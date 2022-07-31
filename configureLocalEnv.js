@@ -52,7 +52,7 @@ try {
   const REACT_APP_SOLANA_FEE_PAYER_ADDRESS = solConfigFile.feePayerWalletPubkey
 
   const REACT_APP_COLIVING_URL = `http://${host}:3000`
-  const REACT_APP_GQL_URI = `http://${host}:8000/subgraphs/name/AudiusProject/-subgraph`
+  const REACT_APP_GQL_URI = `http://${host}:8000/subgraphs/name/dgc.network/-subgraph`
 
   const REACT_APP_IDENTITY_SERVICE_ENDPOINT = `http://${host}:7000`
 
@@ -104,6 +104,6 @@ try {
 } catch (e) {
   console.error(`
     Did not find configuration file.
-    See https://github.com/AudiusProject/-e2e-tests to configure a local dev environment.
+    See https://github.com/dgc.network/-e2e-tests to configure a local dev environment.
   `, e)
 }
