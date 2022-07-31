@@ -112,7 +112,7 @@ export function fetchDiscoveryProviders(): ThunkAction<
     const legacy = (
       await aud.ServiceProviderClient.getServiceProviderList(
         // @ts-ignore
-        'discovery-provider'
+        'discovery-node'
       )
     ).map((d, i) => ({ ...d, spID: 100 + i }))
 

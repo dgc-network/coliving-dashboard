@@ -373,7 +373,7 @@ const RegistrationDeregistrationEvent: React.FC<{
 }> = ({ event, parentOnClick, className, isDisabled }) => {
   const didRegister = event._type === 'ServiceProviderRegistered'
 
-  // is it discovery-node or creator-node
+  // is it discovery-node or network-node
   const onClick = () => {
     if (parentOnClick) parentOnClick()
   }
