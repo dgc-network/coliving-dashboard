@@ -3,7 +3,7 @@ import Page from 'components/Page'
 import { useAccount } from 'store/account/hooks'
 import ManageService from 'components/ManageService'
 import { useProposals } from 'store/cache/proposals/hooks'
-import { ReactComponent as Logo } from 'assets/img/audiusLogoHorizontal.svg'
+import { ReactComponent as Logo } from 'assets/img/colivingLogoHorizontal.svg'
 import Paper from 'components/Paper'
 import Proposal from 'components/Proposal'
 import Loading from 'components/Loading'
@@ -29,7 +29,7 @@ const messages = {
   recentProposals: 'Recent Proposals',
   noProposals: 'No Recent Proposals',
   viewAllProposals: 'View All Proposals',
-  wtfIsAudius: 'WTF is Coliving?',
+  wtfIsColiving: 'WTF is Coliving?',
   wtf1: `Coliving is a digital streaming service that connects fans directly with artists and exclusive new music`,
   wtf2: `It does this by being fully decentralized: Coliving is owned and run by a vibrant, open-source community of artists, fans, and developers all around the world. Coliving gives artists the power to share never-before-heard music and monetize streams directly. Developers can build their own apps on top of Coliving, giving them access to one of the most unique audio catalogs in existence.`,
   wtf3: `Backed by an all-star team of investors, Coliving was founded in 2018 and serves millions of users every month, making it the largest non-financial crypto application ever built.`
@@ -90,11 +90,11 @@ const Home: React.FC<HomeProps> = (props: HomeProps) => {
         {isMobile ? (
           <div className={styles.topRow}>
             <Logo className={styles.logo} />
-            <div className={styles.wtfIs}>{messages.wtfIsAudius}</div>
+            <div className={styles.wtfIs}>{messages.wtfIsColiving}</div>
           </div>
         ) : (
           <div className={styles.topRow}>
-            <div className={styles.wtfIs}>{messages.wtfIsAudius}</div>
+            <div className={styles.wtfIs}>{messages.wtfIsColiving}</div>
             <Logo className={styles.logo} />
           </div>
         )}

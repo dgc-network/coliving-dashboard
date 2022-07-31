@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import SimpleBar from 'simplebar-react'
 import BN from 'bn.js'
 
-import AudiusClient from 'services/Coliving'
+import ColivingClient from 'services/Coliving'
 import { IconArrow, ButtonType } from '@/stems'
 import Modal from 'components/Modal'
 import Button from 'components/Button'
@@ -54,7 +54,7 @@ export const OperatorStaking: React.FC<OperatorStakingProps> = props => {
         {messages.stakingAmount}
       </div>
       <div className={styles.boxValue}>
-        {AudiusClient.displayAud(props.amount)}
+        {ColivingClient.displayAud(props.amount)}
       </div>
     </Box>
   )
@@ -100,7 +100,7 @@ export const OldStake: React.FC<OldStakeProps> = props => {
     >
       <div className={styles.stakeHeader}>{props.title}</div>
       <div className={clsx(styles.stakeValue, styles.stakeSpacing)}>
-        {AudiusClient.displayAud(props.oldStakeAmount)}
+        {ColivingClient.displayAud(props.oldStakeAmount)}
       </div>
       <div
         className={clsx(styles.stakeValue, {
@@ -108,7 +108,7 @@ export const OldStake: React.FC<OldStakeProps> = props => {
           [styles.decrease]: !props.isIncrease
         })}
       >
-        {`${props.isIncrease ? '+' : '-'} ${AudiusClient.displayAud(
+        {`${props.isIncrease ? '+' : '-'} ${ColivingClient.displayAud(
           props.stakeDiff ?? new BN('0')
         )}`}
       </div>
@@ -130,7 +130,7 @@ export const NewStake: React.FC<NewStakeProps> = props => {
     >
       <div className={styles.stakeHeader}>{props.title}</div>
       <div className={styles.stakeValue}>
-        {AudiusClient.displayAud(props.stakeAmount)}
+        {ColivingClient.displayAud(props.stakeAmount)}
       </div>
     </Box>
   )
@@ -147,7 +147,7 @@ export const Delegating: React.FC<DelegatingProps> = props => {
     >
       <div>{messages.delegatingAmount}</div>
       <div className={styles.delegatingAmount}>
-        {AudiusClient.displayAud(props.amount)}
+        {ColivingClient.displayAud(props.amount)}
       </div>
     </Box>
   )

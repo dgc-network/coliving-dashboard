@@ -1,4 +1,4 @@
-import { AudiusClient } from './AudiusClient'
+import { ColivingClient } from './ColivingClient'
 
 import { ServiceType, Version, BigNumber } from 'types'
 
@@ -10,9 +10,9 @@ export type GetServiceTypeInfoResponse = {
 }
 
 export default class NodeType {
-  aud: AudiusClient
+  aud: ColivingClient
 
-  constructor(aud: AudiusClient) {
+  constructor(aud: ColivingClient) {
     this.aud = aud
   }
 

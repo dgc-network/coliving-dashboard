@@ -86,7 +86,7 @@ export const getUsers = ({ sortBy, limit, filter }: UseUsersProp) => (
 // -------------------------------- Helpers  --------------------------------
 
 const getUserMetadata = async (wallet: Address, aud: Coliving): Promise<User> => {
-  const audToken = await aud.AudiusToken.balanceOf(wallet)
+  const audToken = await aud.ColivingToken.balanceOf(wallet)
   const delegates = await aud.getUserDelegates(wallet)
   const totalDelegatorStake = await aud.Delegate.getTotalDelegatorStake(wallet)
   const pendingUndelegateRequest = await aud.Delegate.getPendingUndelegateRequest(

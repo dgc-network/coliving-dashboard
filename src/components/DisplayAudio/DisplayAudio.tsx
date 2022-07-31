@@ -3,7 +3,7 @@ import BN from 'bn.js'
 import clsx from 'clsx'
 
 import Tooltip, { Position } from 'components/Tooltip'
-import AudiusClient from 'services/Coliving'
+import ColivingClient from 'services/Coliving'
 import { formatShortAud, formatWei, formatWeiNumber } from 'utils/format'
 
 import styles from './DisplayAudio.module.css'
@@ -27,7 +27,7 @@ const DisplayAudio: React.FC<DisplayAudioProps> = ({
   shortFormat = false
 }) => {
   const [tooltipText, setTooltipText] = useState(formatWei(amount))
-  const formatter = shortFormat ? formatShortAud : AudiusClient.displayShortAud
+  const formatter = shortFormat ? formatShortAud : ColivingClient.displayShortAud
   const onClick = useCallback(
     e => {
       e.preventDefault()

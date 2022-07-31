@@ -1,6 +1,6 @@
 import ServiceProviderClient from './service-provider/serviceProviderClient'
 import Staking from './staking/staking'
-import AudiusToken from './token/audiusToken'
+import ColivingToken from './token/colivingToken'
 import Delegate from './delegate/delegate'
 import Governance from './governance/governance'
 import NodeType from './nodeType'
@@ -29,9 +29,9 @@ import {
 } from './helpers'
 import { getUserDelegates } from './wrappers'
 
-export class AudiusClient {
+export class ColivingClient {
   constructor() {
-    this.AudiusToken = new AudiusToken(this)
+    this.ColivingToken = new ColivingToken(this)
     this.Delegate = new Delegate(this)
     this.ServiceProviderClient = new ServiceProviderClient(this)
     this.NodeType = new NodeType(this)
@@ -42,7 +42,7 @@ export class AudiusClient {
     this.onSetup()
   }
 
-  AudiusToken: AudiusToken
+  ColivingToken: ColivingToken
   Delegate: Delegate
   ServiceProviderClient: ServiceProviderClient
   NodeType: NodeType
@@ -91,6 +91,6 @@ export class AudiusClient {
   static getContentNodeMetadata = getContentNodeMetadata
 }
 
-window.AudiusClient = AudiusClient
+window.ColivingClient = ColivingClient
 
-export default AudiusClient
+export default ColivingClient

@@ -1,5 +1,5 @@
 import BN from 'bn.js'
-import AudiusClient from 'services/Coliving'
+import ColivingClient from 'services/Coliving'
 import { User, Operator, Address } from 'types'
 
 const DEPLOYER_CUT_BASE = new BN('100')
@@ -34,7 +34,7 @@ export const getOperatorTotalLocked = (user: Operator) => {
  * distribution among the service provider and their delegators
  * Reference processClaim in the claims manager contract
  * NOTE: minted amount is calculated using values at the init claim block
- * @param {AudiusClient} aud Instance of the  client
+ * @param {ColivingClient} aud Instance of the  client
  * @param {string} wallet The service operator's wallet address
  * @param {BN} totalLocked The total token currently locked (decrease stake and delegation)
  * @param {number} blockNumber The blocknumber of the claim to process
@@ -48,7 +48,7 @@ export const getMintedAmountAtBlock = async ({
   blockNumber,
   fundingAmount
 }: {
-  aud: AudiusClient
+  aud: ColivingClient
   wallet: Address
   fundingAmount: BN
   totalLocked: BN
@@ -126,7 +126,7 @@ export const getDelegateRewards = ({
  * @param {Object} users An object of all user wallets to their User details
  * @param {BN} fundsPerRound The amount of rewards given out in a round
  * @param {number} blockNumber The block number to process the claim event for
- * @param {AudiusClient} aud Instance of the  client for contract reads
+ * @param {ColivingClient} aud Instance of the  client for contract reads
  * @returns {BN} expected rewards for the user at the claim block
  */
 export const getRewardForClaimBlock = async ({
@@ -140,7 +140,7 @@ export const getRewardForClaimBlock = async ({
   users: (User | Operator)[]
   fundsPerRound: BN
   blockNumber: number
-  aud: AudiusClient
+  aud: ColivingClient
 }) => {
   const user = users.find(u => u.wallet === wallet)
   let totalRewards = new BN('0')

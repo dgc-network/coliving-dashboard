@@ -9,7 +9,7 @@ import Coliving from 'services/Coliving'
 import { AppState } from 'store/types'
 import { getAccountWallet, fetchPendingTransactions } from 'store/account/hooks'
 
-export function undelegateAudiusStake(
+export function undelegateColivingStake(
   address: Address,
   amount: BN,
   setStatus: (status: Status) => void,
@@ -47,7 +47,7 @@ export const useUndelegateStake = (shouldReset?: boolean) => {
   const undelegateStake = useCallback(
     (address: Address, amount: BN) => {
       if (status !== Status.Loading) {
-        dispatch(undelegateAudiusStake(address, amount, setStatus, setError))
+        dispatch(undelegateColivingStake(address, amount, setStatus, setError))
       }
     },
     [dispatch, status, setStatus, setError]

@@ -1,13 +1,13 @@
 import { Utils } from '@/libs'
 import { formatNumber, formatAudString } from 'utils/format'
-import AudiusClient from './AudiusClient'
+import ColivingClient from './ColivingClient'
 import { Permission, BigNumber } from 'types'
 import { fetchWithTimeout } from 'utils/fetch'
 import BN from 'bn.js'
 
 // Helpers
 export async function hasPermissions(
-  this: AudiusClient,
+  this: ColivingClient,
   ...permissions: Array<Permission>
 ) {
   await this.awaitSetup()
@@ -16,31 +16,31 @@ export async function hasPermissions(
   }
 }
 
-export function onSetup(this: AudiusClient) {
+export function onSetup(this: ColivingClient) {
   this.isSetupPromise = new Promise(resolve => {
     this._setupPromiseResolve = resolve
   })
 }
 
-export function onSetupFinished(this: AudiusClient) {
+export function onSetupFinished(this: ColivingClient) {
   if (this._setupPromiseResolve) this._setupPromiseResolve()
 }
 
-export async function awaitSetup(this: AudiusClient): Promise<void> {
+export async function awaitSetup(this: ColivingClient): Promise<void> {
   return this.isSetupPromise
 }
 
-export async function getEthBlockNumber(this: AudiusClient) {
+export async function getEthBlockNumber(this: ColivingClient) {
   await this.hasPermissions()
   return this.libs.ethWeb3Manager.web3.eth.getBlockNumber()
 }
 
-export async function getEthWallet(this: AudiusClient) {
+export async function getEthWallet(this: ColivingClient) {
   await this.hasPermissions()
   return this.libs.ethWeb3Manager.ownerWallet
 }
 
-export async function getAverageBlockTime(this: AudiusClient) {
+export async function getAverageBlockTime(this: ColivingClient) {
   await this.hasPermissions()
   const web3 = this.libs.ethWeb3Manager.web3
   const span = 1000
@@ -57,7 +57,7 @@ export async function getAverageBlockTime(this: AudiusClient) {
   )
 }
 
-export async function getBlock(this: AudiusClient, blockNumber: number) {
+export async function getBlock(this: ColivingClient, blockNumber: number) {
   await this.hasPermissions()
   const web3 = this.libs.ethWeb3Manager.web3
   const block = await web3.eth.getBlock(blockNumber)
@@ -65,7 +65,7 @@ export async function getBlock(this: AudiusClient, blockNumber: number) {
 }
 
 export async function getBlockNearTimestamp(
-  this: AudiusClient,
+  this: ColivingClient,
   averageBlockTime: number,
   currentBlockNumber: number,
   timestamp: number
@@ -82,7 +82,7 @@ export async function getBlockNearTimestamp(
   return targetBlock
 }
 
-export function toChecksumAddress(this: AudiusClient, wallet: string) {
+export function toChecksumAddress(this: ColivingClient, wallet: string) {
   // NOTE: This is kinda a hack
   // but b/c we load in web3 before the js bundle it will work
   const web3 = window.Web3

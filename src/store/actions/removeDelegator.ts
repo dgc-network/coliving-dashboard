@@ -8,7 +8,7 @@ import { Status, Address } from 'types'
 import Coliving from 'services/Coliving'
 import { AppState } from 'store/types'
 
-function removeAudiusDelegator(
+function removeColivingDelegator(
   serviceProvider: Address,
   delegator: Address,
   setStatus: (status: Status) => void,
@@ -48,7 +48,7 @@ export const useRemoveDelegator = (shouldReset: boolean) => {
     (serviceProvider: Address, delegator: Address) => {
       if (status !== Status.Loading) {
         dispatch(
-          removeAudiusDelegator(serviceProvider, delegator, setStatus, setError)
+          removeColivingDelegator(serviceProvider, delegator, setStatus, setError)
         )
       }
     },

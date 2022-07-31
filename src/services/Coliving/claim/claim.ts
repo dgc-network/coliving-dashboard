@@ -1,13 +1,13 @@
-import { AudiusClient } from '../AudiusClient'
+import { ColivingClient } from '../ColivingClient'
 import BN from 'bn.js'
 import { BlockNumber, Address } from 'types'
 import { ClaimProcessedEvent } from 'models/TimelineEvents'
 import { GetClaimProcessedResponse } from './types'
 
 export default class Claim {
-  aud: AudiusClient
+  aud: ColivingClient
 
-  constructor(aud: AudiusClient) {
+  constructor(aud: ColivingClient) {
     this.aud = aud
   }
 

@@ -13,7 +13,7 @@ import {
 } from './slice'
 import { useEffect, useState, useRef } from 'react'
 import { ServiceType, Block } from 'types'
-import AudiusClient from 'services/Coliving'
+import ColivingClient from 'services/Coliving'
 
 // -------------------------------- Selectors  --------------------------------
 export const getTotalStaked = (state: AppState) =>
@@ -159,7 +159,7 @@ export const useEthBlockNumber = () => {
 }
 
 export const useDispatchBasedOnBlockNumber = (
-  actions: ThunkAction<void, AppState, AudiusClient, Action<string>>[],
+  actions: ThunkAction<void, AppState, ColivingClient, Action<string>>[],
   mod: number = 10
 ) => {
   const didMount = useRef(false)
@@ -189,7 +189,7 @@ export const useBlock = (blockNumber: number) => {
   useEffect(() => {
     const fetchBlock = async () => {
       // TODO: Move this window dependency out
-      const web3 = window.audiusLibs.ethWeb3Manager.web3
+      const web3 = window.colivingLibs.ethWeb3Manager.web3
       const b = await web3.eth.getBlock(blockNumber)
       setBlock(b)
     }

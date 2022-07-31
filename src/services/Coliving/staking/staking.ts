@@ -1,12 +1,12 @@
 import BN from 'bn.js'
-import { AudiusClient } from '../AudiusClient'
+import { ColivingClient } from '../ColivingClient'
 
 import { Address, BlockNumber } from 'types'
 
 export default class Staking {
-  aud: AudiusClient
+  aud: ColivingClient
 
-  constructor(aud: AudiusClient) {
+  constructor(aud: ColivingClient) {
     this.aud = aud
   }
 

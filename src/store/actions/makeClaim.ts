@@ -8,7 +8,7 @@ import Coliving from 'services/Coliving'
 import { AppState } from 'store/types'
 import { fetchUser } from 'store/cache/user/hooks'
 
-function claimAudiusRewards(
+function claimColivingRewards(
   wallet: Address,
   setStatus: (status: Status) => void,
   setError: (msg: string) => void
@@ -41,7 +41,7 @@ export const useMakeClaim = (shouldReset?: boolean) => {
   const makeClaim = useCallback(
     (wallet: Address) => {
       if (status !== Status.Loading) {
-        dispatch(claimAudiusRewards(wallet, setStatus, setError))
+        dispatch(claimColivingRewards(wallet, setStatus, setError))
       }
     },
     [dispatch, status, setStatus, setError]

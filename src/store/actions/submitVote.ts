@@ -9,7 +9,7 @@ import { AppState } from 'store/types'
 import { fetchVotes } from 'store/cache/votes/hooks'
 import { fetchProposal } from 'store/cache/proposals/hooks'
 
-function submitAudiusVote(
+function submitColivingVote(
   proposalId: number,
   vote: Vote,
   currentVote: Vote,
@@ -52,7 +52,7 @@ export const useSubmitVote = (shouldReset?: boolean) => {
   const submitVote = useCallback(
     (proposalId: number, vote: Vote, currentVote: Vote) => {
       dispatch(
-        submitAudiusVote(proposalId, vote, currentVote, setStatus, setError)
+        submitColivingVote(proposalId, vote, currentVote, setStatus, setError)
       )
     },
     [dispatch, setStatus, setError]

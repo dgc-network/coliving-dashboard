@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { ButtonType } from 'components/Button'
 import BN from 'bn.js'
 
-import AudiusClient from 'services/Coliving'
+import ColivingClient from 'services/Coliving'
 import Modal from 'components/Modal'
 import Button from 'components/Button'
 import ValueSlider from 'components/ValueSlider'
@@ -54,12 +54,12 @@ const UpdateDelegationModal: React.FC<UpdateDelegationModalProps> = ({
   const { min, max } = useUserDelegation(wallet)
   const [stakingBN, setStakingBN] = useState(delegates)
   const [stakingAmount, setStakingAmount] = useState(
-    AudiusClient.getAud(delegates).toString()
+    ColivingClient.getAud(delegates).toString()
   )
 
   useEffect(() => {
     setStakingBN(delegates)
-    setStakingAmount(AudiusClient.getAud(delegates).toString())
+    setStakingAmount(ColivingClient.getAud(delegates).toString())
   }, [setStakingAmount, setStakingBN, delegates])
 
   const onUpdateStaking = useCallback(

@@ -9,7 +9,7 @@ import { AppState } from 'store/types'
 import { getDiscoveryProvider } from 'store/cache/discoveryProvider/hooks'
 import { getContentNode } from 'store/cache/contentNode/hooks'
 
-function modifyAudiusService(
+function modifyColivingService(
   serviceType: ServiceType,
   spID: number,
   oldEndpoint: string,
@@ -75,7 +75,7 @@ export const useModifyService = (shouldReset?: boolean) => {
     ) => {
       if (status !== Status.Loading) {
         dispatch(
-          modifyAudiusService(
+          modifyColivingService(
             serviceType,
             spID,
             oldEndpoint,

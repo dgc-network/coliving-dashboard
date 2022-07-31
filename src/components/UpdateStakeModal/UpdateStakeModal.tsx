@@ -5,7 +5,7 @@ import { ButtonType } from '@/stems'
 
 import { useUpdateStake } from 'store/actions/updateStake'
 import { useAccountUser } from 'store/account/hooks'
-import AudiusClient from 'services/Coliving'
+import ColivingClient from 'services/Coliving'
 import Modal from 'components/Modal'
 import Button from 'components/Button'
 import ValueSlider from 'components/ValueSlider'
@@ -73,7 +73,7 @@ const IncreaseStakeModal: React.FC<IncreaseStakeModalProps> = ({
       const deployerStake = (accountUser as Operator).serviceProvider
         .deployerStake
       setStakingBN(deployerStake)
-      setStakingAmount(AudiusClient.getAud(deployerStake).toString())
+      setStakingAmount(ColivingClient.getAud(deployerStake).toString())
     }
   }, [
     userStatus,

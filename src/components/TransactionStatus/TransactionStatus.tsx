@@ -18,7 +18,7 @@ import ConfirmTransactionModal, {
   StandaloneBox
 } from 'components/ConfirmTransactionModal'
 import { useSubmitTransaction } from 'store/actions/submitTransaction'
-import AudiusClient from 'services/Coliving'
+import ColivingClient from 'services/Coliving'
 import { TICKER } from 'utils/consts'
 import { getHumanReadableTime } from 'utils/format'
 import { useTimeRemaining } from 'store/cache/protocol/hooks'
@@ -41,7 +41,7 @@ const getMessage = (
     case PendingTransactionName.DecreaseStake: {
       return `${textPrefix} Request to ${
         props.name
-      } by ${AudiusClient.displayAud(props.amount)} ${TICKER}`
+      } by ${ColivingClient.displayAud(props.amount)} ${TICKER}`
     }
     case PendingTransactionName.RemoveDelegator: {
       return (

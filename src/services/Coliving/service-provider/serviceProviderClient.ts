@@ -1,4 +1,4 @@
-import { AudiusClient } from '../AudiusClient'
+import { ColivingClient } from '../ColivingClient'
 
 import {
   ServiceType,
@@ -36,9 +36,9 @@ import {
 } from '../../../models/TimelineEvents'
 
 export default class ServiceProviderClient {
-  aud: AudiusClient
+  aud: ColivingClient
 
-  constructor(aud: AudiusClient) {
+  constructor(aud: ColivingClient) {
     this.aud = aud
   }
 

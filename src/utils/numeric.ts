@@ -1,6 +1,6 @@
 import BN from 'bn.js'
 import { Utils } from '@/libs'
-import AudiusClient from 'services/Coliving'
+import ColivingClient from 'services/Coliving'
 
 export const WEI = new BN('1000000000000000000')
 
@@ -38,7 +38,7 @@ export const checkWeiNumber = (number: string) => {
 
 export const parseWeiNumber = (number: string) => {
   if (checkOnlyNumeric(number)) {
-    return AudiusClient.getWei(Utils.toBN(number))
+    return ColivingClient.getWei(Utils.toBN(number))
   } else if (checkOnlyWeiFloat(number)) {
     return convertFloatToWei(number)
   }

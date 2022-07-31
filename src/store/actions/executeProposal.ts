@@ -8,7 +8,7 @@ import Coliving from 'services/Coliving'
 import { AppState } from 'store/types'
 import { fetchProposal } from 'store/cache/proposals/hooks'
 
-function executeAudiusProposal(
+function executeColivingProposal(
   proposalId: number,
   setStatus: (status: Status) => void,
   setError: (msg: string) => void
@@ -43,7 +43,7 @@ export const useExecuteProposal = (shouldReset?: boolean) => {
 
   const executeProposal = useCallback(
     (proposalId: number) => {
-      dispatch(executeAudiusProposal(proposalId, setStatus, setError))
+      dispatch(executeColivingProposal(proposalId, setStatus, setError))
     },
     [dispatch, setStatus, setError]
   )

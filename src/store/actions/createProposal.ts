@@ -8,7 +8,7 @@ import Coliving from 'services/Coliving'
 import { AppState } from 'store/types'
 import { fetchActiveProposals } from 'store/cache/proposals/hooks'
 
-function createAudiusProposal(
+function createColivingProposal(
   targetContractName: string,
   signature: string,
   callData: any[],
@@ -66,7 +66,7 @@ export const useCreateProposal = (shouldReset?: boolean) => {
       description: string
     ) => {
       dispatch(
-        createAudiusProposal(
+        createColivingProposal(
           targetContractName,
           signature,
           callData,

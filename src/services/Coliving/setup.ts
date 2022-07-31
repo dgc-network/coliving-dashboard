@@ -1,13 +1,13 @@
-import { AudiusClient } from './AudiusClient'
+import { ColivingClient } from './ColivingClient'
 import , { Utils } from '@/libs'
 
 declare global {
   interface Window {
-    AudiusClient: any
+    ColivingClient: any
     Coliving: any
     Utils: any
     Web3: any
-    audiusLibs: any
+    colivingLibs: any
     web3: any
     ethereum: any
     dataWeb3: any
@@ -54,20 +54,20 @@ const IS_STAGING =
 
 const DISCOVERY_NODE_ALLOW_LIST = IS_PRODUCTION
   ? new Set([
-      'https://discoveryprovider.audius7.prod-us-west-2.staked.cloud',
-      'https://discoveryprovider.audius1.prod-us-west-2.staked.cloud',
-      'https://discoveryprovider.audius4.prod-us-west-2.staked.cloud',
-      'https://discoveryprovider.audius2.prod-us-west-2.staked.cloud',
+      'https://discoveryprovider.coliving7.prod-us-west-2.staked.cloud',
+      'https://discoveryprovider.coliving1.prod-us-west-2.staked.cloud',
+      'https://discoveryprovider.coliving4.prod-us-west-2.staked.cloud',
+      'https://discoveryprovider.coliving2.prod-us-west-2.staked.cloud',
       'https://discovery-au-01..openplayer.org',
       'https://dn-usa..metadata.fyi',
-      'https://discoveryprovider.audius6.prod-us-west-2.staked.cloud',
+      'https://discoveryprovider.coliving6.prod-us-west-2.staked.cloud',
       'https://dn-jpn..metadata.fyi',
       'https://dn1.monophonic.digital',
-      'https://discoveryprovider.audius3.prod-us-west-2.staked.cloud',
+      'https://discoveryprovider.coliving3.prod-us-west-2.staked.cloud',
       'https://-discovery-1.altego.net',
       'https://discoveryprovider..prod-us-west-2.staked.cloud',
       'https://discoveryprovider..co',
-      'https://discoveryprovider.audius5.prod-us-west-2.staked.cloud',
+      'https://discoveryprovider.coliving5.prod-us-west-2.staked.cloud',
       'https://-discovery-2.altego.net',
       'https://discoveryprovider2..co',
       'https://-dp.johannesburg.creatorseed.com',
@@ -106,7 +106,7 @@ const getMetamaskIsOnEthMainnet = async () => {
   return chainId === ethNetworkId
 }
 
-export async function setup(this: AudiusClient): Promise<void> {
+export async function setup(this: ColivingClient): Promise<void> {
   if (!window.web3 || !window.ethereum) {
     // Metamask is not installed
     this.isViewOnly = true
@@ -163,7 +163,7 @@ export async function setup(this: AudiusClient): Promise<void> {
     }
   }
 
-  window.audiusLibs = this.libs
+  window.colivingLibs = this.libs
   this.isSetup = true
   this.onSetupFinished()
 }
@@ -195,7 +195,7 @@ const configureReadOnlyLibs = async () => {
     identityServiceEndpoint
   )
 
-  let audiusLibsConfig = {
+  let colivingLibsConfig = {
     ethWeb3Config,
     solanaWeb3Config,
     discoveryProviderConfig,
@@ -203,7 +203,7 @@ const configureReadOnlyLibs = async () => {
     isServer: false,
     isDebug: !IS_PRODUCTION && !IS_STAGING
   }
-  const libs = new (audiusLibsConfig)
+  const libs = new (colivingLibsConfig)
   await libs.init()
   return libs
 }
@@ -228,7 +228,7 @@ const configureLibsWithAccount = async () => {
   if (!metamaskAccount) {
     return null
   }
-  let audiusLibsConfig = {
+  let colivingLibsConfig = {
     ethWeb3Config: .configEthWeb3(
       ethTokenAddress,
       ethRegistryAddress,
@@ -256,7 +256,7 @@ const configureLibsWithAccount = async () => {
     isServer: false,
     isDebug: !IS_PRODUCTION && !IS_STAGING
   }
-  const libs = new (audiusLibsConfig)
+  const libs = new (colivingLibsConfig)
   await libs.init()
   return libs
 }

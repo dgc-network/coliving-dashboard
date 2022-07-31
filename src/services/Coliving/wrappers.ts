@@ -1,4 +1,4 @@
-import AudiusClient from './AudiusClient'
+import ColivingClient from './ColivingClient'
 import { Address } from 'types'
 
 /**
@@ -11,7 +11,7 @@ import { Address } from 'types'
  * @param delegator Wallet address of the delegator
  * @returns Array of service provider addresses
  */
-export async function getUserDelegates(this: AudiusClient, delegator: Address) {
+export async function getUserDelegates(this: ColivingClient, delegator: Address) {
   await this.hasPermissions()
   const delegates = []
   const increaseDelegateStakeEvents = await this.Delegate.getIncreaseDelegateStakeEvents(

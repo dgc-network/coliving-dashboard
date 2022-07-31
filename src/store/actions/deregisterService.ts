@@ -9,7 +9,7 @@ import { AppState } from 'store/types'
 import { getDiscoveryProvider } from 'store/cache/discoveryProvider/hooks'
 import { getContentNode } from 'store/cache/contentNode/hooks'
 
-function deregisterAudiusService(
+function deregisterColivingService(
   serviceType: ServiceType,
   spID: number,
   endpoint: string,
@@ -50,7 +50,7 @@ export const useDeregisterService = (shouldReset?: boolean) => {
     (serviceType: ServiceType, spID: number, endpoint: string) => {
       if (status !== Status.Loading) {
         dispatch(
-          deregisterAudiusService(
+          deregisterColivingService(
             serviceType,
             spID,
             endpoint,

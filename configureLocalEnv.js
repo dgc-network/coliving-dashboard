@@ -31,7 +31,7 @@ try {
 
   const REACT_APP_ETH_REGISTRY_ADDRESS = ethConfigFile.registryAddress
   const REACT_APP_ETH_PROVIDER_URL = `http://${host}:8546`
-  const REACT_APP_ETH_TOKEN_ADDRESS = ethConfigFile.audiusTokenAddress
+  const REACT_APP_ETH_TOKEN_ADDRESS = ethConfigFile.colivingTokenAddress
   const REACT_APP_ETH_OWNER_WALLET = ethConfigFile.ownerWallet
   // Chain id is 1337 for local eth ganache because we are ... leet
   const REACT_APP_ETH_NETWORK_ID = 1337

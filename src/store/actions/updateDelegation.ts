@@ -2,8 +2,8 @@ import { useState, useCallback, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 
 import { Address, Status, BigNumber } from 'types'
-import { undelegateAudiusStake } from 'store/actions/undelegateStake'
-import { delegateAudiusStake } from 'store/actions/delegateStake'
+import { undelegateColivingStake } from 'store/actions/undelegateStake'
+import { delegateColivingStake } from 'store/actions/delegateStake'
 
 export const useUpdateDelegation = (
   isIncrease: boolean,
@@ -23,9 +23,9 @@ export const useUpdateDelegation = (
     (wallet: Address, amount: BigNumber) => {
       if (status !== Status.Loading) {
         if (isIncrease) {
-          dispatch(delegateAudiusStake(wallet, amount, setStatus, setError))
+          dispatch(delegateColivingStake(wallet, amount, setStatus, setError))
         } else {
-          dispatch(undelegateAudiusStake(wallet, amount, setStatus, setError))
+          dispatch(undelegateColivingStake(wallet, amount, setStatus, setError))
         }
       }
     },

@@ -3,7 +3,7 @@ import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
 import { Utils } from '@/libs'
 import { Address, BigNumber } from 'types'
-import AudiusClient from 'services/Coliving'
+import ColivingClient from 'services/Coliving'
 import { TICKER } from './consts'
 import BN from 'bn.js'
 
@@ -73,13 +73,13 @@ export const formatAud = (amount: BigNumber | null) => {
 
 export const formatWeiNumber = (amount: BigNumber | null) => {
   if (!Utils.isBN(amount)) return ''
-  let aud = formatNumberCommas(AudiusClient.getAud(amount as BigNumber))
+  let aud = formatNumberCommas(ColivingClient.getAud(amount as BigNumber))
   return aud
 }
 
 export const formatWei = (amount: BigNumber | null) => {
   if (!Utils.isBN(amount)) return ''
-  let aud = formatNumberCommas(AudiusClient.getAud(amount as BigNumber))
+  let aud = formatNumberCommas(ColivingClient.getAud(amount as BigNumber))
   return `${aud} ${TICKER}`
 }
 

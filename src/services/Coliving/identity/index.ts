@@ -1,12 +1,12 @@
-import { AudiusClient } from '../AudiusClient'
+import { ColivingClient } from '../ColivingClient'
 
 import BN from 'bn.js'
 import { Address } from 'types'
 
 export default class Identity {
-  public aud: AudiusClient
+  public aud: ColivingClient
 
-  constructor(aud: AudiusClient) {
+  constructor(aud: ColivingClient) {
     this.aud = aud
   }
 

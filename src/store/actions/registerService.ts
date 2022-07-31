@@ -11,7 +11,7 @@ import { fetchUser } from 'store/cache/user/hooks'
 import { getDiscoveryProvider } from 'store/cache/discoveryProvider/hooks'
 import { getContentNode } from 'store/cache/contentNode/hooks'
 
-function registerAudiusService(
+function registerColivingService(
   serviceType: ServiceType,
   endpoint: string,
   stakingAmount: BigNumber,
@@ -107,7 +107,7 @@ export const useRegisterService = (shouldReset?: boolean) => {
     ) => {
       if (status !== Status.Loading) {
         dispatch(
-          registerAudiusService(
+          registerColivingService(
             serviceType,
             endpoint,
             stakingAmount,

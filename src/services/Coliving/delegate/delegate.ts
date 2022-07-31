@@ -1,4 +1,4 @@
-import { AudiusClient } from '../AudiusClient'
+import { ColivingClient } from '../ColivingClient'
 import BN from 'bn.js'
 import { Address, Amount, BlockNumber, TxReceipt, Permission } from 'types'
 import {
@@ -31,9 +31,9 @@ export type DelegateStakeResponse = {
 }
 
 export default class Delegate {
-  aud: AudiusClient
+  aud: ColivingClient
 
-  constructor(aud: AudiusClient) {
+  constructor(aud: ColivingClient) {
     this.aud = aud
   }
 

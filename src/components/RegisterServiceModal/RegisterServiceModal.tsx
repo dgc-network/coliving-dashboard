@@ -6,7 +6,7 @@ import { TabSlider, ButtonType } from '@/stems'
 
 import { useRegisterService } from 'store/actions/registerService'
 import { useServiceInfo } from 'store/cache/protocol/hooks'
-import AudiusClient from 'services/Coliving'
+import ColivingClient from 'services/Coliving'
 import Modal from 'components/Modal'
 import Button from 'components/Button'
 import ValueSlider from 'components/ValueSlider'
@@ -124,7 +124,7 @@ const RegisterServiceModal: React.FC<RegisterServiceModalProps> = ({
   useEffect(() => {
     if (isOpen && selectedServiceInfo && calculatedMinStakeRef.current) {
       setStakingBN(calculatedMinStakeRef.current)
-      const amount = AudiusClient.getAud(
+      const amount = ColivingClient.getAud(
         Utils.toBN(calculatedMinStakeRef.current)
       )
       setStakingAmount(amount.toString())

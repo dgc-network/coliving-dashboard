@@ -9,7 +9,7 @@ import { AppState } from 'store/types'
 import { fetchUser } from 'store/cache/user/hooks'
 import { getAccountWallet } from 'store/account/hooks'
 
-export function delegateAudiusStake(
+export function delegateColivingStake(
   serviceOperatorWallet: Address,
   stakingAmount: BigNumber,
   setStatus: (status: Status) => void,
@@ -48,7 +48,7 @@ export const useDelegateStake = (shouldReset?: boolean) => {
     (serviceOperatorWallet: Address, stakingAmount: BigNumber) => {
       if (status !== Status.Loading) {
         dispatch(
-          delegateAudiusStake(
+          delegateColivingStake(
             serviceOperatorWallet,
             stakingAmount,
             setStatus,

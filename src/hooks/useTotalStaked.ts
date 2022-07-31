@@ -7,14 +7,14 @@ import { Status } from 'types'
 
 const GET_TOTAL_CLAIMABLE = gql`
   query totalClaimable($id: String!) {
-    audiusNetwork(id: $id) {
+    colivingNetwork(id: $id) {
       totalTokensClaimable
     }
   }
 `
 
 interface TotalClaimable {
-  audiusNetwork: {
+  colivingNetwork: {
     totalTokensClaimable: string
   }
 }
@@ -34,7 +34,7 @@ export const useTotalStaked = () => {
   const { status, users } = useUsers()
 
   if (gqlData) {
-    const total = new BN(gqlData.audiusNetwork.totalTokensClaimable)
+    const total = new BN(gqlData.colivingNetwork.totalTokensClaimable)
     return { status: Status.Success, total }
   } else if (users && status === Status.Success) {
     const totalVotingPowerStake = users.reduce((total, user) => {

@@ -1,4 +1,4 @@
-import AudiusClient from 'services/Coliving'
+import ColivingClient from 'services/Coliving'
 import useTotalStaked from './useTotalStaked'
 import { useFundsPerRound } from 'store/cache/claims/hooks'
 import { Status } from 'types'
@@ -11,7 +11,7 @@ export const useWeeklyRewardRate = () => {
     totalActiveStake.status === Status.Success
   ) {
     const percentage =
-      AudiusClient.getBNPercentage(
+      ColivingClient.getBNPercentage(
         fundsPerRound.amount!,
         totalActiveStake.total!,
         4

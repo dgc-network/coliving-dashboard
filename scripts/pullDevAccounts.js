@@ -7,14 +7,14 @@
 const { exec } = require('child_process')
 
 exec(`
-docker cp $(docker ps -q -f "name=audius_ganache_cli_eth_contracts"):/app/eth-contracts-ganache-accounts.json .
+docker cp $(docker ps -q -f "name=coliving_ganache_cli_eth_contracts"):/app/eth-contracts-ganache-accounts.json .
 `)
 
 const accounts = require('../eth-contracts-ganache-accounts.json')
 const wallets = Object.keys(accounts.addresses).slice(0, 50)
 const homedir = require('os').homedir();
 const audConfig = require(`${homedir}/./eth-config.json`)
-const tokenAddress = audConfig['audiusTokenAddress']
+const tokenAddress = audConfig['colivingTokenAddress']
 
 console.log(`Token Address is ${tokenAddress}`)
 for (let w in wallets) {

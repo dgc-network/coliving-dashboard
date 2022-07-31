@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import clsx from 'clsx'
 import styles from './ValueSlider.module.css'
-import AudiusClient from 'services/Coliving'
+import ColivingClient from 'services/Coliving'
 import { BigNumber } from 'types'
 import { Position } from 'components/Tooltip'
 import DisplayAudio from 'components/DisplayAudio'
@@ -50,7 +50,7 @@ const ValueSlider: React.FC<ValueSliderProps> = ({
 
   useEffect(() => {
     if (containerRef.current && min && max) {
-      const percentage = AudiusClient.getBNPercentage(
+      const percentage = ColivingClient.getBNPercentage(
         value.sub(min),
         max.sub(min)
       )
@@ -68,7 +68,7 @@ const ValueSlider: React.FC<ValueSliderProps> = ({
       min &&
       max
     ) {
-      const percentage = AudiusClient.getBNPercentage(
+      const percentage = ColivingClient.getBNPercentage(
         initialValue.sub(min),
         max.sub(min)
       )

@@ -1,4 +1,4 @@
-import { AudiusClient } from '../AudiusClient'
+import { ColivingClient } from '../ColivingClient'
 
 import BN from 'bn.js'
 
@@ -25,9 +25,9 @@ const QUERY_PROPOSAL_START_BLOCK = parseInt(
 )
 
 export default class Governance {
-  public aud: AudiusClient
+  public aud: ColivingClient
 
-  constructor(aud: AudiusClient) {
+  constructor(aud: ColivingClient) {
     this.aud = aud
   }
 

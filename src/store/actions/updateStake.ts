@@ -9,7 +9,7 @@ import { AppState } from 'store/types'
 import { fetchPendingTransactions, getAccountWallet } from 'store/account/hooks'
 import { fetchUser } from 'store/cache/user/hooks'
 
-function increaseAudiusStake(
+function increaseColivingStake(
   stakingAmount: BigNumber,
   setStatus: (status: Status) => void,
   setError: (msg: string) => void
@@ -32,7 +32,7 @@ function increaseAudiusStake(
   }
 }
 
-function decreaseAudiusStake(
+function decreaseColivingStake(
   stakingAmount: BigNumber,
   setStatus: (status: Status) => void,
   setError: (msg: string) => void
@@ -70,9 +70,9 @@ export const useUpdateStake = (isIncrease: boolean, shouldReset?: boolean) => {
     (stakingAmount: BigNumber) => {
       if (status !== Status.Loading) {
         if (isIncrease) {
-          dispatch(increaseAudiusStake(stakingAmount, setStatus, setError))
+          dispatch(increaseColivingStake(stakingAmount, setStatus, setError))
         } else {
-          dispatch(decreaseAudiusStake(stakingAmount, setStatus, setError))
+          dispatch(decreaseColivingStake(stakingAmount, setStatus, setError))
         }
       }
     },

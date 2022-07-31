@@ -5,7 +5,7 @@ import { ButtonType } from '@/stems'
 
 import { useDelegateStake } from 'store/actions/delegateStake'
 import { useUserDelegation } from 'store/actions/userDelegation'
-import AudiusClient from 'services/Coliving'
+import ColivingClient from 'services/Coliving'
 import Modal from 'components/Modal'
 import Button from 'components/Button'
 import ValueSlider from 'components/ValueSlider'
@@ -55,7 +55,7 @@ const DelegateStakeModal: React.FC<DelegateStakeModalProps> = ({
   useEffect(() => {
     if (min && stakingBN.isZero()) {
       setStakingBN(min)
-      setStakingAmount(AudiusClient.getAud(min).toString())
+      setStakingAmount(ColivingClient.getAud(min).toString())
     }
   }, [min, stakingBN, setStakingAmount, setStakingBN])
 

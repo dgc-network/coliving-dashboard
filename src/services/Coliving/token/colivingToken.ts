@@ -1,16 +1,16 @@
-import { AudiusClient } from '../AudiusClient'
+import { ColivingClient } from '../ColivingClient'
 
 import { Address, BigNumber } from 'types'
 
-export default class AudiusToken {
-  aud: AudiusClient
+export default class ColivingToken {
+  aud: ColivingClient
 
-  constructor(aud: AudiusClient) {
+  constructor(aud: ColivingClient) {
     this.aud = aud
   }
 
   getContract() {
-    return this.aud.libs.ethContracts.AudiusTokenClient
+    return this.aud.libs.ethContracts.ColivingTokenClient
   }
 
   async balanceOf(account: Address): Promise<BigNumber> {

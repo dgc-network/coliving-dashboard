@@ -8,7 +8,7 @@ import { Status } from 'types'
 import Coliving from 'services/Coliving'
 import { AppState } from 'store/types'
 
-function updateAudiusOperatorCut(
+function updateColivingOperatorCut(
   cut: number,
   setStatus: (status: Status) => void,
   setError: (msg: string) => void
@@ -50,7 +50,7 @@ export const useUpdateOperatorCut = (shouldReset?: boolean) => {
   const updateOperatorCut = useCallback(
     (cut: number) => {
       if (status !== Status.Loading) {
-        dispatch(updateAudiusOperatorCut(cut, setStatus, setError))
+        dispatch(updateColivingOperatorCut(cut, setStatus, setError))
       }
     },
     [dispatch, status, setStatus, setError]
