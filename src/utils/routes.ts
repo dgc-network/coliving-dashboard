@@ -54,9 +54,9 @@ export const GOVERNANCE_PROPOSAL_TITLE = 'Proposal'
 export const NOT_FOUND = '/404'
 
 // External Routes
-export const AUDIUS_API_URL = 'https://.org/api'
-export const AUDIUS_DAPP_URL =
-  process.env.REACT_APP_AUDIUS_URL || 'https://.co'
+export const COLIVING_API_URL = 'https://.org/api'
+export const COLIVING_DAPP_URL =
+  process.env.REACT_APP_COLIVING_URL || 'https://.co'
 
 // Get Routes
 export const accountPage = (address: string) => {

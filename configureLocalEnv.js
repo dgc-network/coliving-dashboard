@@ -1,19 +1,19 @@
-const AUDIUS_CONFIG = './config.json'
-const AUDIUS_ETH_CONFIG = './eth-config.json'
-const AUDIUS_SOL_CONFIG = './solana-program-config.json'
+const COLIVING_CONFIG = './config.json'
+const COLIVING_ETH_CONFIG = './eth-config.json'
+const COLIVING_SOL_CONFIG = './solana-program-config.json'
 
 const fs = require('fs')
 const path = require('path')
 const homeDir = require('os').homedir()
 try {
-  const configFile = require(path.join(homeDir, AUDIUS_CONFIG))
-  const ethConfigFile = require(path.join(homeDir, AUDIUS_ETH_CONFIG))
-  const solConfigFile = require(path.join(homeDir, AUDIUS_SOL_CONFIG))
+  const configFile = require(path.join(homeDir, COLIVING_CONFIG))
+  const ethConfigFile = require(path.join(homeDir, COLIVING_ETH_CONFIG))
+  const solConfigFile = require(path.join(homeDir, COLIVING_SOL_CONFIG))
   console.log(configFile)
   console.log(ethConfigFile)
   console.log(solConfigFile)
 
-  const remoteHost = process.env.AUDIUS_REMOTE_DEV_HOST
+  const remoteHost = process.env.COLIVING_REMOTE_DEV_HOST
   const localhost = 'localhost'
   const useRemoteHost =
     remoteHost && process.argv.length > 2 && process.argv[2] == 'remote'
@@ -51,7 +51,7 @@ try {
   const REACT_APP_WAUDIO_MINT_ADDRESS = solConfigFile.splToken
   const REACT_APP_SOLANA_FEE_PAYER_ADDRESS = solConfigFile.feePayerWalletPubkey
 
-  const REACT_APP_AUDIUS_URL = `http://${host}:3000`
+  const REACT_APP_COLIVING_URL = `http://${host}:3000`
   const REACT_APP_GQL_URI = `http://${host}:8000/subgraphs/name/AudiusProject/-subgraph`
 
   const REACT_APP_IDENTITY_SERVICE_ENDPOINT = `http://${host}:7000`
@@ -87,7 +87,7 @@ try {
   REACT_APP_REWARDS_MANAGER_PROGRAM_PDA=${REACT_APP_REWARDS_MANAGER_PROGRAM_PDA}
   REACT_APP_REWARDS_MANAGER_TOKEN_PDA=${REACT_APP_REWARDS_MANAGER_TOKEN_PDA}
 
-  REACT_APP_AUDIUS_URL=${REACT_APP_AUDIUS_URL}
+  REACT_APP_COLIVING_URL=${REACT_APP_COLIVING_URL}
   REACT_APP_GQL_URI=${REACT_APP_GQL_URI}
 
   REACT_APP_IDENTITY_SERVICE_ENDPOINT=${REACT_APP_IDENTITY_SERVICE_ENDPOINT}

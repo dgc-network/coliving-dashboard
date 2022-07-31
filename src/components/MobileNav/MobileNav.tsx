@@ -60,7 +60,7 @@ const MobileNavButton = (props: MobileNavButtonProps) => {
 
 type LaunchTheAppButtonProps = {}
 const LaunchTheAppButton = (props: LaunchTheAppButtonProps) => {
-  const goToApp = useOpenLink(routes.AUDIUS_DAPP_URL)
+  const goToApp = useOpenLink(routes.COLIVING_DAPP_URL)
   return (
     <Button
       text={messages.launchApp}

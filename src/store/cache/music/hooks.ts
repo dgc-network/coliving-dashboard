@@ -14,7 +14,7 @@ import {
 } from './slice'
 import { fetchWithLibs } from '../../../utils/fetch'
 
-const AUDIUS_URL = process.env.REACT_APP_AUDIUS_URL
+const COLIVING_URL = process.env.REACT_APP_COLIVING_URL
 
 // -------------------------------- Selectors  ---------------------------------
 
@@ -42,8 +42,8 @@ export function fetchTopTracks(): ThunkAction<
         title: d.title,
         handle: d.user.handle,
         artwork: d.artwork?.['480x480'] ?? imageBlank,
-        url: `${AUDIUS_URL}/tracks/${d.id}`,
-        userUrl: `${AUDIUS_URL}/users/${d.user.id}`
+        url: `${COLIVING_URL}/tracks/${d.id}`,
+        userUrl: `${COLIVING_URL}/users/${d.user.id}`
       }))
       dispatch(setTopTracks({ tracks }))
     } catch (e) {
@@ -71,7 +71,7 @@ export function fetchTopPlaylists(): ThunkAction<
         handle: d.user.handle,
         artwork: d.artwork?.['480x480'] ?? imageBlank,
         plays: d.total_play_count,
-        url: `${AUDIUS_URL}/playlists/${d.id}`
+        url: `${COLIVING_URL}/playlists/${d.id}`
       }))
       dispatch(setTopPlaylists({ playlists }))
     } catch (e) {
@@ -99,7 +99,7 @@ export function fetchTopAlbums(): ThunkAction<
         handle: d.user.handle,
         artwork: d.artwork?.['480x480'] ?? imageBlank,
         plays: d.total_play_count,
-        url: `${AUDIUS_URL}/playlists/${d.id}`
+        url: `${COLIVING_URL}/playlists/${d.id}`
       }))
       dispatch(setTopAlbums({ albums }))
     } catch (e) {

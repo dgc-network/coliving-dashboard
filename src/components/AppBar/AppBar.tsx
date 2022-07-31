@@ -8,7 +8,7 @@ import { useUser } from 'store/cache/user/hooks'
 import { Address } from 'types'
 import { formatShortWallet } from 'utils/format'
 import { usePushRoute } from 'utils/effects'
-import { accountPage, AUDIUS_DAPP_URL, isCryptoPage } from 'utils/routes'
+import { accountPage, COLIVING_DAPP_URL, isCryptoPage } from 'utils/routes'
 import { useEthBlockNumber } from 'store/cache/protocol/hooks'
 import clsx from 'clsx'
 import { useLocation } from 'react-router-dom'
@@ -25,7 +25,7 @@ import { Utils } from '@/libs'
 const styles = createStyles({ desktopStyles, mobileStyles })
 
 const messages = {
-  title: 'AUDIUS',
+  title: 'COLIVING',
   name: 'PROTOCOL DASHBOARD',
   launchApp: 'LAUNCH THE APP',
   connectMetaMask: 'Connect Metamask',
@@ -123,7 +123,7 @@ const UserAccountSnippet = ({ wallet }: UserAccountSnippetProps) => {
 
 type LaunchTheAppButtonProps = {}
 const LaunchTheAppButton = (props: LaunchTheAppButtonProps) => {
-  const goToApp = useOpenLink(AUDIUS_DAPP_URL)
+  const goToApp = useOpenLink(COLIVING_DAPP_URL)
   return (
     <Button
       text={messages.launchApp}
