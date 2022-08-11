@@ -1,7 +1,7 @@
 # Coliving Service Provider Dashboard
 
 ## Summary
-Coliving Service Provider Dashboard allows users to register content nodes and discovery providers, 
+Coliving Service Provider Dashboard allows users to register content nodes and discovery nodes, 
 view their registered services & which ones are out date, and explore all coliving services.
 
 
