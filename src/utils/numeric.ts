@@ -45,7 +45,7 @@ export const parseWeiNumber = (number: string) => {
 }
 
 /**
- * Divides $AUDIO in Wei into whole $AUDIO and casts to number
+ * Divides $LIVE in Wei into whole $LIVE and casts to number
  * @param num
  */
 export const weiAudToAud = (num: BN) => {

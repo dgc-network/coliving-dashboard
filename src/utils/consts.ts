@@ -1,1 +1,1 @@
-export const TICKER = '$AUDIO'
+export const TICKER = '$LIVE'

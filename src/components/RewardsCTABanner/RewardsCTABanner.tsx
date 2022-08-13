@@ -8,8 +8,8 @@ import AudioRewardsModal from 'components/AudioRewardsModal'
 import { IconArrow, IconCrown } from '@/stems'
 
 const messages = {
-  rewards: '$AUDIO REWARDS',
-  description: 'TOP 10 API APPS EACH MONTH WIN $AUDIO',
+  rewards: '$LIVE REWARDS',
+  description: 'TOP 10 API APPS EACH MONTH WIN $LIVE',
   learnMore: 'LEARN MORE'
 }
 
