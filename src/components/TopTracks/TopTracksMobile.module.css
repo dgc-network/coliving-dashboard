@@ -3,14 +3,14 @@
   user-select: none;
 }
 
-.tracks {
+.agreements {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
 }
 
-.track {
+.agreement {
   width: 150px;
   margin-bottom: 16px;
 }
@@ -37,7 +37,7 @@
   transform: scale3d(0.90, 0.90, 0.90);
 }
 
-.trackTitle {
+.agreementTitle {
   text-align: center;
   font-size: 12px;
   line-height: 20px;

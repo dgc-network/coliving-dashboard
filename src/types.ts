@@ -238,7 +238,7 @@ export type PendingTransaction =
   | PendingClaimTransaction
   | DelayedPendingTransaction
 
-export type Track = {
+export type Agreement = {
   title: string
   handle: string
   artwork: string

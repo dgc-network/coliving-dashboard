@@ -1,14 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { Album, Playlist, Track } from 'types'
+import { Album, Playlist, Agreement } from 'types'
 
 export type State = {
-  topTracks: Track[] | null | MusicError
+  topAgreements: Agreement[] | null | MusicError
   topPlaylists: Playlist[] | null | MusicError
   topAlbums: Album[] | null | MusicError
 }
 
 export const initialState: State = {
-  topTracks: null,
+  topAgreements: null,
   topPlaylists: null,
   topAlbums: null
 }
@@ -17,7 +17,7 @@ export enum MusicError {
   ERROR = 'error'
 }
 
-type SetTopTracks = { tracks: Track[] | MusicError }
+type SetTopAgreements = { agreements: Agreement[] | MusicError }
 type SetTopPlaylists = { playlists: Playlist[] | MusicError }
 type SetTopAlbums = { albums: Album[] | MusicError }
 
@@ -25,9 +25,9 @@ const slice = createSlice({
   name: 'music',
   initialState,
   reducers: {
-    setTopTracks: (state, action: PayloadAction<SetTopTracks>) => {
-      const { tracks } = action.payload
-      state.topTracks = tracks
+    setTopAgreements: (state, action: PayloadAction<SetTopAgreements>) => {
+      const { agreements } = action.payload
+      state.topAgreements = agreements
     },
     setTopPlaylists: (state, action: PayloadAction<SetTopPlaylists>) => {
       const { playlists } = action.payload
@@ -40,6 +40,6 @@ const slice = createSlice({
   }
 })
 
-export const { setTopTracks, setTopPlaylists, setTopAlbums } = slice.actions
+export const { setTopAgreements, setTopPlaylists, setTopAlbums } = slice.actions
 
 export default slice.reducer

@@ -3,14 +3,14 @@ import { useSelector, useDispatch } from 'react-redux'
 import { ThunkAction } from 'redux-thunk'
 import { Action } from 'redux'
 import AppState from 'store/types'
-import { Playlist, Track } from 'types'
+import { Playlist, Agreement } from 'types'
 import { useEffect, useState } from 'react'
 import imageBlank from 'assets/img/imageBlank2x.png'
 import {
   MusicError,
   setTopAlbums,
   setTopPlaylists,
-  setTopTracks
+  setTopAgreements
 } from './slice'
 import { fetchWithLibs } from '../../../utils/fetch'
 
@@ -18,14 +18,14 @@ const COLIVING_URL = process.env.REACT_APP_COLIVING_URL
 
 // -------------------------------- Selectors  ---------------------------------
 
-export const getTopTracks = (state: AppState) => state.cache.music.topTracks
+export const getTopAgreements = (state: AppState) => state.cache.music.topAgreements
 export const getTopPlaylists = (state: AppState) =>
   state.cache.music.topPlaylists
 export const getTopAlbums = (state: AppState) => state.cache.music.topAlbums
 
 // -------------------------------- Thunk Actions  ---------------------------------
 
-export function fetchTopTracks(): ThunkAction<
+export function fetchTopAgreements(): ThunkAction<
   void,
   AppState,
   Coliving,
@@ -35,19 +35,19 @@ export function fetchTopTracks(): ThunkAction<
     try {
       await aud.awaitSetup()
       const data = await fetchWithLibs({
-        endpoint: '/v1/tracks/trending',
+        endpoint: '/v1/agreements/trending',
         queryParams: { limit: 4 }
       })
-      const tracks: Track[] = data.slice(0, 4).map((d: any) => ({
+      const agreements: Agreement[] = data.slice(0, 4).map((d: any) => ({
         title: d.title,
         handle: d.user.handle,
         artwork: d.artwork?.['480x480'] ?? imageBlank,
-        url: `${COLIVING_URL}/tracks/${d.id}`,
+        url: `${COLIVING_URL}/agreements/${d.id}`,
         userUrl: `${COLIVING_URL}/users/${d.user.id}`
       }))
-      dispatch(setTopTracks({ tracks }))
+      dispatch(setTopAgreements({ agreements }))
     } catch (e) {
-      dispatch(setTopTracks({ tracks: MusicError.ERROR }))
+      dispatch(setTopAgreements({ agreements: MusicError.ERROR }))
       console.error(e)
     }
   }
@@ -111,25 +111,25 @@ export function fetchTopAlbums(): ThunkAction<
 
 // -------------------------------- Hooks  --------------------------------
 
-export const useTopTracks = () => {
+export const useTopAgreements = () => {
   const [doOnce, setDoOnce] = useState(false)
-  const topTracks = useSelector(getTopTracks)
+  const topAgreements = useSelector(getTopAgreements)
   const dispatch = useDispatch()
 
   useEffect(() => {
-    if (!doOnce && !topTracks) {
+    if (!doOnce && !topAgreements) {
       setDoOnce(true)
-      dispatch(fetchTopTracks())
+      dispatch(fetchTopAgreements())
     }
-  }, [doOnce, topTracks, dispatch])
+  }, [doOnce, topAgreements, dispatch])
 
   useEffect(() => {
-    if (topTracks) {
+    if (topAgreements) {
       setDoOnce(false)
     }
-  }, [topTracks, setDoOnce])
+  }, [topAgreements, setDoOnce])
 
-  return { topTracks }
+  return { topAgreements }
 }
 
 export const useTopPlaylists = () => {
