@@ -59,7 +59,7 @@ export const formatShortWallet = (wallet: Address) => {
 }
 
 /**
- * Format a BN to the shortened $audio currency
+ * Format a BN to the shortened $live currency
  * @param {BN} num
  */
 export const formatAud = (amount: BigNumber | null) => {

@@ -99,7 +99,7 @@ const MinimumDelegationAmountModal: React.FC<MinimumDelegationAmountModalProps> 
         <div className={styles.currentLabel}>
           {messages.currentLabel}
           <DisplayAudio
-            className={styles.audioLabel}
+            className={styles.liveLabel}
             amount={minimumDelegationAmount}
             label={TICKER}
           />
