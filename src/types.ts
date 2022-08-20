@@ -246,7 +246,7 @@ export type Agreement = {
   userUrl: string
 }
 
-export type Playlist = {
+export type ContentList = {
   title: string
   handle: string
   artwork: string

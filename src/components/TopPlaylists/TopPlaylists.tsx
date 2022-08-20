@@ -2,28 +2,28 @@ import Error from 'components/Error'
 import Loading from 'components/Loading'
 import Paper from 'components/Paper'
 import React, { useCallback } from 'react'
-import { useTopPlaylists } from 'store/cache/music/hooks'
+import { useTopContentLists } from 'store/cache/music/hooks'
 import { MusicError } from 'store/cache/music/slice'
 
-import styles from './TopPlaylists.module.css'
+import styles from './TopContentLists.module.css'
 
 const messages = {
-  title: 'Top Playlists This Week'
+  title: 'Top ContentLists This Week'
 }
 
-type TopPlaylistsProps = {}
+type TopContentListsProps = {}
 
-const TopPlaylists: React.FC<TopPlaylistsProps> = () => {
-  const { topPlaylists } = useTopPlaylists()
+const TopContentLists: React.FC<TopContentListsProps> = () => {
+  const { topContentLists } = useTopContentLists()
   const goToUrl = useCallback((url: string) => {
     window.open(url, '_blank')
   }, [])
 
-  const renderTopPlaylists = () => {
-    if (topPlaylists === MusicError.ERROR) return <Error />
-    return !!topPlaylists ? (
-      topPlaylists!.map((p, i) => (
-        <div key={i} className={styles.playlist} onClick={() => goToUrl(p.url)}>
+  const renderTopContentLists = () => {
+    if (topContentLists === MusicError.ERROR) return <Error />
+    return !!topContentLists ? (
+      topContentLists!.map((p, i) => (
+        <div key={i} className={styles.content list} onClick={() => goToUrl(p.url)}>
           <div
             className={styles.artwork}
             style={{
@@ -31,7 +31,7 @@ const TopPlaylists: React.FC<TopPlaylistsProps> = () => {
             }}
           />
           <div className={styles.text}>
-            <div className={styles.playlistTitle}>{p.title}</div>
+            <div className={styles.content listTitle}>{p.title}</div>
             <div className={styles.handle}>{p.handle}</div>
           </div>
         </div>
@@ -43,9 +43,9 @@ const TopPlaylists: React.FC<TopPlaylistsProps> = () => {
   return (
     <Paper className={styles.container}>
       <div className={styles.title}>{messages.title}</div>
-      <div className={styles.playlists}>{renderTopPlaylists()}</div>
+      <div className={styles.content lists}>{renderTopContentLists()}</div>
     </Paper>
   )
 }
 
-export default TopPlaylists
+export default TopContentLists

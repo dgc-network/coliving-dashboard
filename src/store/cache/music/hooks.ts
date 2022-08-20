@@ -3,13 +3,13 @@ import { useSelector, useDispatch } from 'react-redux'
 import { ThunkAction } from 'redux-thunk'
 import { Action } from 'redux'
 import AppState from 'store/types'
-import { Playlist, Agreement } from 'types'
+import { ContentList, Agreement } from 'types'
 import { useEffect, useState } from 'react'
 import imageBlank from 'assets/img/imageBlank2x.png'
 import {
   MusicError,
   setTopAlbums,
-  setTopPlaylists,
+  setTopContentLists,
   setTopAgreements
 } from './slice'
 import { fetchWithLibs } from '../../../utils/fetch'
@@ -19,8 +19,8 @@ const COLIVING_URL = process.env.REACT_APP_COLIVING_URL
 // -------------------------------- Selectors  ---------------------------------
 
 export const getTopAgreements = (state: AppState) => state.cache.music.topAgreements
-export const getTopPlaylists = (state: AppState) =>
-  state.cache.music.topPlaylists
+export const getTopContentLists = (state: AppState) =>
+  state.cache.music.topContentLists
 export const getTopAlbums = (state: AppState) => state.cache.music.topAlbums
 
 // -------------------------------- Thunk Actions  ---------------------------------
@@ -53,7 +53,7 @@ export function fetchTopAgreements(): ThunkAction<
   }
 }
 
-export function fetchTopPlaylists(): ThunkAction<
+export function fetchTopContentLists(): ThunkAction<
   void,
   AppState,
   Coliving,
@@ -64,19 +64,19 @@ export function fetchTopPlaylists(): ThunkAction<
       await aud.awaitSetup()
       const limit = 5
       const data = await fetchWithLibs({
-        endpoint: '/v1/full/playlists/trending'
+        endpoint: '/v1/full/content lists/trending'
       })
-      const playlists: Playlist[] = data.slice(0, limit).map((d: any) => ({
-        title: d.playlist_name,
+      const content lists: ContentList[] = data.slice(0, limit).map((d: any) => ({
+        title: d.content list_name,
         handle: d.user.handle,
         artwork: d.artwork?.['480x480'] ?? imageBlank,
         plays: d.total_play_count,
-        url: `${COLIVING_URL}/playlists/${d.id}`
+        url: `${COLIVING_URL}/content lists/${d.id}`
       }))
-      dispatch(setTopPlaylists({ playlists }))
+      dispatch(setTopContentLists({ content lists }))
     } catch (e) {
       console.error(e)
-      dispatch(setTopPlaylists({ playlists: MusicError.ERROR }))
+      dispatch(setTopContentLists({ content lists: MusicError.ERROR }))
     }
   }
 }
@@ -91,15 +91,15 @@ export function fetchTopAlbums(): ThunkAction<
     try {
       await aud.awaitSetup()
       const data = await fetchWithLibs({
-        endpoint: '/v1/full/playlists/top',
+        endpoint: '/v1/full/content lists/top',
         queryParams: { type: 'album', limit: 5 }
       })
-      const albums: Playlist[] = data.map((d: any) => ({
-        title: d.playlist_name,
+      const albums: ContentList[] = data.map((d: any) => ({
+        title: d.content list_name,
         handle: d.user.handle,
         artwork: d.artwork?.['480x480'] ?? imageBlank,
         plays: d.total_play_count,
-        url: `${COLIVING_URL}/playlists/${d.id}`
+        url: `${COLIVING_URL}/content lists/${d.id}`
       }))
       dispatch(setTopAlbums({ albums }))
     } catch (e) {
@@ -132,25 +132,25 @@ export const useTopAgreements = () => {
   return { topAgreements }
 }
 
-export const useTopPlaylists = () => {
+export const useTopContentLists = () => {
   const [doOnce, setDoOnce] = useState(false)
-  const topPlaylists = useSelector(getTopPlaylists)
+  const topContentLists = useSelector(getTopContentLists)
   const dispatch = useDispatch()
 
   useEffect(() => {
-    if (!doOnce && !topPlaylists) {
+    if (!doOnce && !topContentLists) {
       setDoOnce(true)
-      dispatch(fetchTopPlaylists())
+      dispatch(fetchTopContentLists())
     }
-  }, [topPlaylists, dispatch, doOnce])
+  }, [topContentLists, dispatch, doOnce])
 
   useEffect(() => {
-    if (topPlaylists) {
+    if (topContentLists) {
       setDoOnce(false)
     }
-  }, [topPlaylists, setDoOnce])
+  }, [topContentLists, setDoOnce])
 
-  return { topPlaylists }
+  return { topContentLists }
 }
 
 export const useTopAlbums = () => {

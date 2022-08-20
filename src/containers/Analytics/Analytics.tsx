@@ -13,7 +13,7 @@ import TotalStakedChart from 'components/TotalStakedChart'
 import TopAppsChart from 'components/TopAppsChart'
 import TopGenresChart from 'components/TopGenresChart'
 import TopAgreements from 'components/TopAgreements'
-import TopPlaylists from 'components/TopPlaylists'
+import TopContentLists from 'components/TopContentLists'
 import TopAlbums from 'components/TopAlbums'
 import { createStyles } from 'utils/mobile'
 
@@ -53,7 +53,7 @@ const Analytics: React.FC<AnalyticsProps> = () => {
       </div>
       <div className={styles.section}>
         <TopAlbums />
-        <TopPlaylists />
+        <TopContentLists />
       </div>
     </Page>
   )

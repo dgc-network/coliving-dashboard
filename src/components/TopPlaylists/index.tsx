@@ -1,1 +1,1 @@
-export { default } from './TopPlaylists'
+export { default } from './TopContentLists'
