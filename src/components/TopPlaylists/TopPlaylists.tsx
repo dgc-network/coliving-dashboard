@@ -23,7 +23,7 @@ const TopContentLists: React.FC<TopContentListsProps> = () => {
     if (topContentLists === MusicError.ERROR) return <Error />
     return !!topContentLists ? (
       topContentLists!.map((p, i) => (
-        <div key={i} className={styles.content list} onClick={() => goToUrl(p.url)}>
+        <div key={i} className={styles.contentList} onClick={() => goToUrl(p.url)}>
           <div
             className={styles.artwork}
             style={{
@@ -31,7 +31,7 @@ const TopContentLists: React.FC<TopContentListsProps> = () => {
             }}
           />
           <div className={styles.text}>
-            <div className={styles.content listTitle}>{p.title}</div>
+            <div className={styles.contentListTitle}>{p.title}</div>
             <div className={styles.handle}>{p.handle}</div>
           </div>
         </div>
@@ -43,7 +43,7 @@ const TopContentLists: React.FC<TopContentListsProps> = () => {
   return (
     <Paper className={styles.container}>
       <div className={styles.title}>{messages.title}</div>
-      <div className={styles.content lists}>{renderTopContentLists()}</div>
+      <div className={styles.contentLists}>{renderTopContentLists()}</div>
     </Paper>
   )
 }

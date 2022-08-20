@@ -64,19 +64,19 @@ export function fetchTopContentLists(): ThunkAction<
       await aud.awaitSetup()
       const limit = 5
       const data = await fetchWithLibs({
-        endpoint: '/v1/full/content lists/trending'
+        endpoint: '/v1/full/contentLists/trending'
       })
-      const content lists: ContentList[] = data.slice(0, limit).map((d: any) => ({
-        title: d.content list_name,
+      const contentLists: ContentList[] = data.slice(0, limit).map((d: any) => ({
+        title: d.contentList_name,
         handle: d.user.handle,
         artwork: d.artwork?.['480x480'] ?? imageBlank,
         plays: d.total_play_count,
-        url: `${COLIVING_URL}/content lists/${d.id}`
+        url: `${COLIVING_URL}/contentLists/${d.id}`
       }))
-      dispatch(setTopContentLists({ content lists }))
+      dispatch(setTopContentLists({ contentLists }))
     } catch (e) {
       console.error(e)
-      dispatch(setTopContentLists({ content lists: MusicError.ERROR }))
+      dispatch(setTopContentLists({ contentLists: MusicError.ERROR }))
     }
   }
 }
@@ -91,15 +91,15 @@ export function fetchTopAlbums(): ThunkAction<
     try {
       await aud.awaitSetup()
       const data = await fetchWithLibs({
-        endpoint: '/v1/full/content lists/top',
+        endpoint: '/v1/full/contentLists/top',
         queryParams: { type: 'album', limit: 5 }
       })
       const albums: ContentList[] = data.map((d: any) => ({
-        title: d.content list_name,
+        title: d.contentList_name,
         handle: d.user.handle,
         artwork: d.artwork?.['480x480'] ?? imageBlank,
         plays: d.total_play_count,
-        url: `${COLIVING_URL}/content lists/${d.id}`
+        url: `${COLIVING_URL}/contentLists/${d.id}`
       }))
       dispatch(setTopAlbums({ albums }))
     } catch (e) {

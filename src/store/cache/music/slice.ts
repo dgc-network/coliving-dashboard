@@ -18,7 +18,7 @@ export enum MusicError {
 }
 
 type SetTopAgreements = { agreements: Agreement[] | MusicError }
-type SetTopContentLists = { content lists: ContentList[] | MusicError }
+type SetTopContentLists = { contentLists: ContentList[] | MusicError }
 type SetTopAlbums = { albums: Album[] | MusicError }
 
 const slice = createSlice({
@@ -30,8 +30,8 @@ const slice = createSlice({
       state.topAgreements = agreements
     },
     setTopContentLists: (state, action: PayloadAction<SetTopContentLists>) => {
-      const { content lists } = action.payload
-      state.topContentLists = content lists
+      const { contentLists } = action.payload
+      state.topContentLists = contentLists
     },
     setTopAlbums: (state, action: PayloadAction<SetTopAlbums>) => {
       const { albums } = action.payload
