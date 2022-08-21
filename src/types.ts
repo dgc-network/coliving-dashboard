@@ -13,7 +13,7 @@ export type Amount = BN
 export type BigNumber = BN
 
 export enum ServiceType {
-  DiscoveryProvider = 'discovery-node',
+  DiscoveryNode = 'discovery-node',
   ContentNode = 'content-node'
 }
 
@@ -32,8 +32,8 @@ export type Node = {
   country: string
 }
 
-export type DiscoveryProvider = {
-  type: ServiceType.DiscoveryProvider
+export type DiscoveryNode = {
+  type: ServiceType.DiscoveryNode
   version: Version
   isDeregistered: boolean
 } & Node
@@ -44,7 +44,7 @@ export type ContentNode = {
   isDeregistered: boolean
 } & Node
 
-export type NodeService = DiscoveryProvider | ContentNode
+export type NodeService = DiscoveryNode | ContentNode
 
 export type ServiceProvider = {
   deployerCut: number
@@ -79,7 +79,7 @@ export type User = {
 
 export type Operator = {
   serviceProvider: ServiceProvider
-  discoveryProviders: Array<number>
+  discoveryNodes: Array<number>
   pendingDecreaseStakeRequest: GetPendingDecreaseStakeRequestResponse
   contentNodes: Array<number>
   delegators: Array<Delegate>

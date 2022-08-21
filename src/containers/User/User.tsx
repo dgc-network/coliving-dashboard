@@ -83,8 +83,8 @@ const UserPage: React.FC<UserPageProps> = (props: UserPageProps) => {
     return !matchPath(pathname, { path: SERVICES_ACCOUNT_USER })
   }, [isServiceProvider, pathname])
 
-  const hasDiscoveryProviders =
-    isServiceProvider && (user as Operator).discoveryProviders.length > 0
+  const hasDiscoveryNodes =
+    isServiceProvider && (user as Operator).discoveryNodes.length > 0
   const hasContentNodes =
     isServiceProvider && (user as Operator).contentNodes.length > 0
 
@@ -99,7 +99,7 @@ const UserPage: React.FC<UserPageProps> = (props: UserPageProps) => {
       replaceRoute(accountPage(wallet))
   }, [status, wallet, pathname, isServiceProvider, replaceRoute])
 
-  const numDiscoveryNodes = (user as Operator)?.discoveryProviders?.length ?? 0
+  const numDiscoveryNodes = (user as Operator)?.discoveryNodes?.length ?? 0
   const numContentNodes = (user as Operator)?.contentNodes?.length ?? 0
   const activeStake = user ? getActiveStake(user) : Utils.toBN('0')
   const inboundDelegation = useActiveInboundDelegation({ wallet })
@@ -191,7 +191,7 @@ const UserPage: React.FC<UserPageProps> = (props: UserPageProps) => {
         />
       )}
       <div className={styles.serviceContainer}>
-        {hasDiscoveryProviders && (
+        {hasDiscoveryNodes && (
           <DiscoveryTable
             owner={user?.wallet}
             className={clsx(styles.serviceTable, {
@@ -203,7 +203,7 @@ const UserPage: React.FC<UserPageProps> = (props: UserPageProps) => {
           <ContentTable
             owner={user?.wallet}
             className={clsx(styles.serviceTable, {
-              [styles.leftSpacing]: hasDiscoveryProviders
+              [styles.leftSpacing]: hasDiscoveryNodes
             })}
           />
         )}

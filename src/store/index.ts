@@ -14,7 +14,7 @@ import { routerMiddleware } from 'connected-react-router'
 import { History } from 'history'
 import Coliving from 'services/Coliving'
 import thunk from 'redux-thunk'
-import discoveryProvider from 'store/cache/discoveryProvider/slice'
+import discoveryNode from 'store/cache/discoveryNode/slice'
 import contentNode from 'store/cache/contentNode/slice'
 import protocol from 'store/cache/protocol/slice'
 import user from 'store/cache/user/slice'
@@ -77,7 +77,7 @@ const getReducer = (history: History) => {
     account,
     api,
     cache: combineReducers({
-      discoveryProvider,
+      discoveryNode,
       contentNode,
       protocol,
       user,

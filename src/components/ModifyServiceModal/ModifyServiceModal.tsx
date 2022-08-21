@@ -161,7 +161,7 @@ const ModifyServiceModal: React.FC<ModifyServiceModalProps> = ({
           value={endpoint}
           onChange={setEndpoint}
           label={
-            serviceType === ServiceType.DiscoveryProvider
+            serviceType === ServiceType.DiscoveryNode
               ? messages.dpEndpoint
               : messages.cnEndpoint
           }

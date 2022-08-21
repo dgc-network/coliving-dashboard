@@ -6,7 +6,7 @@ import { Action } from 'redux'
 import { Status, ServiceType } from 'types'
 import Coliving from 'services/Coliving'
 import { AppState } from 'store/types'
-import { getDiscoveryProvider } from 'store/cache/discoveryProvider/hooks'
+import { getDiscoveryNode } from 'store/cache/discoveryNode/hooks'
 import { getContentNode } from 'store/cache/contentNode/hooks'
 
 function deregisterColivingService(
@@ -21,8 +21,8 @@ function deregisterColivingService(
     try {
       await aud.ServiceProviderClient.deregister(serviceType, endpoint)
 
-      if (serviceType === ServiceType.DiscoveryProvider) {
-        dispatch(getDiscoveryProvider(spID))
+      if (serviceType === ServiceType.DiscoveryNode) {
+        dispatch(getDiscoveryNode(spID))
       } else {
         dispatch(getContentNode(spID))
       }

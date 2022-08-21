@@ -187,7 +187,7 @@ const configureReadOnlyLibs = async () => {
     rewardsManagerTokenPDA: REWARDS_MANAGER_TOKEN_PDA,
     useRelay: true
   })
-  const discoveryProviderConfig = .configDiscoveryProvider(
+  const discoveryNodeConfig = .configDiscoveryNode(
     DISCOVERY_NODE_ALLOW_LIST
   )
 
@@ -198,7 +198,7 @@ const configureReadOnlyLibs = async () => {
   let colivingLibsConfig = {
     ethWeb3Config,
     solanaWeb3Config,
-    discoveryProviderConfig,
+    discoveryNodeConfig,
     identityServiceConfig,
     isServer: false,
     isDebug: !IS_PRODUCTION && !IS_STAGING
@@ -247,7 +247,7 @@ const configureLibsWithAccount = async () => {
       rewardsManagerTokenPDA: REWARDS_MANAGER_TOKEN_PDA,
       useRelay: true
     }),
-    discoveryProviderConfig: .configDiscoveryProvider(
+    discoveryNodeConfig: .configDiscoveryNode(
       DISCOVERY_NODE_ALLOW_LIST
     ),
     identityServiceConfig: .configIdentityService(

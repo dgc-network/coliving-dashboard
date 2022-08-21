@@ -2,7 +2,7 @@ import React from 'react'
 import { RouteComponentProps } from 'react-router'
 import { matchPath } from 'react-router-dom'
 import NodeOverview from 'components/NodeOverview'
-import { useDiscoveryProvider } from 'store/cache/discoveryProvider/hooks'
+import { useDiscoveryNode } from 'store/cache/discoveryNode/hooks'
 import { useContentNode } from 'store/cache/contentNode/hooks'
 import { useAccount } from 'store/account/hooks'
 
@@ -53,15 +53,15 @@ const ContentNode: React.FC<ContentNodeProps> = ({
   )
 }
 
-type DiscoveryProviderProps = {
+type DiscoveryNodeProps = {
   spID: number
   accountWallet: Address | undefined
 }
-const DiscoveryProvider: React.FC<DiscoveryProviderProps> = ({
+const DiscoveryNode: React.FC<DiscoveryNodeProps> = ({
   spID,
   accountWallet
-}: DiscoveryProviderProps) => {
-  const { node: discoveryProvider, status } = useDiscoveryProvider({ spID })
+}: DiscoveryNodeProps) => {
+  const { node: discoveryNode, status } = useDiscoveryNode({ spID })
   const pushRoute = usePushRoute()
   if (status === Status.Failure) {
     pushRoute(NOT_FOUND)
@@ -70,18 +70,18 @@ const DiscoveryProvider: React.FC<DiscoveryProviderProps> = ({
     return null
   }
 
-  const isOwner = accountWallet === discoveryProvider!.owner
+  const isOwner = accountWallet === discoveryNode!.owner
 
   return (
     <NodeOverview
       spID={spID}
-      serviceType={ServiceType.DiscoveryProvider}
-      version={discoveryProvider!.version}
-      endpoint={discoveryProvider!.endpoint}
-      operatorWallet={discoveryProvider!.owner}
-      delegateOwnerWallet={discoveryProvider!.delegateOwnerWallet}
+      serviceType={ServiceType.DiscoveryNode}
+      version={discoveryNode!.version}
+      endpoint={discoveryNode!.endpoint}
+      operatorWallet={discoveryNode!.owner}
+      delegateOwnerWallet={discoveryNode!.delegateOwnerWallet}
       isOwner={isOwner}
-      isDeregistered={discoveryProvider!.isDeregistered}
+      isDeregistered={discoveryNode!.isDeregistered}
     />
   )
 }
@@ -107,7 +107,7 @@ const Node: React.FC<NodeProps> = (props: NodeProps) => {
       defaultPreviousPageRoute={SERVICES}
     >
       {isDiscovery ? (
-        <DiscoveryProvider spID={spID} accountWallet={accountWallet} />
+        <DiscoveryNode spID={spID} accountWallet={accountWallet} />
       ) : (
         <ContentNode spID={spID} accountWallet={accountWallet} />
       )}

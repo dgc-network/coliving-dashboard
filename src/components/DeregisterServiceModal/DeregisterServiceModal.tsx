@@ -20,7 +20,7 @@ const messages = {
   placeholder: 'DEREGISTER',
   confirmDeregister: 'Deregister',
   contentNode: 'Content Node',
-  discoveryProvider: 'Discovery Node'
+  discoveryNode: 'Discovery Node'
 }
 
 const DEREGISTER = 'DEREGISTER'
@@ -88,8 +88,8 @@ const DeregisterServiceModal: React.FC<DeregisterServiceModalProps> = ({
     <Box className={styles.deregisterConfirm}>
       <div className={styles.confirmTitle}>
         {`${messages.confirmDeregister} ${
-          serviceType === ServiceType.DiscoveryProvider
-            ? messages.discoveryProvider
+          serviceType === ServiceType.DiscoveryNode
+            ? messages.discoveryNode
             : messages.contentNode
         }`}
       </div>

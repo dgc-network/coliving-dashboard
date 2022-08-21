@@ -11,7 +11,7 @@ import Governance from 'containers/Governance'
 import Services from 'containers/Services'
 import Node from 'containers/Node'
 import User from 'containers/User'
-import DiscoveryProviders from 'containers/DiscoveryProviders'
+import DiscoveryNodes from 'containers/DiscoveryNodes'
 import ContentNodes from 'containers/ContentNodes'
 import ServiceOperators from 'containers/ServiceOperators'
 import ServiceUsers from 'containers/ServiceUsers'
@@ -62,7 +62,7 @@ const App = () => {
                 <Route
                   path={routes.SERVICES_DISCOVERY_PROVIDER}
                   exact
-                  component={DiscoveryProviders}
+                  component={DiscoveryNodes}
                 />
                 <Route
                   path={routes.SERVICES_DISCOVERY_PROVIDER_NODE}

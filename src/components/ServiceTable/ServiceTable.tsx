@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import ReactCountryFlag from 'react-country-flag'
-import { NodeService, ContentNode, DiscoveryProvider } from 'types'
+import { NodeService, ContentNode, DiscoveryNode } from 'types'
 import styles from './ServiceTable.module.css'
 import Table from 'components/Table'
 import Error from 'components/Error'
@@ -20,7 +20,7 @@ type OwnProps = {
   moreText?: string
   onRowClick:
     | ((props: ContentNode) => void)
-    | ((props: DiscoveryProvider) => void)
+    | ((props: DiscoveryNode) => void)
   onClickMore?: () => void
   alwaysShowMore?: boolean
 }

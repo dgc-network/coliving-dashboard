@@ -62,7 +62,7 @@ const NodeOverview = ({
     <Paper className={styles.container}>
       <div className={styles.header}>
         <div className={styles.serviceType}>
-          {serviceType === ServiceType.DiscoveryProvider
+          {serviceType === ServiceType.DiscoveryNode
             ? messages.dp
             : messages.cn}
         </div>

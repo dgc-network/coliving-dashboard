@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './DiscoveryProviders.module.css'
+import styles from './DiscoveryNodes.module.css'
 import Page from 'components/Page'
 import DiscoveryTable from 'components/DiscoveryTable'
 import { SERVICES, SERVICES_TITLE } from 'utils/routes'
@@ -10,9 +10,9 @@ const messages = {
 }
 
 type OwnProps = {}
-type DiscoveryProvidersProps = OwnProps
+type DiscoveryNodesProps = OwnProps
 
-const DiscoveryProviders: React.FC<DiscoveryProvidersProps> = () => {
+const DiscoveryNodes: React.FC<DiscoveryNodesProps> = () => {
   return (
     <Page
       title={messages.title}
@@ -25,4 +25,4 @@ const DiscoveryProviders: React.FC<DiscoveryProvidersProps> = () => {
   )
 }
 
-export default DiscoveryProviders
+export default DiscoveryNodes

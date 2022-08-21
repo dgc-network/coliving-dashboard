@@ -50,14 +50,14 @@ export function fetchServiceStakeValues(): ThunkAction<
   Action<string>
 > {
   return async (dispatch, getState, aud) => {
-    const discoveryProvider = await aud.NodeType.getServiceTypeInfo(
-      ServiceType.DiscoveryProvider
+    const discoveryNode = await aud.NodeType.getServiceTypeInfo(
+      ServiceType.DiscoveryNode
     )
     const contentNode = await aud.NodeType.getServiceTypeInfo(
       ServiceType.ContentNode
     )
 
-    dispatch(setServiceTypeInfo({ discoveryProvider, contentNode }))
+    dispatch(setServiceTypeInfo({ discoveryNode, contentNode }))
   }
 }
 
@@ -128,7 +128,7 @@ export const useServiceInfo = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     if (
-      services.discoveryProvider === undefined ||
+      services.discoveryNode === undefined ||
       services.contentNode === undefined
     ) {
       dispatch(fetchServiceStakeValues())

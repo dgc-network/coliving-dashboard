@@ -20,8 +20,8 @@ import { setLoading, setUsers, setUserProfile } from './slice'
 import { useEffect } from 'react'
 import {
   getFilteredNodes as getDPNodes,
-  fetchDiscoveryProviders
-} from '../discoveryProvider/hooks'
+  fetchDiscoveryNodes
+} from '../discoveryNode/hooks'
 import {
   getFilteredNodes as getCNNodes,
   fetchContentNodes
@@ -112,7 +112,7 @@ const getServiceProviderMetadata = async (
   aud: Coliving
 ): Promise<{
   serviceProvider: ServiceProvider
-  discoveryProviders: Array<number>
+  discoveryNodes: Array<number>
   pendingDecreaseStakeRequest: GetPendingDecreaseStakeRequestResponse
   contentNodes: Array<number>
   delegators: Array<Delegate>
@@ -129,9 +129,9 @@ const getServiceProviderMetadata = async (
   const serviceProvider: ServiceProvider = await aud.ServiceProviderClient.getServiceProviderDetails(
     wallet
   )
-  const discoveryProviders = await aud.ServiceProviderClient.getServiceProviderIdsFromAddress(
+  const discoveryNodes = await aud.ServiceProviderClient.getServiceProviderIdsFromAddress(
     wallet,
-    ServiceType.DiscoveryProvider
+    ServiceType.DiscoveryNode
   )
   const contentNodes = await aud.ServiceProviderClient.getServiceProviderIdsFromAddress(
     wallet,
@@ -167,7 +167,7 @@ const getServiceProviderMetadata = async (
 
   return {
     serviceProvider,
-    discoveryProviders,
+    discoveryNodes,
     pendingDecreaseStakeRequest,
     contentNodes,
     totalStakedFor,
@@ -222,7 +222,7 @@ function fetchUsers(): ThunkAction<void, AppState, Coliving, Action<string>> {
   return async (dispatch, getState, aud) => {
     dispatch(setLoading())
     await Promise.all([
-      dispatch(fetchDiscoveryProviders()),
+      dispatch(fetchDiscoveryNodes()),
       dispatch(fetchContentNodes())
     ])
     const state = getState()

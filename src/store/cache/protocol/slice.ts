@@ -17,7 +17,7 @@ export type State = {
     maxDelegators?: number
   }
   services: {
-    discoveryProvider?: ServiceInfo
+    discoveryNode?: ServiceInfo
     contentNode?: ServiceInfo
   }
 }
@@ -35,7 +35,7 @@ type SetDelegator = {
 
 type SetServiceTypeInfo = {
   contentNode: ServiceInfo
-  discoveryProvider: ServiceInfo
+  discoveryNode: ServiceInfo
 }
 
 const slice = createSlice({
@@ -50,7 +50,7 @@ const slice = createSlice({
       state.delegator.maxDelegators = action.payload.maxDelegators
     },
     setServiceTypeInfo: (state, action: PayloadAction<SetServiceTypeInfo>) => {
-      state.services.discoveryProvider = action.payload.discoveryProvider
+      state.services.discoveryNode = action.payload.discoveryNode
       state.services.contentNode = action.payload.contentNode
     },
     setEthBlockNumber: (state, action: PayloadAction<number>) => {

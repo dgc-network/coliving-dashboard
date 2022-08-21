@@ -10,14 +10,14 @@ import {
   Status,
   SortNode,
   ServiceType,
-  DiscoveryProvider
+  DiscoveryNode
 } from 'types'
 import Coliving from 'services/Coliving'
 import { AppState } from 'store/types'
 import { setLoading, setNodes, setTotal } from './slice'
 import { useEffect } from 'react'
 
-type UseDiscoveryProvidersProps = {
+type UseDiscoveryNodesProps = {
   owner?: Address
   sortBy?: SortNode
   limit?: number
@@ -25,17 +25,17 @@ type UseDiscoveryProvidersProps = {
 
 const filterNodes = (
   nodes: {
-    [spId: number]: DiscoveryProvider
+    [spId: number]: DiscoveryNode
   },
-  { owner, sortBy, limit }: UseDiscoveryProvidersProps = {}
+  { owner, sortBy, limit }: UseDiscoveryNodesProps = {}
 ) => {
   let dpNodes = Object.values(nodes)
 
-  const filterFunc = (node: DiscoveryProvider) => {
+  const filterFunc = (node: DiscoveryNode) => {
     return (!owner || node.owner === owner) && !node.isDeregistered
   }
 
-  const sortFunc = (n1: DiscoveryProvider, n2: DiscoveryProvider) => {
+  const sortFunc = (n1: DiscoveryNode, n2: DiscoveryNode) => {
     if (semver.gt(n1.endpoint, n2.endpoint)) return 1
     else if (semver.lt(n1.endpoint, n2.endpoint)) return -1
     return 0
@@ -50,17 +50,17 @@ const filterNodes = (
 
 // -------------------------------- Selectors  --------------------------------
 export const getStatus = (state: AppState) =>
-  state.cache.discoveryProvider.status
-export const getTotal = (state: AppState) => state.cache.discoveryProvider.total
+  state.cache.discoveryNode.status
+export const getTotal = (state: AppState) => state.cache.discoveryNode.total
 export const getNode = (spID: number) => (state: AppState) =>
-  state.cache.discoveryProvider.nodes[spID]
+  state.cache.discoveryNode.nodes[spID]
 
-export const getNodes = (state: AppState) => state.cache.discoveryProvider.nodes
+export const getNodes = (state: AppState) => state.cache.discoveryNode.nodes
 export const getFilteredNodes = ({
   owner,
   sortBy,
   limit
-}: UseDiscoveryProvidersProps = {}) => (state: AppState) => {
+}: UseDiscoveryNodesProps = {}) => (state: AppState) => {
   const nodes = getNodes(state)
   return filterNodes(nodes, { owner, sortBy, limit })
 }
@@ -70,7 +70,7 @@ export const getFilteredNodes = ({
 const processDP = async (
   node: Node,
   aud: Coliving
-): Promise<DiscoveryProvider> => {
+): Promise<DiscoveryNode> => {
   const { version, country } = await Coliving.getDiscoveryNodeMetadata(
     node.endpoint
   )
@@ -78,14 +78,14 @@ const processDP = async (
   let previousInfo = {}
   if (isDeregistered) {
     previousInfo = await aud.ServiceProviderClient.getDeregisteredService(
-      ServiceType.DiscoveryProvider,
+      ServiceType.DiscoveryNode,
       node.spID
     )
   }
   return {
     ...node,
     ...previousInfo,
-    type: ServiceType.DiscoveryProvider,
+    type: ServiceType.DiscoveryNode,
     version,
     country,
     isDeregistered
@@ -95,7 +95,7 @@ const processDP = async (
 // -------------------------------- Thunk Actions  --------------------------------
 
 // Async function to get
-export function fetchDiscoveryProviders(): ThunkAction<
+export function fetchDiscoveryNodes(): ThunkAction<
   void,
   AppState,
   Coliving,
@@ -106,8 +106,8 @@ export function fetchDiscoveryProviders(): ThunkAction<
     if (status) return
 
     dispatch(setLoading())
-    const discoveryProviders = await aud.ServiceProviderClient.getServiceProviderList(
-      ServiceType.DiscoveryProvider
+    const discoveryNodes = await aud.ServiceProviderClient.getServiceProviderList(
+      ServiceType.DiscoveryNode
     )
     const legacy = (
       await aud.ServiceProviderClient.getServiceProviderList(
@@ -116,11 +116,11 @@ export function fetchDiscoveryProviders(): ThunkAction<
       )
     ).map((d, i) => ({ ...d, spID: 100 + i }))
 
-    const discoveryProviderVersions = await Promise.all(
-      discoveryProviders.concat(legacy).map(node => processDP(node, aud))
+    const discoveryNodeVersions = await Promise.all(
+      discoveryNodes.concat(legacy).map(node => processDP(node, aud))
     )
-    const nodes = discoveryProviderVersions.reduce(
-      (acc: { [spId: number]: DiscoveryProvider }, dp) => {
+    const nodes = discoveryNodeVersions.reduce(
+      (acc: { [spId: number]: DiscoveryNode }, dp) => {
         acc[dp.spID] = dp
         return acc
       },
@@ -137,22 +137,22 @@ export function fetchDiscoveryProviders(): ThunkAction<
 }
 
 // Async function to get
-export function getDiscoveryProvider(
+export function getDiscoveryNode(
   spID: number,
   setStatus?: (status: Status) => void
 ): ThunkAction<void, AppState, Coliving, Action<string>> {
   return async (dispatch, getState, aud) => {
-    const numDiscoveryProviders = await aud.ServiceProviderClient.getTotalServiceTypeProviders(
-      ServiceType.DiscoveryProvider
+    const numDiscoveryNodes = await aud.ServiceProviderClient.getTotalServiceTypeProviders(
+      ServiceType.DiscoveryNode
     )
-    dispatch(setTotal({ total: numDiscoveryProviders }))
-    if (spID > numDiscoveryProviders) {
+    dispatch(setTotal({ total: numDiscoveryNodes }))
+    if (spID > numDiscoveryNodes) {
       if (setStatus) setStatus(Status.Failure)
       return null
     }
 
     const dpNode = await aud.ServiceProviderClient.getServiceEndpointInfo(
-      ServiceType.DiscoveryProvider,
+      ServiceType.DiscoveryNode,
       spID
     )
     const node = await processDP(dpNode, aud)
@@ -164,11 +164,11 @@ export function getDiscoveryProvider(
 
 // -------------------------------- Hooks  --------------------------------
 
-export const useDiscoveryProviders = ({
+export const useDiscoveryNodes = ({
   owner,
   sortBy,
   limit
-}: UseDiscoveryProvidersProps) => {
+}: UseDiscoveryNodesProps) => {
   const status = useSelector(getStatus)
   const allNodes = useSelector(getNodes)
   const nodes = useMemo(() => filterNodes(allNodes, { owner, sortBy, limit }), [
@@ -181,15 +181,15 @@ export const useDiscoveryProviders = ({
   const dispatch = useDispatch()
   useEffect(() => {
     if (!status) {
-      dispatch(fetchDiscoveryProviders())
+      dispatch(fetchDiscoveryNodes())
     }
   }, [dispatch, status])
 
   return { status, nodes }
 }
 
-type UseDiscoveryProviderProps = { spID: number }
-export const useDiscoveryProvider = ({ spID }: UseDiscoveryProviderProps) => {
+type UseDiscoveryNodeProps = { spID: number }
+export const useDiscoveryNode = ({ spID }: UseDiscoveryNodeProps) => {
   const [status, setStatus] = useState(Status.Loading)
   const totalDpNodes = useSelector(getTotal)
   const dp = useSelector(getNode(spID))
@@ -197,7 +197,7 @@ export const useDiscoveryProvider = ({ spID }: UseDiscoveryProviderProps) => {
 
   useEffect(() => {
     if (!dp && typeof totalDpNodes !== 'number') {
-      dispatch(getDiscoveryProvider(spID, setStatus))
+      dispatch(getDiscoveryNode(spID, setStatus))
     }
   }, [dispatch, dp, totalDpNodes, spID])
   if (dp && status !== Status.Success) setStatus(Status.Success)

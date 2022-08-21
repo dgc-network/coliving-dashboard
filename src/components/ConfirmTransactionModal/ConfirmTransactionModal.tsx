@@ -18,7 +18,7 @@ const messages = {
   metamask: 'Confirm With MetaMask',
   error: 'An Error Has Occured',
   okay: 'OKAY',
-  discoveryProvider: 'Discovery Node',
+  discoveryNode: 'Discovery Node',
   contentNode: 'Content Node',
   stakingAmount: `Staking Amount ${TICKER}`,
   newService: 'NEW SERVICES',
@@ -74,8 +74,8 @@ export const NewService: React.FC<NewServiceProps> = props => {
     >
       <div className={styles.newServiceTitle}>{messages.newService}</div>
       <div className={styles.newServiceType}>
-        {props.serviceType === ServiceType.DiscoveryProvider
-          ? messages.discoveryProvider
+        {props.serviceType === ServiceType.DiscoveryNode
+          ? messages.discoveryNode
           : messages.contentNode}
       </div>
       <div className={styles.newServiceDelegateWallet}>

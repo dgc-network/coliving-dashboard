@@ -1,1 +1,1 @@
-export { default } from './DiscoveryProviders'
+export { default } from './DiscoveryNodes'

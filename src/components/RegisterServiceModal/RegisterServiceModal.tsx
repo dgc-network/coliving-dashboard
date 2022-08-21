@@ -43,7 +43,7 @@ type OwnProps = {
 type RegisterServiceModalProps = OwnProps
 
 const tabOptions = [
-  { key: ServiceType.DiscoveryProvider, text: 'Discovery Node' },
+  { key: ServiceType.DiscoveryNode, text: 'Discovery Node' },
   { key: ServiceType.ContentNode, text: 'Content Node' }
 ]
 
@@ -51,7 +51,7 @@ const RegisterServiceModal: React.FC<RegisterServiceModalProps> = ({
   isOpen,
   onClose
 }: RegisterServiceModalProps) => {
-  const [selectedTab, setSelectedTab] = useState(ServiceType.DiscoveryProvider)
+  const [selectedTab, setSelectedTab] = useState(ServiceType.DiscoveryNode)
   const { wallet } = useAccount()
   const serviceInfo = useServiceInfo()
   const { user } = useAccountUser()
@@ -69,7 +69,7 @@ const RegisterServiceModal: React.FC<RegisterServiceModalProps> = ({
     user &&
     'serviceProvider' in user &&
     serviceInfo.contentNode &&
-    serviceInfo.discoveryProvider
+    serviceInfo.discoveryNode
   ) {
     let usedStake = new BN('0')
 
@@ -79,10 +79,10 @@ const RegisterServiceModal: React.FC<RegisterServiceModalProps> = ({
         numContentNodes.mul(serviceInfo.contentNode.minStake)
       )
     }
-    if ('discoveryProviders' in user) {
-      const numDiscoveryNodes = new BN(user.discoveryProviders.length)
+    if ('discoveryNodes' in user) {
+      const numDiscoveryNodes = new BN(user.discoveryNodes.length)
       usedStake = usedStake.add(
-        numDiscoveryNodes.mul(serviceInfo.discoveryProvider.minStake)
+        numDiscoveryNodes.mul(serviceInfo.discoveryNode.minStake)
       )
     }
 
@@ -91,8 +91,8 @@ const RegisterServiceModal: React.FC<RegisterServiceModalProps> = ({
   }
 
   const selectedServiceInfo =
-    selectedTab === ServiceType.DiscoveryProvider
-      ? serviceInfo.discoveryProvider
+    selectedTab === ServiceType.DiscoveryNode
+      ? serviceInfo.discoveryNode
       : serviceInfo.contentNode
 
   // Our calculated min stake is the service type min stake MINUS
@@ -243,12 +243,12 @@ const RegisterServiceModal: React.FC<RegisterServiceModalProps> = ({
         value={endpoint}
         onChange={setEndpoint}
         label={
-          selectedTab === ServiceType.DiscoveryProvider
+          selectedTab === ServiceType.DiscoveryNode
             ? messages.dpEndpoint
             : messages.cnEndpoint
         }
         placeholder={
-          selectedTab === ServiceType.DiscoveryProvider
+          selectedTab === ServiceType.DiscoveryNode
             ? messages.dpEndpointPlaceholder
             : messages.cnEndpointPlaceholder
         }

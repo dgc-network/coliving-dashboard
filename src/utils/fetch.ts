@@ -34,7 +34,7 @@ export const fetchWithLibs = async (req: {
   queryParams?: object
 }) => {
   // TODO use  client instead of window.colivingLibs
-  const data = await window.colivingLibs.discoveryProvider._makeRequest(req)
+  const data = await window.colivingLibs.discoveryNode._makeRequest(req)
 
   // if all nodes are unhealthy and unavailable
   if (!data) return Promise.reject()

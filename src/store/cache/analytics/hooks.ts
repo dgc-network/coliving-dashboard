@@ -19,8 +19,8 @@ import {
   MetricError
 } from './slice'
 import { useEffect, useState } from 'react'
-import { DiscoveryProvider } from 'types'
-import { useDiscoveryProviders } from '../discoveryProvider/hooks'
+import { DiscoveryNode } from 'types'
+import { useDiscoveryNodes } from '../discoveryNode/hooks'
 import { useAverageBlockTime, useEthBlockNumber } from '../protocol/hooks'
 import { weiAudToAud } from 'utils/numeric'
 import { ELECTRONIC_SUB_GENRES } from './genres'

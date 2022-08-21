@@ -8,7 +8,7 @@ import Coliving from 'services/Coliving'
 import { AppState } from 'store/types'
 import { getAccountWallet } from 'store/account/hooks'
 import { fetchUser } from 'store/cache/user/hooks'
-import { getDiscoveryProvider } from 'store/cache/discoveryProvider/hooks'
+import { getDiscoveryNode } from 'store/cache/discoveryNode/hooks'
 import { getContentNode } from 'store/cache/contentNode/hooks'
 
 function registerColivingService(
@@ -73,8 +73,8 @@ function registerColivingService(
 
       // Repull pending transactions
       if (wallet) await dispatch(fetchUser(wallet))
-      if (serviceType === ServiceType.DiscoveryProvider) {
-        await dispatch(getDiscoveryProvider(spID))
+      if (serviceType === ServiceType.DiscoveryNode) {
+        await dispatch(getDiscoveryNode(spID))
       } else {
         await dispatch(getContentNode(spID))
       }

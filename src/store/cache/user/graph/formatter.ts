@@ -82,9 +82,9 @@ export const formatUser = async (
       new BN(user.delegationReceivedAmount)
     ),
     delegatedTotal: new BN(user.delegationReceivedAmount),
-    discoveryProviders:
+    discoveryNodes:
       user.services
-        ?.filter(({ type: { id } }) => id === ServiceType.DiscoveryProvider)
+        ?.filter(({ type: { id } }) => id === ServiceType.DiscoveryNode)
         .map(service => parseInt(service.spId)) ?? [],
     contentNodes:
       user.services

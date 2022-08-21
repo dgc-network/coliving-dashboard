@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
-import { useDiscoveryProviders } from 'store/cache/discoveryProvider/hooks'
+import { useDiscoveryNodes } from 'store/cache/discoveryNode/hooks'
 
-import { DiscoveryProvider, Address, Status } from 'types'
+import { DiscoveryNode, Address, Status } from 'types'
 import { SERVICES_DISCOVERY_PROVIDER, discoveryNodePage } from 'utils/routes'
 import { usePushRoute } from 'utils/effects'
 
@@ -26,7 +26,7 @@ const DiscoveryTable: React.FC<DiscoveryTableProps> = ({
   owner,
   alwaysShowMore
 }: DiscoveryTableProps) => {
-  const { nodes, status } = useDiscoveryProviders({ owner })
+  const { nodes, status } = useDiscoveryNodes({ owner })
   const pushRoute = usePushRoute()
 
   const onClickMore = useCallback(() => {
@@ -34,7 +34,7 @@ const DiscoveryTable: React.FC<DiscoveryTableProps> = ({
   }, [pushRoute])
 
   const onRowClick = useCallback(
-    (row: DiscoveryProvider) => {
+    (row: DiscoveryNode) => {
       pushRoute(discoveryNodePage(row.spID))
     },
     [pushRoute]
