@@ -54,24 +54,24 @@ const IS_STAGING =
 
 const DISCOVERY_NODE_ALLOW_LIST = IS_PRODUCTION
   ? new Set([
-      'https://discoveryprovider.coliving7.prod-us-west-2.staked.cloud',
-      'https://discoveryprovider.coliving1.prod-us-west-2.staked.cloud',
-      'https://discoveryprovider.coliving4.prod-us-west-2.staked.cloud',
-      'https://discoveryprovider.coliving2.prod-us-west-2.staked.cloud',
+      'https://discoverynode.coliving7.prod-us-west-2.staked.cloud',
+      'https://discoverynode.coliving1.prod-us-west-2.staked.cloud',
+      'https://discoverynode.coliving4.prod-us-west-2.staked.cloud',
+      'https://discoverynode.coliving2.prod-us-west-2.staked.cloud',
       'https://discovery-au-01..openplayer.org',
       'https://dn-usa..metadata.fyi',
-      'https://discoveryprovider.coliving6.prod-us-west-2.staked.cloud',
+      'https://discoverynode.coliving6.prod-us-west-2.staked.cloud',
       'https://dn-jpn..metadata.fyi',
       'https://dn1.monophonic.digital',
-      'https://discoveryprovider.coliving3.prod-us-west-2.staked.cloud',
+      'https://discoverynode.coliving3.prod-us-west-2.staked.cloud',
       'https://-discovery-1.altego.net',
-      'https://discoveryprovider..prod-us-west-2.staked.cloud',
-      'https://discoveryprovider..co',
-      'https://discoveryprovider.coliving5.prod-us-west-2.staked.cloud',
+      'https://discoverynode..prod-us-west-2.staked.cloud',
+      'https://discoverynode..co',
+      'https://discoverynode.coliving5.prod-us-west-2.staked.cloud',
       'https://-discovery-2.altego.net',
-      'https://discoveryprovider2..co',
+      'https://discoverynode2..co',
       'https://-dp.johannesburg.creatorseed.com',
-      'https://discoveryprovider3..co',
+      'https://discoverynode3..co',
       'https://dn2.monophonic.digital'
     ])
   : undefined

@@ -14,7 +14,7 @@ import { useModalControls } from 'utils/hooks'
 const messages = {
   title: 'Modify Service',
   dpEndpoint: 'Discovery Node Service Endpoint',
-  dpEndpointPlaceholder: 'https://discoveryprovider..co',
+  dpEndpointPlaceholder: 'https://discoverynode..co',
   cnEndpoint: 'Content Node Service Endpoint',
   cnEndpointPlaceholder: 'https://contentnode..co',
   delegate: 'Delegate Owner Wallet',
