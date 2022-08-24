@@ -67,7 +67,7 @@ export function fetchTopContentLists(): ThunkAction<
         endpoint: '/v1/full/contentLists/trending'
       })
       const contentLists: ContentList[] = data.slice(0, limit).map((d: any) => ({
-        title: d.contentList_name,
+        title: d.content_list_name,
         handle: d.user.handle,
         artwork: d.artwork?.['480x480'] ?? imageBlank,
         plays: d.total_play_count,
@@ -95,7 +95,7 @@ export function fetchTopAlbums(): ThunkAction<
         queryParams: { type: 'album', limit: 5 }
       })
       const albums: ContentList[] = data.map((d: any) => ({
-        title: d.contentList_name,
+        title: d.content_list_name,
         handle: d.user.handle,
         artwork: d.artwork?.['480x480'] ?? imageBlank,
         plays: d.total_play_count,
