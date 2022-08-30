@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Utils } from '@/libs'
+import { Utils } from '@coliving/sdk'
 import { useUser } from 'store/cache/user/hooks'
 import { Address, BigNumber, Status, Operator } from 'types'
 

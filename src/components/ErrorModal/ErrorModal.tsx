@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import SimpleBar from 'simplebar-react'
-import { ButtonType } from '@/stems'
+import { ButtonType } from '@coliving/stems'
 
 import Modal from 'components/Modal'
 import Button from 'components/Button'

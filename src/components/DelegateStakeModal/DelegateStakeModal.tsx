@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import clsx from 'clsx'
-import { Utils } from '@/libs'
-import { ButtonType } from '@/stems'
+import { Utils } from '@coliving/sdk'
+import { ButtonType } from '@coliving/stems'
 
 import { useDelegateStake } from 'store/actions/delegateStake'
 import { useUserDelegation } from 'store/actions/userDelegation'

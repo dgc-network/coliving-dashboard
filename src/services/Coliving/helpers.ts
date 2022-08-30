@@ -1,4 +1,4 @@
-import { Utils } from '@/libs'
+import { Utils } from '@coliving/sdk'
 import { formatNumber, formatAudString } from 'utils/format'
 import ColivingClient from './ColivingClient'
 import { Permission, BigNumber } from 'types'

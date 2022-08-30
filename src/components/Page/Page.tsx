@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react'
 import clsx from 'clsx'
 import { Spring } from 'react-spring/renderprops'
-import { IconArrowWhite } from '@/stems'
+import { IconArrowWhite } from '@coliving/stems'
 import { usePushRoute, useBackRoute } from 'utils/effects'
 import { useLastPage } from 'store/pageHistory/hooks'
 

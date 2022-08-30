@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './ProposalStatusChip.module.css'
 import clsx from 'clsx'
 import { Outcome } from 'types'
-import { IconCheck, IconRemove } from '@/stems'
+import { IconCheck, IconRemove } from '@coliving/stems'
 import Loading from 'components/Loading'
 
 const messages = {

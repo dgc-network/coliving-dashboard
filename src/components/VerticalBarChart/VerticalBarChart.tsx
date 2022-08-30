@@ -3,7 +3,7 @@ import Paper from 'components/Paper'
 import React from 'react'
 import { Bar } from 'react-chartjs-2'
 import { formatShortNumber, formatShortNumberWithDecimal } from 'utils/format'
-import { IconCrown } from '@/stems'
+import { IconCrown } from '@coliving/stems'
 // Custom draw fn
 import 'components/BarChart/draw'
 

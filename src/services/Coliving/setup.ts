@@ -1,5 +1,5 @@
 import { ColivingClient } from './ColivingClient'
-import , { Utils } from '@/libs'
+import , { Utils } from '@coliving/sdk'
 
 declare global {
   interface Window {

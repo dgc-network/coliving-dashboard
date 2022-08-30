@@ -3,7 +3,7 @@ import clsx from 'clsx'
 
 import styles from './TransactionStatus.module.css'
 import Button, { ButtonType } from 'components/Button'
-import { IconRemove, IconCheck } from '@/stems'
+import { IconRemove, IconCheck } from '@coliving/stems'
 import Loading from 'components/Loading'
 import { usePendingTransactions } from 'store/account/hooks'
 import { useCancelTransaction } from 'store/actions/cancelTransaction'

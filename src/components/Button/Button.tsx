@@ -7,7 +7,7 @@ import {
   ButtonSize as StemButtonSize,
   ButtonProps as StemsButtonProps,
   ButtonType as StemsButtonType
-} from '@/stems'
+} from '@coliving/stems'
 
 export enum CustomButtonType {
   RED = 'RED',

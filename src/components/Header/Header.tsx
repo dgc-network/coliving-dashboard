@@ -5,7 +5,7 @@ import AppBar from 'components/AppBar'
 import Nav from 'components/Nav'
 import { useInit } from 'store/cache/protocol/hooks'
 import { useIsMobile } from 'utils/hooks'
-import { IconKebabHorizontal } from '@/stems'
+import { IconKebabHorizontal } from '@coliving/stems'
 
 import desktopStyles from './Header.module.css'
 import mobileStyles from './HeaderMobile.module.css'

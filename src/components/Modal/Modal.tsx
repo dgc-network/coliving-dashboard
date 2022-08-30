@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 import clsx from 'clsx'
 import styles from './Modal.module.css'
 
-import { IconRemove, Modal as StemsModal } from '@/stems'
+import { IconRemove, Modal as StemsModal } from '@coliving/stems'
 
 interface ModalProps {
   className?: string

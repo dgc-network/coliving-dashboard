@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { ButtonType } from '@/stems'
+import { ButtonType } from '@coliving/stems'
 
 import Modal from 'components/Modal'
 import Button from 'components/Button'

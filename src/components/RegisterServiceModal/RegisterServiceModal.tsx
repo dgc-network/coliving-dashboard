@@ -1,8 +1,8 @@
 import React, { useState, useCallback, useEffect, useRef, useMemo } from 'react'
 import clsx from 'clsx'
 import BN from 'bn.js'
-import { Utils } from '@/libs'
-import { TabSlider, ButtonType } from '@/stems'
+import { Utils } from '@coliving/sdk'
+import { TabSlider, ButtonType } from '@coliving/stems'
 
 import { useRegisterService } from 'store/actions/registerService'
 import { useServiceInfo } from 'store/cache/protocol/hooks'

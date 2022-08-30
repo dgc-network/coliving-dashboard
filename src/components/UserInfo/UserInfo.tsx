@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 import Button from 'components/Button'
 import Paper from 'components/Paper'
-import { ButtonType } from '@/stems'
+import { ButtonType } from '@coliving/stems'
 import DelegateStakeModal from 'components/DelegateStakeModal'
 import { usePendingClaim } from 'store/cache/claims/hooks'
 import ConfirmTransactionModal, {

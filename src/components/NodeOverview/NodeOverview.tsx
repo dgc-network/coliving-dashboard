@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import Paper from 'components/Paper'
 import Button from 'components/Button'
 import ModifyServiceModal from 'components/ModifyServiceModal'
-import { ButtonType, IconPencil } from '@/stems'
+import { ButtonType, IconPencil } from '@coliving/stems'
 import { ServiceType, Address } from 'types'
 import { useModalControls } from 'utils/hooks'
 

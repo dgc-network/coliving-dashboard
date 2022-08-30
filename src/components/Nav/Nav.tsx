@@ -8,7 +8,7 @@ import clsx from 'clsx'
 import { AppState } from 'store/types'
 import styles from './Nav.module.css'
 import * as routes from 'utils/routes'
-import { Button, ButtonType } from '@/stems'
+import { Button, ButtonType } from '@coliving/stems'
 import { useLocation } from 'react-router-dom'
 
 const navRoutes = [

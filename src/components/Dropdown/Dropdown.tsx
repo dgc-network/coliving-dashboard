@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import { IconCaretDown, useClickOutside } from '@/stems'
+import { IconCaretDown, useClickOutside } from '@coliving/stems'
 
 import styles from './Dropdown.module.css'
 import clsx from 'clsx'

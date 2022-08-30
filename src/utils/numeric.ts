@@ -1,5 +1,5 @@
 import BN from 'bn.js'
-import { Utils } from '@/libs'
+import { Utils } from '@coliving/sdk'
 import ColivingClient from 'services/Coliving'
 
 export const WEI = new BN('1000000000000000000')

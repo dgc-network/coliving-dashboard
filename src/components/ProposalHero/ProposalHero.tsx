@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import { Utils } from '@/libs'
+import { Utils } from '@coliving/sdk'
 
 import Paper from 'components/Paper'
 import VoteMeter from 'components/VoteMeter'
@@ -25,7 +25,7 @@ import {
 import { useAccountUser } from 'store/account/hooks'
 import { Position } from 'components/Tooltip'
 import { createStyles } from 'utils/mobile'
-import { IconCheck, IconRemove } from '@/stems'
+import { IconCheck, IconRemove } from '@coliving/stems'
 
 import desktopStyles from './ProposalHero.module.css'
 import mobileStyles from './ProposalHeroMobile.module.css'

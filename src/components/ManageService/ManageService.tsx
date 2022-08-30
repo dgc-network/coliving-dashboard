@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { Utils } from '@/libs'
+import { Utils } from '@coliving/sdk'
 import BN from 'bn.js'
 import clsx from 'clsx'
 import styles from './ManageService.module.css'
@@ -27,7 +27,7 @@ import {
   IconUser,
   IconMinimum,
   IconDeployerCut
-} from '@/stems'
+} from '@coliving/stems'
 import { usePushRoute } from 'utils/effects'
 import { TICKER } from 'utils/consts'
 import { useMakeClaim } from 'store/actions/makeClaim'

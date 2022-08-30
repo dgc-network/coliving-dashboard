@@ -1,4 +1,4 @@
-import { Utils } from '@/libs'
+import { Utils } from '@coliving/sdk'
 import { Operator, User } from 'types'
 import BN from 'bn.js'
 

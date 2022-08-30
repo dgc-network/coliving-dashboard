@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { ThunkAction } from 'redux-thunk'
 import { Action } from 'redux'
-import { Utils } from '@/libs'
+import { Utils } from '@coliving/sdk'
 import BN from 'bn.js'
 import {
   Address,

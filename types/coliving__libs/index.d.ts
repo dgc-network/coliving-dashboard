@@ -1,1 +1,1 @@
-declare module '@/libs';
+declare module '@coliving/sdk';

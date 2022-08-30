@@ -4,7 +4,7 @@ import SimpleBar from 'simplebar-react'
 import BN from 'bn.js'
 
 import ColivingClient from 'services/Coliving'
-import { IconArrow, ButtonType } from '@/stems'
+import { IconArrow, ButtonType } from '@coliving/stems'
 import Modal from 'components/Modal'
 import Button from 'components/Button'
 import styles from './ConfirmTransactionModal.module.css'

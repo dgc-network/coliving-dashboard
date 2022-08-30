@@ -9,7 +9,7 @@ import { ReactComponent as Logo } from 'assets/img/colivingLogoHorizontal.svg'
 import { AppState } from 'store/types'
 import styles from './MobileNav.module.css'
 import * as routes from 'utils/routes'
-import { Button, ButtonType, IconRemove } from '@/stems'
+import { Button, ButtonType, IconRemove } from '@coliving/stems'
 import useOpenLink from 'hooks/useOpenLink'
 
 const messages = {

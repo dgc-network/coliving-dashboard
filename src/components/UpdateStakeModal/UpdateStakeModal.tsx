@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import { Utils } from '@/libs'
+import { Utils } from '@coliving/sdk'
 import clsx from 'clsx'
-import { ButtonType } from '@/stems'
+import { ButtonType } from '@coliving/stems'
 
 import { useUpdateStake } from 'store/actions/updateStake'
 import { useAccountUser } from 'store/account/hooks'

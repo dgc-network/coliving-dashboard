@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import { ButtonType } from '@/stems'
+import { ButtonType } from '@coliving/stems'
 
 import { useUpdateOperatorCut } from 'store/actions/updateOperatorCut'
 import Modal from 'components/Modal'

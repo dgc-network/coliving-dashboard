@@ -1,7 +1,7 @@
 import numeral from 'numeral'
 import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
-import { Utils } from '@/libs'
+import { Utils } from '@coliving/sdk'
 import { Address, BigNumber } from 'types'
 import ColivingClient from 'services/Coliving'
 import { TICKER } from './consts'

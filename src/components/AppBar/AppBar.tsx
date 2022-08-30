@@ -20,7 +20,7 @@ import DisplayAudio from 'components/DisplayAudio'
 import UserImage from 'components/UserImage'
 import useOpenLink from 'hooks/useOpenLink'
 import getActiveStake from 'utils/activeStake'
-import { Utils } from '@/libs'
+import { Utils } from '@coliving/sdk'
 
 const styles = createStyles({ desktopStyles, mobileStyles })
 

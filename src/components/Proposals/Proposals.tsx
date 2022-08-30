@@ -1,11 +1,11 @@
 import React, { useState, useCallback } from 'react'
 import clsx from 'clsx'
-import { Utils } from '@/libs'
+import { Utils } from '@coliving/sdk'
 
 import { useProposals } from 'store/cache/proposals/hooks'
 import Paper from 'components/Paper'
 import Button, { ButtonType } from 'components/Button'
-import { IconSave } from '@/stems'
+import { IconSave } from '@coliving/stems'
 import styles from './Proposals.module.css'
 import NewProposalModal from 'components/NewProposalModal'
 import Proposal from 'components/Proposal/Proposal'

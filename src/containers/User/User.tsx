@@ -2,7 +2,7 @@ import React, { useEffect, useMemo } from 'react'
 import clsx from 'clsx'
 import { RouteComponentProps } from 'react-router'
 import { matchPath } from 'react-router-dom'
-import { Utils } from '@/libs'
+import { Utils } from '@coliving/sdk'
 
 import Page from 'components/Page'
 import Delegate from 'components/Delegate'

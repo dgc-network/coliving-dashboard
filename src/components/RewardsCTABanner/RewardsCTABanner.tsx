@@ -5,7 +5,7 @@ import Paper from 'components/Paper'
 import styles from './RewardsCTABanner.module.css'
 import { useIsMobile, useModalControls } from 'utils/hooks'
 import AudioRewardsModal from 'components/AudioRewardsModal'
-import { IconArrow, IconCrown } from '@/stems'
+import { IconArrow, IconCrown } from '@coliving/stems'
 
 const messages = {
   rewards: '$LIVE REWARDS',
