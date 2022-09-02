@@ -9,7 +9,7 @@ import {
   useUserWeeklyRewards
 } from 'store/cache/rewards/hooks'
 import Loading from 'components/Loading'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 
 const messages = {
   staked: `Staked ${TICKER}`,
@@ -46,12 +46,12 @@ const MyEstimatedRewards: React.FC<MyEstimatedRewardsProps> = ({ wallet }) => {
     weeklyRewards.status === Status.Loading ||
     annualRewards.status === Status.Loading
   const annual = annualRewards.reward ? (
-    <DisplayAudio amount={annualRewards.reward} />
+    <DisplayLive amount={annualRewards.reward} />
   ) : null
 
   const weekly =
     'reward' in weeklyRewards ? (
-      <DisplayAudio amount={weeklyRewards.reward} />
+      <DisplayLive amount={weeklyRewards.reward} />
     ) : null
 
   return (

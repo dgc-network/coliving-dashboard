@@ -3,7 +3,7 @@ import { Utils } from '@coliving/sdk'
 import BN from 'bn.js'
 import clsx from 'clsx'
 import styles from './ManageService.module.css'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 import Paper from 'components/Paper'
 import UpdateStakeModal from 'components/UpdateStakeModal'
 import RegisterServiceModal from 'components/RegisterServiceModal'
@@ -154,7 +154,7 @@ const MinimumDelegationAmount = ({
         <IconMinimum className={clsx(styles.userIcon)} />
       </div>
       {messages.minimunDelegationAmount}
-      <DisplayAudio
+      <DisplayLive
         className={styles.minDelgationAmount}
         amount={minimumDelegationAmount}
         label={TICKER}

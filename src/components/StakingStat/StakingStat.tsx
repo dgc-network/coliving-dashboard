@@ -9,7 +9,7 @@ import { TICKER } from 'utils/consts'
 import { formatWei } from 'utils/format'
 import StatsChip, { Divider } from 'components/StatsChip/StatsChip'
 import InlineStat from 'components/InlineStat/InlineStat'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 
 const messages = {
   staked: `Staked ${TICKER}`,
@@ -70,7 +70,7 @@ const StakingStatInfo: React.FC<StakingStatInfoProps> = ({
           <Divider className={styles.delegatesDivider} />
           <div className={styles.delegatedContainer}>
             <div className={styles.delegatedLabel}>{messages.delegated}</div>
-            <DisplayAudio
+            <DisplayLive
               position={Position.BOTTOM}
               className={styles.delegatedValue}
               amount={totalDelegates}

@@ -11,7 +11,7 @@ import Table from 'components/Table'
 import styles from './DelegatorsTable.module.css'
 import { Operator, Address, Delegate } from 'types'
 import DelegatorsModal from 'components/DelegatorsModal'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 import UserImage from 'components/UserImage'
 import UserName from 'components/UserName'
 
@@ -72,7 +72,7 @@ const DelegatorsTable: React.FC<DelegatorsTableProps> = ({
           className={clsx(styles.rowCol, styles.colAddress)}
           wallet={data.address}
         />
-        <DisplayAudio
+        <DisplayLive
           className={clsx(styles.rowCol, styles.colAmount)}
           amount={data.activeAmount}
         />

@@ -3,7 +3,7 @@ import React, { ReactNode } from 'react'
 import Paper from 'components/Paper'
 import styles from './Bounds.module.css'
 import { Address } from 'types'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 import { useUser } from 'store/cache/user/hooks'
 
 const messages = {
@@ -38,8 +38,8 @@ const Bounds: React.FC<BoundsProps> = ({ wallet }) => {
   if (!user || !('serviceProvider' in user)) {
     return null
   }
-  const min = <DisplayAudio amount={user.serviceProvider.minAccountStake} />
-  const max = <DisplayAudio amount={user.serviceProvider.maxAccountStake} />
+  const min = <DisplayLive amount={user.serviceProvider.minAccountStake} />
+  const max = <DisplayLive amount={user.serviceProvider.maxAccountStake} />
   return (
     <Paper className={styles.container}>
       <RowStat label={messages.minimumTotalStake} value={min} />

@@ -9,7 +9,7 @@ import Table from 'components/Table'
 import styles from './DelegatesTable.module.css'
 import { Delegate, Address } from 'types'
 import DelegatesModal from 'components/DelegatesModal'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 import BN from 'bn.js'
 import UserImage from 'components/UserImage'
 import UserName from 'components/UserName'
@@ -68,7 +68,7 @@ const DelegatesTable: React.FC<DelegatesTableProps> = ({
           className={clsx(styles.rowCol, styles.colAddress)}
           wallet={data.address}
         />
-        <DisplayAudio
+        <DisplayLive
           className={clsx(styles.rowCol, styles.colAmount)}
           amount={data.activeAmount}
         />

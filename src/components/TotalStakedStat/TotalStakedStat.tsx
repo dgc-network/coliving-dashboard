@@ -5,7 +5,7 @@ import { TICKER } from 'utils/consts'
 import styles from './TotalStakedStat.module.css'
 import { Status } from 'types'
 import useTotalStaked from 'hooks/useTotalStaked'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 
 const messages = {
   staked: `Active Stake ${TICKER}`
@@ -20,7 +20,7 @@ const TotalStakedStat: React.FC<TotalStakedStatProps> = () => {
   let stat: ReactNode = null
 
   if (total && status === Status.Success) {
-    stat = <DisplayAudio className={styles.stat} amount={total} shortFormat />
+    stat = <DisplayLive className={styles.stat} amount={total} shortFormat />
   }
 
   return <Stat label={messages.staked} stat={stat} />

@@ -14,7 +14,7 @@ import { useSubmitVote } from 'store/actions/submitVote'
 import { useExecuteProposal } from 'store/actions/executeProposal'
 import { StandaloneBox } from 'components/ConfirmTransactionModal/ConfirmTransactionModal'
 import Loading from 'components/Loading'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 import {
   useProposalTimeRemaining,
   useAmountAbstained,
@@ -371,7 +371,7 @@ const ProposalHero: React.FC<ProposalHeroProps> = ({
                 votesFor={proposal.voteMagnitudeYes}
                 votesAgainst={proposal.voteMagnitudeNo}
               />
-              <DisplayAudio
+              <DisplayLive
                 position={Position.BOTTOM}
                 className={styles.abstained}
                 amount={amountAbstained}
@@ -379,14 +379,14 @@ const ProposalHero: React.FC<ProposalHeroProps> = ({
               />
               {isActive && (
                 <div className={styles.quorumContainer}>
-                  <DisplayAudio
+                  <DisplayLive
                     position={Position.BOTTOM}
                     className={styles.quorumValue}
                     amount={totalMagnitudeVoted}
                     label={messages.voted}
                   />
                   {' / '}
-                  <DisplayAudio
+                  <DisplayLive
                     position={Position.BOTTOM}
                     className={styles.quorumValue}
                     amount={proposal.quorum}

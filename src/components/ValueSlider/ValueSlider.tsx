@@ -4,7 +4,7 @@ import styles from './ValueSlider.module.css'
 import ColivingClient from 'services/Coliving'
 import { BigNumber } from 'types'
 import { Position } from 'components/Tooltip'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 
 const messages = {
   min: 'MIN',
@@ -116,12 +116,12 @@ const ValueSlider: React.FC<ValueSliderProps> = ({
                   : messages.min
                 : messages.min}
             </span>
-            <DisplayAudio position={Position.BOTTOM} amount={min} />
+            <DisplayLive position={Position.BOTTOM} amount={min} />
           </div>
         )}
         {max && (
           <div ref={minValueRef} className={styles.maxValues}>
-            <DisplayAudio position={Position.BOTTOM} amount={max} />
+            <DisplayLive position={Position.BOTTOM} amount={max} />
             <span className={styles.maxLabel}>
               {isIncrease !== undefined
                 ? isIncrease

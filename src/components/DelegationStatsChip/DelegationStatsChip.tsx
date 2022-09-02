@@ -4,7 +4,7 @@ import React from 'react'
 import BN from 'bn.js'
 import { formatWei } from 'utils/format'
 import { TICKER } from 'utils/consts'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 
 type DelegationStatsChipProps = {
   className?: string
@@ -44,7 +44,7 @@ const DelegationStatsChip = ({
       <InlineStat label={messages.deployerCut} value={`${deployerCut}%`} />
       <InlineStat
         label={messages.minDelegation}
-        value={<DisplayAudio amount={minDelegation} />}
+        value={<DisplayLive amount={minDelegation} />}
       />
       <InlineStat label={messages.delegators} value={delegators.toString()} />
     </StatsChip>

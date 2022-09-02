@@ -8,7 +8,7 @@ import { MusicError } from 'store/cache/music/slice'
 import styles from './TopContentLists.module.css'
 
 const messages = {
-  title: 'Top ContentLists This Week'
+  title: 'Top Content Lists This Week'
 }
 
 type TopContentListsProps = {}

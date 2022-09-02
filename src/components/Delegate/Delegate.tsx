@@ -13,7 +13,7 @@ import UpdateDelegationModal from 'components/UpdateDelegationModal'
 import { Address, Status } from 'types'
 import { useHasPendingDecreaseDelegationTx } from 'store/account/hooks'
 import { usePendingClaim } from 'store/cache/claims/hooks'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 
 const messages = {
   title: 'Manage Delegation',
@@ -125,7 +125,7 @@ const DelegateSection: React.FC<DelegateSectionProps> = ({
       <div className={styles.title}>{messages.title} </div>
       <div className={styles.content}>
         <div className={styles.delegationContainer}>
-          <DisplayAudio
+          <DisplayLive
             position={Position.TOP}
             className={styles.delegationValue}
             amount={delegates}

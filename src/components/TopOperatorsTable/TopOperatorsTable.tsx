@@ -11,7 +11,7 @@ import { usePushRoute } from 'utils/effects'
 import { useIsMobile } from 'utils/hooks'
 import getActiveStake, { getTotalActiveDelegatedStake } from 'utils/activeStake'
 import BN from 'bn.js'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 import UserImage from 'components/UserImage'
 import UserName from 'components/UserName'
 
@@ -109,7 +109,7 @@ const TopOperatorsTable: React.FC<TopOperatorsTableProps> = ({
         />
         {!isMobile && (
           <>
-            <DisplayAudio
+            <DisplayLive
               className={clsx(styles.rowCol, styles.totalStakedColumn)}
               amount={data.staked}
             />

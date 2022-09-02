@@ -6,7 +6,7 @@ import { TICKER } from 'utils/consts'
 import desktopStyles from './VoteMeter.module.css'
 import mobileStyles from './VoteMeterMobile.module.css'
 import { createStyles } from 'utils/mobile'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 
 const styles = createStyles({ desktopStyles, mobileStyles })
 
@@ -41,11 +41,11 @@ const VoteMeter: React.FC<VoteMeterProps> = ({
     <div className={styles.voteMeter}>
       <div className={styles.counts}>
         <div className={styles.count}>
-          <DisplayAudio amount={votesFor} />
+          <DisplayLive amount={votesFor} />
           <span>{messages.auds}</span>
         </div>
         <div className={styles.count}>
-          <DisplayAudio amount={votesAgainst} />
+          <DisplayLive amount={votesAgainst} />
           <span>{messages.auds}</span>
         </div>
       </div>

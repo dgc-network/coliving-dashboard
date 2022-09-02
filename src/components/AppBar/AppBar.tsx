@@ -16,7 +16,7 @@ import { createStyles } from 'utils/mobile'
 import desktopStyles from './AppBar.module.css'
 import mobileStyles from './AppBarMobile.module.css'
 import { useIsMobile } from 'utils/hooks'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 import UserImage from 'components/UserImage'
 import useOpenLink from 'hooks/useOpenLink'
 import getActiveStake from 'utils/activeStake'
@@ -100,7 +100,7 @@ const UserAccountSnippet = ({ wallet }: UserAccountSnippetProps) => {
         </div>
       </div>
       <div className={styles.snippetText}>
-        <DisplayAudio
+        <DisplayLive
           position={Position.BOTTOM}
           className={styles.tokenText}
           amount={user.audToken}
@@ -109,7 +109,7 @@ const UserAccountSnippet = ({ wallet }: UserAccountSnippetProps) => {
         <p className={styles.userSnippetLabel}>{messages.wallet}</p>
       </div>
       <div className={styles.snippetText}>
-        <DisplayAudio
+        <DisplayLive
           position={Position.BOTTOM}
           className={styles.tokenText}
           amount={activeStake}

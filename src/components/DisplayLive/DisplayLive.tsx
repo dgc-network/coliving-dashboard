@@ -6,7 +6,7 @@ import Tooltip, { Position } from 'components/Tooltip'
 import ColivingClient from 'services/Coliving'
 import { formatShortAud, formatWei, formatWeiNumber } from 'utils/format'
 
-import styles from './DisplayAudio.module.css'
+import styles from './DisplayLive.module.css'
 import copyToClipboard from 'utils/copyToClipboard'
 
 type OwnProps = {
@@ -17,9 +17,9 @@ type OwnProps = {
   shortFormat?: boolean
 }
 
-type DisplayAudioProps = OwnProps
+type DisplayLiveProps = OwnProps
 
-const DisplayAudio: React.FC<DisplayAudioProps> = ({
+const DisplayLive: React.FC<DisplayLiveProps> = ({
   amount,
   className,
   position,
@@ -53,4 +53,4 @@ const DisplayAudio: React.FC<DisplayAudioProps> = ({
   )
 }
 
-export default DisplayAudio
+export default DisplayLive

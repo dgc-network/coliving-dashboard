@@ -8,7 +8,7 @@ import BN from 'bn.js'
 import { Delegate, Address } from 'types'
 import { usePushRoute } from 'utils/effects'
 import { accountPage } from 'utils/routes'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 import UserImage from 'components/UserImage'
 import UserName from 'components/UserName'
 
@@ -60,7 +60,7 @@ const DelegatesModal: React.FC<DelegatesModalProps> = ({
           className={clsx(styles.rowCol, styles.colAddress)}
           wallet={data.address}
         />
-        <DisplayAudio
+        <DisplayLive
           className={clsx(styles.rowCol, styles.colAmount)}
           amount={data.amount}
         />

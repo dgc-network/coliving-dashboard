@@ -4,7 +4,7 @@ import Paper from 'components/Paper'
 import styles from './StatsChip.module.css'
 import clsx from 'clsx'
 import Loading from 'components/Loading'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 
 export const Divider = ({ className }: { className?: string }) => {
   return (
@@ -37,7 +37,7 @@ const StatsChip: React.FC<StatsChipProps> = ({
         </div>
       ) : (
         <>
-          <DisplayAudio
+          <DisplayLive
             className={styles.tooltipStyle}
             amount={amount}
             shortFormat

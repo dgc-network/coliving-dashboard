@@ -30,7 +30,7 @@ import {
   ServiceProviderRegisteredEvent,
   TimelineEvent as TimelineEventType
 } from 'models/TimelineEvents'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 const styles = createStyles({ desktopStyles, mobileStyles })
 
 const DisplayUser = ({ wallet }: { wallet: Address }) => {
@@ -175,7 +175,7 @@ const DelegationIncreaseEvent: React.FC<{
   const title = (
     <span className={styles.titleContainer}>
       {received ? `Received` : `Delegated`}
-      <DisplayAudio
+      <DisplayLive
         className={clsx(styles.titleSpacingLeft, styles.titleSpacingRight)}
         amount={event.increaseAmount}
       />
@@ -226,7 +226,7 @@ const DelegationDecreaseEvent: React.FC<{
           <DisplayUser wallet={event.serviceProvider} />
         </span>
         <span className={styles.titleSpacingLeft}>{' by'}</span>
-        <DisplayAudio
+        <DisplayLive
           className={clsx(styles.titleSpacingLeft, styles.titleSpacingRight)}
           amount={event.amount}
           label={TICKER}
@@ -247,7 +247,7 @@ const DelegationDecreaseEvent: React.FC<{
         >
           {`requested to decrease delegation by`}
         </span>
-        <DisplayAudio
+        <DisplayLive
           className={clsx(styles.titleSpacingRight)}
           amount={event.amount}
           label={TICKER}
@@ -260,7 +260,7 @@ const DelegationDecreaseEvent: React.FC<{
     return (
       <>
         {`Decreased delegation`}
-        <DisplayAudio
+        <DisplayLive
           className={clsx(styles.titleSpacingLeft, styles.titleSpacingRight)}
           amount={event.amount}
         />
@@ -284,7 +284,7 @@ const DelegationDecreaseEvent: React.FC<{
         >
           {'decreased delegation by'}
         </span>
-        <DisplayAudio
+        <DisplayLive
           className={clsx(styles.titleSpacingRight)}
           amount={event.amount}
         />
@@ -301,7 +301,7 @@ const DelegationDecreaseEvent: React.FC<{
           <DisplayUser wallet={event.serviceProvider} />
         </span>
         <span className={styles.titleSpacingLeft}>{' by'}</span>
-        <DisplayAudio
+        <DisplayLive
           className={clsx(styles.titleSpacingLeft, styles.titleSpacingRight)}
           amount={event.amount}
         />
@@ -320,7 +320,7 @@ const DelegationDecreaseEvent: React.FC<{
         <span className={styles.titleSpacingLeft}>
           {` cancelled request to decrease delegation by`}
         </span>
-        <DisplayAudio
+        <DisplayLive
           className={clsx(styles.titleSpacingLeft, styles.titleSpacingRight)}
           amount={event.amount}
         />
@@ -412,7 +412,7 @@ const ClaimEvent: React.FC<{
         <DisplayUser wallet={event.claimer} />
       </span>
       {` Claims`}
-      <DisplayAudio
+      <DisplayLive
         className={clsx(styles.titleSpacingLeft, styles.titleSpacingRight)}
         amount={event.rewards}
       />
@@ -478,14 +478,14 @@ const ServiceProviderStakeEvent: React.FC<{
     return (
       <span className={styles.titleContainer}>
         {`${sentenceFragment1} stake by`}
-        <DisplayAudio
+        <DisplayLive
           className={clsx(styles.titleSpacingLeft, styles.titleSpacingRight)}
           amount={amount}
         />
         {newAmount ? (
           <>
             {'to'}
-            <DisplayAudio
+            <DisplayLive
               className={clsx(
                 styles.titleSpacingLeft,
                 styles.titleSpacingRight

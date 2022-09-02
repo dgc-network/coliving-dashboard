@@ -9,7 +9,7 @@ import { formatAud } from 'utils/format'
 import { usePushRoute } from 'utils/effects'
 import { accountPage } from 'utils/routes'
 import Modal from 'components/Modal'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 import UserImage from 'components/UserImage'
 import UserName from 'components/UserName'
 
@@ -32,7 +32,7 @@ const RenderRow = ({ data }: { data: VoteEvent }) => {
       <div className={clsx(styles.rowCol, styles.colAddresses)}>
         {data && <User wallet={data.voter} />}
       </div>
-      <DisplayAudio
+      <DisplayLive
         className={clsx(styles.rowCol, styles.colVoteWeight)}
         amount={data.voterStake}
       />

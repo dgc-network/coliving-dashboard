@@ -19,7 +19,7 @@ import { TICKER } from 'utils/consts'
 import { useModalControls } from 'utils/hooks'
 import { useUserDelegation } from 'store/actions/userDelegation'
 import useUpdateDelegation from 'store/actions/updateDelegation'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 
 const messages = {
   increaseTitle: 'Increase Delegation',
@@ -158,7 +158,7 @@ const UpdateDelegationModal: React.FC<UpdateDelegationModalProps> = ({
           <div className={styles.stakingChange}>
             <div className={styles.stakingRow}>
               <div className={styles.stakingLabel}>Current Staking:</div>
-              <DisplayAudio
+              <DisplayLive
                 className={styles.stakingValue}
                 amount={delegates}
                 label={TICKER}
@@ -166,7 +166,7 @@ const UpdateDelegationModal: React.FC<UpdateDelegationModalProps> = ({
             </div>
             <div className={styles.stakingRow}>
               <div className={styles.stakingLabel}>Change:</div>
-              <DisplayAudio
+              <DisplayLive
                 className={clsx(styles.stakingValue, styles.changeValue)}
                 amount={stakeChange}
                 label={TICKER}

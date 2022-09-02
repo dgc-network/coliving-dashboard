@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { useDiscoveryNodes } from 'store/cache/discoveryNode/hooks'
+import { useDiscoveryNodes } from '../../store/cache/discoveryNode/hooks'
 
 import { DiscoveryNode, Address, Status } from 'types'
 import { SERVICES_DISCOVERY_PROVIDER, discoveryNodePage } from 'utils/routes'

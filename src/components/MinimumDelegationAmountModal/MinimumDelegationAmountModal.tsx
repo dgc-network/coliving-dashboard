@@ -12,7 +12,7 @@ import ConfirmTransactionModal, {
   StandaloneBox
 } from 'components/ConfirmTransactionModal'
 import { useModalControls } from 'utils/hooks'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 import { TICKER } from 'utils/consts'
 import { checkWeiNumber, parseWeiNumber } from 'utils/numeric'
 
@@ -76,7 +76,7 @@ const MinimumDelegationAmountModal: React.FC<MinimumDelegationAmountModalProps> 
   const topBox = (
     <StandaloneBox>
       {`${messages.confirmChange} to `}
-      <DisplayAudio amount={minDelegationBN} label={TICKER} />
+      <DisplayLive amount={minDelegationBN} label={TICKER} />
     </StandaloneBox>
   )
 
@@ -98,7 +98,7 @@ const MinimumDelegationAmountModal: React.FC<MinimumDelegationAmountModalProps> 
         />
         <div className={styles.currentLabel}>
           {messages.currentLabel}
-          <DisplayAudio
+          <DisplayLive
             className={styles.liveLabel}
             amount={minimumDelegationAmount}
             label={TICKER}

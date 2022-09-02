@@ -13,7 +13,7 @@ import { Address, SortUser, Status } from 'types'
 import { usePushRoute } from 'utils/effects'
 import { useIsMobile } from 'utils/hooks'
 import getActiveStake from 'utils/activeStake'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 import UserImage from 'components/UserImage'
 import UserName from 'components/UserName'
 
@@ -113,7 +113,7 @@ const TopAddressesTable: React.FC<TopAddressesTableProps> = ({
         />
         {!isMobile && (
           <>
-            <DisplayAudio
+            <DisplayLive
               className={clsx(styles.rowCol, styles.totalStakedColumn)}
               amount={data.staked}
             />

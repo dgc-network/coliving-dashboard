@@ -17,7 +17,7 @@ import ConfirmTransactionModal, {
 import { useUndelegateStake } from 'store/actions/undelegateStake'
 import { accountPage } from 'utils/routes'
 import { usePushRoute } from 'utils/effects'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 import UserImage from 'components/UserImage'
 import UserName from 'components/UserName'
 
@@ -135,7 +135,7 @@ const DelegatorsTable: React.FC<DelegatorsTableProps> = ({
           className={clsx(styles.rowCol, styles.colAddress)}
           wallet={data.address}
         />
-        <DisplayAudio
+        <DisplayLive
           className={clsx(styles.rowCol, styles.colAmount)}
           amount={data.amount}
         />

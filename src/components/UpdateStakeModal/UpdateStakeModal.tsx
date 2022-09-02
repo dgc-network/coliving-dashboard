@@ -19,7 +19,7 @@ import ConfirmTransactionModal, {
 } from 'components/ConfirmTransactionModal'
 import { TICKER } from 'utils/consts'
 import { Position } from 'components/Tooltip'
-import DisplayAudio from 'components/DisplayAudio'
+import DisplayLive from 'components/DisplayLive'
 
 const messages = {
   increaseTitle: 'Increase Stake',
@@ -194,7 +194,7 @@ const IncreaseStakeModal: React.FC<IncreaseStakeModalProps> = ({
           <div className={styles.stakingChange}>
             <div className={styles.stakingRow}>
               <div className={styles.stakingLabel}>Current Staking:</div>
-              <DisplayAudio
+              <DisplayLive
                 className={styles.stakingValue}
                 amount={deployerStake}
                 label={TICKER}
@@ -202,7 +202,7 @@ const IncreaseStakeModal: React.FC<IncreaseStakeModalProps> = ({
             </div>
             <div className={styles.stakingRow}>
               <div className={styles.stakingLabel}>Change:</div>
-              <DisplayAudio
+              <DisplayLive
                 position={Position.BOTTOM}
                 className={clsx(styles.stakingValue, styles.changeValue)}
                 amount={stakeChange}
