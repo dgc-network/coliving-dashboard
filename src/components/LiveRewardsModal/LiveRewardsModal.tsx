@@ -3,7 +3,7 @@ import { ButtonType } from '@coliving/stems'
 
 import Modal from 'components/Modal'
 import Button from 'components/Button'
-import styles from './AudioRewardsModal.module.css'
+import styles from './LiveRewardsModal.module.css'
 import apiLogo from 'assets/img/apiLogo.png'
 import useOpenLink from 'hooks/useOpenLink'
 import { COLIVING_API_URL } from 'utils/routes'
@@ -22,12 +22,12 @@ type OwnProps = {
   onClose: () => void
 }
 
-type AudioRewardsModalProps = OwnProps
+type LiveRewardsModalProps = OwnProps
 
-const AudioRewardsModal: React.FC<AudioRewardsModalProps> = ({
+const LiveRewardsModal: React.FC<LiveRewardsModalProps> = ({
   isOpen,
   onClose
-}: AudioRewardsModalProps) => {
+}: LiveRewardsModalProps) => {
   const openLink = useOpenLink(COLIVING_API_URL)
   const onClickBtn = useCallback(
     (e: React.MouseEvent) => {
@@ -58,4 +58,4 @@ const AudioRewardsModal: React.FC<AudioRewardsModalProps> = ({
   )
 }
 
-export default AudioRewardsModal
+export default LiveRewardsModal

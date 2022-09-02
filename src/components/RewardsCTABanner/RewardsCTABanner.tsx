@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import Paper from 'components/Paper'
 import styles from './RewardsCTABanner.module.css'
 import { useIsMobile, useModalControls } from 'utils/hooks'
-import AudioRewardsModal from 'components/LiveRewardsModal'
+import LiveRewardsModal from 'components/LiveRewardsModal'
 import { IconArrow, IconCrown } from '@coliving/stems'
 
 const messages = {
@@ -25,7 +25,7 @@ const RewardsCTABanner: React.FC<RewardsCTABannerProps> = ({ className }) => {
 
   return (
     <>
-      <AudioRewardsModal isOpen={isOpen} onClose={onClose} />
+      <LiveRewardsModal isOpen={isOpen} onClose={onClose} />
       <Paper
         className={clsx(styles.container, {
           [className!]: className,
