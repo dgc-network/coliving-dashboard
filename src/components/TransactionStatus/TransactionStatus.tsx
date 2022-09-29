@@ -2,9 +2,9 @@ import React, { useCallback, useEffect, ReactNode } from 'react'
 import clsx from 'clsx'
 
 import styles from './TransactionStatus.module.css'
-import Button, { ButtonType } from 'components/Button'
+import Button, { ButtonType } from 'components/button'
 import { IconRemove, IconCheck } from '@coliving/stems'
-import Loading from 'components/Loading'
+import Loading from 'components/loading'
 import { usePendingTransactions } from 'store/account/hooks'
 import { useCancelTransaction } from 'store/actions/cancelTransaction'
 import {
@@ -16,9 +16,9 @@ import { useEthBlockNumber } from 'store/cache/protocol/hooks'
 import { useModalControls } from 'utils/hooks'
 import ConfirmTransactionModal, {
   StandaloneBox
-} from 'components/ConfirmTransactionModal'
+} from 'components/confirmTransactionModal'
 import { useSubmitTransaction } from 'store/actions/submitTransaction'
-import ColivingClient from 'services/Coliving'
+import ColivingClient from 'services/coliving'
 import { TICKER } from 'utils/consts'
 import { getHumanReadableTime } from 'utils/format'
 import { useTimeRemaining } from 'store/cache/protocol/hooks'

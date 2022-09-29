@@ -1,8 +1,8 @@
 import React from 'react'
 
 import styles from './DiscoveryNodes.module.css'
-import Page from 'components/Page'
-import DiscoveryTable from 'components/DiscoveryTable'
+import Page from 'components/page'
+import DiscoveryTable from 'components/discoveryTable'
 import { SERVICES, SERVICES_TITLE } from 'utils/routes'
 
 const messages = {

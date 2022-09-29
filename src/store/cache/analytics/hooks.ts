@@ -4,7 +4,7 @@ import { Action } from 'redux'
 import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
 
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 import {
   setApiCalls,

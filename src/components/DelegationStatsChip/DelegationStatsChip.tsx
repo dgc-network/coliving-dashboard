@@ -1,10 +1,10 @@
-import InlineStat from 'components/InlineStat/InlineStat'
-import StatsChip from 'components/StatsChip/StatsChip'
+import InlineStat from 'components/inlineStat/inlineStat'
+import StatsChip from 'components/statsChip/statsChip'
 import React from 'react'
 import BN from 'bn.js'
 import { formatWei } from 'utils/format'
 import { TICKER } from 'utils/consts'
-import DisplayLive from 'components/DisplayLive'
+import DisplayLive from 'components/displayLive'
 
 type DelegationStatsChipProps = {
   className?: string

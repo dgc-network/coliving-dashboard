@@ -7,7 +7,7 @@ import { getAccountWallet } from 'store/account/hooks'
 import { fetchUser } from 'store/cache/user/hooks'
 
 import { Status } from 'types'
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 
 function updateMinimumDelegationAmount(

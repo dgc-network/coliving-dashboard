@@ -4,7 +4,7 @@ import { ThunkAction } from 'redux-thunk'
 import { Action } from 'redux'
 
 import { Status, ServiceType, Address } from 'types'
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 import { getDiscoveryNode } from 'store/cache/discoveryNode/hooks'
 import { getContentNode } from 'store/cache/contentNode/hooks'

@@ -1,11 +1,11 @@
 import React, { useCallback } from 'react'
 import clsx from 'clsx'
 import BN from 'bn.js'
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { SERVICES_USERS, accountPage } from 'utils/routes'
 
 import styles from './TopAddressesTable.module.css'
-import Table from 'components/Table'
+import Table from 'components/table'
 import { formatWeight } from 'utils/format'
 
 import { useUsers } from 'store/cache/user/hooks'
@@ -13,9 +13,9 @@ import { Address, SortUser, Status } from 'types'
 import { usePushRoute } from 'utils/effects'
 import { useIsMobile } from 'utils/hooks'
 import getActiveStake from 'utils/activeStake'
-import DisplayLive from 'components/DisplayLive'
-import UserImage from 'components/UserImage'
-import UserName from 'components/UserName'
+import DisplayLive from 'components/displayLive'
+import UserImage from 'components/userImage'
+import UserName from 'components/userName'
 
 const messages = {
   topAddresses: 'Top Addresses by Voting Weight',

@@ -1,1 +1,1 @@
-export { default } from './VotesTable'
+export { default } from './votesTable'

@@ -1,1 +1,1 @@
-export { default } from './EstimatedAnnualStat'
+export { default } from './estimatedAnnualStat'

@@ -1,11 +1,11 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import Page from 'components/Page'
-import ManageService from 'components/ManageService'
-import DiscoveryTable from 'components/DiscoveryTable'
-import ContentTable from 'components/ContentTable'
-import TopOperatorsTable from 'components/TopOperatorsTable'
+import Page from 'components/page'
+import ManageService from 'components/manageService'
+import DiscoveryTable from 'components/discoveryTable'
+import ContentTable from 'components/contentTable'
+import TopOperatorsTable from 'components/topOperatorsTable'
 import { useAccount } from 'store/account/hooks'
 
 import desktopStyles from './Services.module.css'

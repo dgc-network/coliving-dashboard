@@ -9,7 +9,7 @@ import {
   DelayedPendingTransaction,
   PendingTransactionName
 } from 'types'
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 import {
   setLoading,

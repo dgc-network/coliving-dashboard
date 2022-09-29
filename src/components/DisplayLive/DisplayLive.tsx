@@ -2,8 +2,8 @@ import React, { useCallback, useState } from 'react'
 import BN from 'bn.js'
 import clsx from 'clsx'
 
-import Tooltip, { Position } from 'components/Tooltip'
-import ColivingClient from 'services/Coliving'
+import Tooltip, { Position } from 'components/tooltip'
+import ColivingClient from 'services/coliving'
 import { formatShortAud, formatWei, formatWeiNumber } from 'utils/format'
 
 import styles from './DisplayLive.module.css'

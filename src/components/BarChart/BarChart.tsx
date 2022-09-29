@@ -1,7 +1,7 @@
 import clsx from 'clsx'
-import Dropdown from 'components/Dropdown'
-import Loading from 'components/Loading'
-import Paper from 'components/Paper'
+import Dropdown from 'components/dropdown'
+import Loading from 'components/loading'
+import Paper from 'components/paper'
 import React from 'react'
 import { HorizontalBar } from 'react-chartjs-2'
 import { formatShortNumber } from 'utils/format'
@@ -13,7 +13,7 @@ import mobileStyles from './BarChartMobile.module.css'
 import { createStyles } from 'utils/mobile'
 import { useIsMobile } from 'utils/hooks'
 import { formatBucketText } from 'store/cache/analytics/hooks'
-import Error from 'components/Error'
+import Error from 'components/error'
 
 const styles = createStyles({ desktopStyles, mobileStyles })
 

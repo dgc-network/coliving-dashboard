@@ -1,1 +1,1 @@
-export { default } from './DisplayLive'
+export { default } from './displayLive'

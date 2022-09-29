@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { SERVICES_SERVICE_PROVIDERS, accountPage } from 'utils/routes'
 
 import styles from './TopOperatorsTable.module.css'
-import Table from 'components/Table'
+import Table from 'components/table'
 
 import { useUsers } from 'store/cache/user/hooks'
 import { Address, Operator, SortUser, Status } from 'types'
@@ -11,9 +11,9 @@ import { usePushRoute } from 'utils/effects'
 import { useIsMobile } from 'utils/hooks'
 import getActiveStake, { getTotalActiveDelegatedStake } from 'utils/activeStake'
 import BN from 'bn.js'
-import DisplayLive from 'components/DisplayLive'
-import UserImage from 'components/UserImage'
-import UserName from 'components/UserName'
+import DisplayLive from 'components/displayLive'
+import UserImage from 'components/userImage'
+import UserName from 'components/userName'
 
 const messages = {
   topAddresses: 'Top Service Operators by Active Stake',

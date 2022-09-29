@@ -1,7 +1,7 @@
-import { ColivingClient } from '../ColivingClient'
+import { ColivingClient } from '../colivingClient'
 import BN from 'bn.js'
 import { BlockNumber, Address } from 'types'
-import { ClaimProcessedEvent } from 'models/TimelineEvents'
+import { ClaimProcessedEvent } from 'models/timelineEvents'
 import { GetClaimProcessedResponse } from './types'
 
 export default class Claim {

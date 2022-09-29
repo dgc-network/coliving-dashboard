@@ -1,1 +1,1 @@
-export { default } from './OperatorCutModal'
+export { default } from './operatorCutModal'

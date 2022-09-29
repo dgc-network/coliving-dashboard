@@ -1,10 +1,10 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import Paper from 'components/Paper'
+import Paper from 'components/paper'
 import styles from './RewardsCTABanner.module.css'
 import { useIsMobile, useModalControls } from 'utils/hooks'
-import LiveRewardsModal from 'components/LiveRewardsModal'
+import LiveRewardsModal from 'components/liveRewardsModal'
 import { IconArrow, IconCrown } from '@coliving/stems'
 
 const messages = {

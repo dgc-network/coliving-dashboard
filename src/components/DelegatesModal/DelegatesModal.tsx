@@ -3,14 +3,14 @@ import clsx from 'clsx'
 
 import { useDelegates } from 'store/cache/user/hooks'
 import styles from './DelegatesModal.module.css'
-import ModalTable from 'components/ModalTable'
+import ModalTable from 'components/modalTable'
 import BN from 'bn.js'
 import { Delegate, Address } from 'types'
 import { usePushRoute } from 'utils/effects'
 import { accountPage } from 'utils/routes'
-import DisplayLive from 'components/DisplayLive'
-import UserImage from 'components/UserImage'
-import UserName from 'components/UserName'
+import DisplayLive from 'components/displayLive'
+import UserImage from 'components/userImage'
+import UserName from 'components/userName'
 
 const messages = {
   title: 'Delegates',

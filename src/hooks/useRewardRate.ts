@@ -1,4 +1,4 @@
-import ColivingClient from 'services/Coliving'
+import ColivingClient from 'services/coliving'
 import useTotalStaked from './useTotalStaked'
 import { useFundsPerRound } from 'store/cache/claims/hooks'
 import { Status } from 'types'

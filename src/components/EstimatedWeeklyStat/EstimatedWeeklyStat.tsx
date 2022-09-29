@@ -1,6 +1,6 @@
 import React from 'react'
 
-import RewardStat from 'components/RewardStat'
+import RewardStat from 'components/rewardStat'
 import { Status } from 'types'
 import { useWeeklyRewardRate } from 'hooks/useRewardRate'
 

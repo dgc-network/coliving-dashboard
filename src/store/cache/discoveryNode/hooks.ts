@@ -12,7 +12,7 @@ import {
   ServiceType,
   DiscoveryNode
 } from 'types'
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 import { setLoading, setNodes, setTotal } from './slice'
 import { useEffect } from 'react'

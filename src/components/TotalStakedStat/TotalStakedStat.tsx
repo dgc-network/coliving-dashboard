@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react'
 
-import Stat from 'components/Stat'
+import Stat from 'components/stat'
 import { TICKER } from 'utils/consts'
 import styles from './TotalStakedStat.module.css'
 import { Status } from 'types'
 import useTotalStaked from 'hooks/useTotalStaked'
-import DisplayLive from 'components/DisplayLive'
+import DisplayLive from 'components/displayLive'
 
 const messages = {
   staked: `Active Stake ${TICKER}`

@@ -1,2 +1,2 @@
-export { default } from './Proposals'
-export { NoProposals } from './Proposals'
+export { default } from './proposals'
+export { NoProposals } from './proposals'

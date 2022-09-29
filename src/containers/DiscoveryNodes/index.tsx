@@ -1,1 +1,1 @@
-export { default } from './DiscoveryNodes'
+export { default } from './discoveryNodes'

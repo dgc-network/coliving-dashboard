@@ -1,1 +1,1 @@
-export { default } from './TotalApiCallsChart'
+export { default } from './totalApiCallsChart'

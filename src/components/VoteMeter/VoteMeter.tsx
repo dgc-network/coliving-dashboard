@@ -6,7 +6,7 @@ import { TICKER } from 'utils/consts'
 import desktopStyles from './VoteMeter.module.css'
 import mobileStyles from './VoteMeterMobile.module.css'
 import { createStyles } from 'utils/mobile'
-import DisplayLive from 'components/DisplayLive'
+import DisplayLive from 'components/displayLive'
 
 const styles = createStyles({ desktopStyles, mobileStyles })
 

@@ -1,1 +1,1 @@
-export { default } from './RewardsCTABanner'
+export { default } from './rewardsCTABanner'

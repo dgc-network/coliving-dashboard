@@ -1,14 +1,14 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import Modal from 'components/Modal'
+import Modal from 'components/modal'
 
 import styles from './NewProposalModal.module.css'
-import TextField from 'components/TextField'
-import { Format } from 'components/TextField/TextField'
-import Button, { ButtonType } from 'components/Button'
+import TextField from 'components/textField'
+import { Format } from 'components/textField/textField'
+import Button, { ButtonType } from 'components/button'
 import { useCreateProposal } from 'store/actions/createProposal'
 import { Status } from 'types'
-import ConfirmTransactionModal from 'components/ConfirmTransactionModal'
-import { StandaloneBox } from 'components/ConfirmTransactionModal/ConfirmTransactionModal'
+import ConfirmTransactionModal from 'components/confirmTransactionModal'
+import { StandaloneBox } from 'components/confirmTransactionModal/confirmTransactionModal'
 
 const messages = {
   createProposal: 'Create Proposal',

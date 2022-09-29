@@ -1,10 +1,10 @@
 import React from 'react'
 import BN from 'bn.js'
-import Paper from 'components/Paper'
+import Paper from 'components/paper'
 import styles from './StatsChip.module.css'
 import clsx from 'clsx'
-import Loading from 'components/Loading'
-import DisplayLive from 'components/DisplayLive'
+import Loading from 'components/loading'
+import DisplayLive from 'components/displayLive'
 
 export const Divider = ({ className }: { className?: string }) => {
   return (

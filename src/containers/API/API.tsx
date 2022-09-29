@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Page from 'components/Page'
-import RewardsCTABanner from 'components/RewardsCTABanner'
+import Page from 'components/page'
+import RewardsCTABanner from 'components/rewardsCTABanner'
 import useOpenLink from 'hooks/useOpenLink'
 import { COLIVING_API_URL } from 'utils/routes'
-import TopAPIAppsChart from 'components/TopAPIAppsChart'
+import TopAPIAppsChart from 'components/topAPIAppsChart'
 
 import { createStyles } from 'utils/mobile'
 import desktopStyles from './API.module.css'

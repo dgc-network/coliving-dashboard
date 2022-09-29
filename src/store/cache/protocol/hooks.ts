@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { ThunkAction } from 'redux-thunk'
 import { Action } from 'redux'
 
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 import {
   setTotalStaked,
@@ -13,7 +13,7 @@ import {
 } from './slice'
 import { useEffect, useState, useRef } from 'react'
 import { ServiceType, Block } from 'types'
-import ColivingClient from 'services/Coliving'
+import ColivingClient from 'services/coliving'
 
 // -------------------------------- Selectors  --------------------------------
 export const getTotalStaked = (state: AppState) =>

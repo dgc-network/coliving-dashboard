@@ -1,17 +1,17 @@
-import Loading from 'components/Loading'
-import Paper from 'components/Paper'
+import Loading from 'components/loading'
+import Paper from 'components/paper'
 import React from 'react'
 import { Bar } from 'react-chartjs-2'
 import { formatShortNumber, formatShortNumberWithDecimal } from 'utils/format'
 import { IconCrown } from '@coliving/stems'
 // Custom draw fn
-import 'components/BarChart/draw'
+import 'components/barChart/draw'
 
 import desktopStyles from './VerticalBarChart.module.css'
 import mobileStyles from './VerticalBarChartMobile.module.css'
 import { createStyles } from 'utils/mobile'
 import { useIsMobile } from 'utils/hooks'
-import Error from 'components/Error'
+import Error from 'components/error'
 
 const styles = createStyles({ desktopStyles, mobileStyles })
 

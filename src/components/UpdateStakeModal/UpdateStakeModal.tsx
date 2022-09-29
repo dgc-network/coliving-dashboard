@@ -5,21 +5,21 @@ import { ButtonType } from '@coliving/stems'
 
 import { useUpdateStake } from 'store/actions/updateStake'
 import { useAccountUser } from 'store/account/hooks'
-import ColivingClient from 'services/Coliving'
-import Modal from 'components/Modal'
-import Button from 'components/Button'
-import ValueSlider from 'components/ValueSlider'
-import TextField from 'components/TextField'
+import ColivingClient from 'services/coliving'
+import Modal from 'components/modal'
+import Button from 'components/button'
+import ValueSlider from 'components/valueSlider'
+import TextField from 'components/textField'
 import styles from './UpdateStakeModal.module.css'
 import { Status, Operator } from 'types'
 import { checkWeiNumber, parseWeiNumber } from 'utils/numeric'
 import ConfirmTransactionModal, {
   OldStake,
   NewStake
-} from 'components/ConfirmTransactionModal'
+} from 'components/confirmTransactionModal'
 import { TICKER } from 'utils/consts'
-import { Position } from 'components/Tooltip'
-import DisplayLive from 'components/DisplayLive'
+import { Position } from 'components/tooltip'
+import DisplayLive from 'components/displayLive'
 
 const messages = {
   increaseTitle: 'Increase Stake',

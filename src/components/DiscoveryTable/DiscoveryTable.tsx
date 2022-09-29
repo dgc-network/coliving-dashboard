@@ -5,7 +5,7 @@ import { DiscoveryNode, Address, Status } from 'types'
 import { SERVICES_DISCOVERY_PROVIDER, discoveryNodePage } from 'utils/routes'
 import { usePushRoute } from 'utils/effects'
 
-import ServiceTable from 'components/ServiceTable'
+import ServiceTable from 'components/serviceTable'
 
 const messages = {
   title: 'Discovery Nodes',

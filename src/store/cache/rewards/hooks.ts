@@ -4,7 +4,7 @@ import { Action } from 'redux'
 import BN from 'bn.js'
 
 import { Address, User, Operator, Status } from 'types'
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 import { useEffect } from 'react'
 

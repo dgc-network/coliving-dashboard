@@ -1,1 +1,1 @@
-export { default } from './TopAPITable'
+export { default } from './topAPITable'

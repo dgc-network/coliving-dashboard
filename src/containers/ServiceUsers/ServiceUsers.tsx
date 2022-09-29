@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Page from 'components/Page'
-import TopAddressesTable from 'components/TopAddressesTable'
+import Page from 'components/page'
+import TopAddressesTable from 'components/topAddressesTable'
 import { SERVICES_TITLE, SERVICES } from 'utils/routes'
 
 const messages = {

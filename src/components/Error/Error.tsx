@@ -1,4 +1,4 @@
-import Tooltip from 'components/Tooltip'
+import Tooltip from 'components/tooltip'
 import React from 'react'
 import clsx from 'clsx'
 import { ReactComponent as IconUhOh } from 'assets/img/uhOh.svg'

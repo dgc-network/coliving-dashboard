@@ -1,1 +1,1 @@
-export { default } from './ManageService'
+export { default } from './manageService'

@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react'
 import { ButtonType } from '@coliving/stems'
 
-import Modal from 'components/Modal'
-import Button from 'components/Button'
+import Modal from 'components/modal'
+import Button from 'components/button'
 import styles from './LiveRewardsModal.module.css'
 import apiLogo from 'assets/img/apiLogo.png'
 import useOpenLink from 'hooks/useOpenLink'

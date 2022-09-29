@@ -1,1 +1,1 @@
-export { default } from './Bounds'
+export { default } from './bounds'

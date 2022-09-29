@@ -1,4 +1,4 @@
-import RadarChart from 'components/RadarChart'
+import RadarChart from 'components/radarChart'
 import React, { useState } from 'react'
 import { useTrailingTopGenres } from 'store/cache/analytics/hooks'
 import { Bucket, MetricError } from 'store/cache/analytics/slice'

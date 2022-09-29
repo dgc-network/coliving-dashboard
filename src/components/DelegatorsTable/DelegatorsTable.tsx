@@ -7,13 +7,13 @@ import { useModalControls } from 'utils/hooks'
 import { accountPage } from 'utils/routes'
 import { useUser, useDelegators } from 'store/cache/user/hooks'
 
-import Table from 'components/Table'
+import Table from 'components/table'
 import styles from './DelegatorsTable.module.css'
 import { Operator, Address, Delegate } from 'types'
-import DelegatorsModal from 'components/DelegatorsModal'
-import DisplayLive from 'components/DisplayLive'
-import UserImage from 'components/UserImage'
-import UserName from 'components/UserName'
+import DelegatorsModal from 'components/delegatorsModal'
+import DisplayLive from 'components/displayLive'
+import UserImage from 'components/userImage'
+import UserName from 'components/userName'
 
 const messages = {
   title: 'Delegators',

@@ -1,1 +1,1 @@
-export { default } from './PlaysChart'
+export { default } from './playsChart'

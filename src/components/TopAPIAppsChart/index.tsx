@@ -1,1 +1,1 @@
-export { default } from './TopAPIAppsChart'
+export { default } from './topAPIAppsChart'

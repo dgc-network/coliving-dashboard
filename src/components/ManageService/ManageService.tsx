@@ -3,13 +3,13 @@ import { Utils } from '@coliving/sdk'
 import BN from 'bn.js'
 import clsx from 'clsx'
 import styles from './ManageService.module.css'
-import DisplayLive from 'components/DisplayLive'
-import Paper from 'components/Paper'
-import UpdateStakeModal from 'components/UpdateStakeModal'
-import RegisterServiceModal from 'components/RegisterServiceModal'
-import OperatorCutModal from 'components/OperatorCutModal'
-import MinimumDelegationAmountModal from 'components/MinimumDelegationAmountModal'
-import TransactionStatus from 'components/TransactionStatus'
+import DisplayLive from 'components/displayLive'
+import Paper from 'components/paper'
+import UpdateStakeModal from 'components/updateStakeModal'
+import RegisterServiceModal from 'components/registerServiceModal'
+import OperatorCutModal from 'components/operatorCutModal'
+import MinimumDelegationAmountModal from 'components/minimumDelegationAmountModal'
+import TransactionStatus from 'components/transactionStatus'
 import {
   useAccount,
   useAccountUser,
@@ -20,7 +20,7 @@ import { Address, Status, Operator } from 'types'
 import { useModalControls } from 'utils/hooks'
 import { accountPage } from 'utils/routes'
 
-import Button, { ButtonType } from 'components/Button'
+import Button, { ButtonType } from 'components/button'
 import {
   IconArrowWhite,
   IconValidationCheck,
@@ -33,10 +33,10 @@ import { TICKER } from 'utils/consts'
 import { useMakeClaim } from 'store/actions/makeClaim'
 import ConfirmTransactionModal, {
   StandaloneBox
-} from 'components/ConfirmTransactionModal'
-import DelegatesModal from 'components/DelegatesModal'
-import DelegatorsModal from 'components/DelegatorsModal'
-import Loading from 'components/Loading'
+} from 'components/confirmTransactionModal'
+import DelegatesModal from 'components/delegatesModal'
+import DelegatorsModal from 'components/delegatorsModal'
+import Loading from 'components/loading'
 
 const messages = {
   title: 'Manage Your Account & Services',

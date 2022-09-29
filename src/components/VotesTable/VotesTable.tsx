@@ -3,15 +3,15 @@ import clsx from 'clsx'
 import BN from 'bn.js'
 
 import styles from './VotesTable.module.css'
-import Table from 'components/Table'
+import Table from 'components/table'
 import { VoteEvent, Address } from 'types'
 import { formatAud } from 'utils/format'
 import { usePushRoute } from 'utils/effects'
 import { accountPage } from 'utils/routes'
-import Modal from 'components/Modal'
-import DisplayLive from 'components/DisplayLive'
-import UserImage from 'components/UserImage'
-import UserName from 'components/UserName'
+import Modal from 'components/modal'
+import DisplayLive from 'components/displayLive'
+import UserImage from 'components/userImage'
+import UserName from 'components/userName'
 
 const User = ({ wallet }: { wallet: Address }) => {
   return (

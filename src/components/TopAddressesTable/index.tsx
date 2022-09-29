@@ -1,1 +1,1 @@
-export { default } from './TopAddressesTable'
+export { default } from './topAddressesTable'

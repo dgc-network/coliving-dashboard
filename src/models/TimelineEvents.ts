@@ -4,14 +4,14 @@ import {
   GetRegisteredServiceProviderEventsResponse,
   GetDeregisteredServiceProviderEventsResponse,
   GetIncreasedStakeEventResponse
-} from '../services/Coliving/service-provider/types'
-import { GetIncreaseDelegateStakeEventsResponse } from 'services/Coliving/delegate/types'
+} from '../services/coliving/service-provider/types'
+import { GetIncreaseDelegateStakeEventsResponse } from 'services/coliving/delegate/types'
 import {
   GetClaimEventsResponse,
   GetDelegatorRemovedEventsResponse,
   GetSlashEventsResponse
-} from 'services/Coliving/delegate/types'
-import { GetClaimProcessedResponse } from '../services/Coliving/claim/types'
+} from 'services/coliving/delegate/types'
+import { GetClaimProcessedResponse } from '../services/coliving/claim/types'
 
 /* ServiceProvider Events */
 

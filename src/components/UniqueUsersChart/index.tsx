@@ -1,1 +1,1 @@
-export { default } from './UniqueUsersChart'
+export { default } from './uniqueUsersChart'

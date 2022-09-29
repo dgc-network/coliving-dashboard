@@ -1,1 +1,1 @@
-export { default } from './DeregisterServiceModal'
+export { default } from './deregisterServiceModal'

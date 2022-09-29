@@ -1,1 +1,1 @@
-export { default } from './TopAlbums'
+export { default } from './topAlbums'

@@ -1,20 +1,20 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import { Utils } from '@coliving/sdk'
 
-import Paper from 'components/Paper'
-import VoteMeter from 'components/VoteMeter'
-import ProposalStatusBadge from 'components/ProposalStatusBadge'
+import Paper from 'components/paper'
+import VoteMeter from 'components/voteMeter'
+import ProposalStatusBadge from 'components/proposalStatusBadge'
 import { Proposal, Outcome, Vote, Address, Status } from 'types'
-import Button, { ButtonType } from 'components/Button'
+import Button, { ButtonType } from 'components/button'
 import { leftPadZero, getDate, getHumanReadableTime } from 'utils/format'
 import { ReactComponent as IconThumbUp } from 'assets/img/iconThumbUp.svg'
 import { ReactComponent as IconThumbDown } from 'assets/img/iconThumbDown.svg'
-import ConfirmTransactionModal from 'components/ConfirmTransactionModal'
+import ConfirmTransactionModal from 'components/confirmTransactionModal'
 import { useSubmitVote } from 'store/actions/submitVote'
 import { useExecuteProposal } from 'store/actions/executeProposal'
-import { StandaloneBox } from 'components/ConfirmTransactionModal/ConfirmTransactionModal'
-import Loading from 'components/Loading'
-import DisplayLive from 'components/DisplayLive'
+import { StandaloneBox } from 'components/confirmTransactionModal/confirmTransactionModal'
+import Loading from 'components/loading'
+import DisplayLive from 'components/displayLive'
 import {
   useProposalTimeRemaining,
   useAmountAbstained,
@@ -23,7 +23,7 @@ import {
   useExecutionDelayTimeRemaining
 } from 'store/cache/proposals/hooks'
 import { useAccountUser } from 'store/account/hooks'
-import { Position } from 'components/Tooltip'
+import { Position } from 'components/tooltip'
 import { createStyles } from 'utils/mobile'
 import { IconCheck, IconRemove } from '@coliving/stems'
 
@@ -31,7 +31,7 @@ import desktopStyles from './ProposalHero.module.css'
 import mobileStyles from './ProposalHeroMobile.module.css'
 import getActiveStake from 'utils/activeStake'
 import clsx from 'clsx'
-import UserImage from 'components/UserImage'
+import UserImage from 'components/userImage'
 
 const styles = createStyles({ desktopStyles, mobileStyles })
 

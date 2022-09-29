@@ -5,7 +5,7 @@ import { Action } from 'redux'
 import { getAccountWallet, fetchPendingTransactions } from 'store/account/hooks'
 
 import { Status } from 'types'
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 
 function updateColivingOperatorCut(

@@ -1,5 +1,5 @@
 import BN from 'bn.js'
-import ColivingClient from 'services/Coliving'
+import ColivingClient from 'services/coliving'
 import { User, Operator, Address } from 'types'
 
 const DEPLOYER_CUT_BASE = new BN('100')

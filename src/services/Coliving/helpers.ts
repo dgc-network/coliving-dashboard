@@ -1,6 +1,6 @@
 import { Utils } from '@coliving/sdk'
 import { formatNumber, formatAudString } from 'utils/format'
-import ColivingClient from './ColivingClient'
+import ColivingClient from './colivingClient'
 import { Permission, BigNumber } from 'types'
 import { fetchWithTimeout } from 'utils/fetch'
 import BN from 'bn.js'

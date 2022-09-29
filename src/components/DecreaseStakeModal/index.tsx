@@ -1,1 +1,1 @@
-export { default } from './DecreaseStakeModal'
+export { default } from './decreaseStakeModal'

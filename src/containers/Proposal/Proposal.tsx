@@ -1,21 +1,21 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
-import Page from 'components/Page'
+import Page from 'components/page'
 import { RouteComponentProps } from 'react-router-dom'
-import ProposalHero from 'components/ProposalHero'
+import ProposalHero from 'components/proposalHero'
 import { useProposal } from 'store/cache/proposals/hooks'
 import { Outcome } from 'types'
 
-import VotesTable from 'components/VotesTable'
+import VotesTable from 'components/votesTable'
 import { useVotes, useUserVote } from 'store/cache/votes/hooks'
 import { GOVERNANCE } from 'utils/routes'
 
 import desktopStyles from './Proposal.module.css'
 import mobileStyles from './ProposalMobile.module.css'
 import { createStyles } from 'utils/mobile'
-import Paper from 'components/Paper'
-import Loading from 'components/Loading'
+import Paper from 'components/paper'
+import Loading from 'components/loading'
 
 const styles = createStyles({ desktopStyles, mobileStyles })
 

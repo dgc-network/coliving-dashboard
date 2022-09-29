@@ -5,7 +5,7 @@ import { Action } from 'redux'
 import BN from 'bn.js'
 
 import { Status, Address } from 'types'
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 import { getAccountWallet, fetchPendingTransactions } from 'store/account/hooks'
 

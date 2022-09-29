@@ -3,16 +3,16 @@ import { ButtonType } from '@coliving/stems'
 import BN from 'bn.js'
 
 import { useUpdateMinimumDelegationAmount } from 'store/actions/updateMinimumDelegationAmount'
-import Modal from 'components/Modal'
-import Button from 'components/Button'
-import TextField from 'components/TextField'
+import Modal from 'components/modal'
+import Button from 'components/button'
+import TextField from 'components/textField'
 import styles from './MinimumDelegationAmountModal.module.css'
 import { Status } from 'types'
 import ConfirmTransactionModal, {
   StandaloneBox
-} from 'components/ConfirmTransactionModal'
+} from 'components/confirmTransactionModal'
 import { useModalControls } from 'utils/hooks'
-import DisplayLive from 'components/DisplayLive'
+import DisplayLive from 'components/displayLive'
 import { TICKER } from 'utils/consts'
 import { checkWeiNumber, parseWeiNumber } from 'utils/numeric'
 

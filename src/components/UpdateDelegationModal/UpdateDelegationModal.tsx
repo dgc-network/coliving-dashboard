@@ -1,25 +1,25 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import clsx from 'clsx'
-import { ButtonType } from 'components/Button'
+import { ButtonType } from 'components/button'
 import BN from 'bn.js'
 
-import ColivingClient from 'services/Coliving'
-import Modal from 'components/Modal'
-import Button from 'components/Button'
-import ValueSlider from 'components/ValueSlider'
-import TextField from 'components/TextField'
+import ColivingClient from 'services/coliving'
+import Modal from 'components/modal'
+import Button from 'components/button'
+import ValueSlider from 'components/valueSlider'
+import TextField from 'components/textField'
 import styles from './UpdateDelegationModal.module.css'
 import { Status, Address } from 'types'
 import { checkWeiNumber, parseWeiNumber } from 'utils/numeric'
 import ConfirmTransactionModal, {
   OldStake,
   NewStake
-} from 'components/ConfirmTransactionModal'
+} from 'components/confirmTransactionModal'
 import { TICKER } from 'utils/consts'
 import { useModalControls } from 'utils/hooks'
 import { useUserDelegation } from 'store/actions/userDelegation'
 import useUpdateDelegation from 'store/actions/updateDelegation'
-import DisplayLive from 'components/DisplayLive'
+import DisplayLive from 'components/displayLive'
 
 const messages = {
   increaseTitle: 'Increase Delegation',

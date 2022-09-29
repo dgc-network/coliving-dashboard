@@ -1,4 +1,4 @@
-import { ColivingClient } from '../ColivingClient'
+import { ColivingClient } from '../colivingClient'
 import BN from 'bn.js'
 import { Address, Amount, BlockNumber, TxReceipt, Permission } from 'types'
 import {
@@ -7,7 +7,7 @@ import {
   DelegateIncreaseStakeEvent,
   DelegateRemovedEvent,
   DelegateSlashEvent
-} from 'models/TimelineEvents'
+} from 'models/timelineEvents'
 import {
   GetClaimEventsResponse,
   GetDelegatorRemovedEventsResponse,

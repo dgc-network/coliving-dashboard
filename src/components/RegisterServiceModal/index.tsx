@@ -1,1 +1,1 @@
-export { default } from './RegisterServiceModal'
+export { default } from './registerServiceModal'

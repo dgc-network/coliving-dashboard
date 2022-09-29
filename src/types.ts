@@ -1,6 +1,6 @@
 import BN from 'bn.js'
-import { GetPendingUndelegateRequestResponse } from 'services/Coliving/delegate/types'
-import { GetPendingDecreaseStakeRequestResponse } from 'services/Coliving/service-provider/types'
+import { GetPendingUndelegateRequestResponse } from 'services/coliving/delegate/types'
+import { GetPendingDecreaseStakeRequestResponse } from 'services/coliving/service-provider/types'
 
 export type Version = string
 export type Address = string

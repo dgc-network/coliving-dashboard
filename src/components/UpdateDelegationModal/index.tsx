@@ -1,1 +1,1 @@
-export { default } from './UpdateDelegationModal'
+export { default } from './updateDelegationModal'

@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react'
 import clsx from 'clsx'
 import styles from './ValueSlider.module.css'
-import ColivingClient from 'services/Coliving'
+import ColivingClient from 'services/coliving'
 import { BigNumber } from 'types'
-import { Position } from 'components/Tooltip'
-import DisplayLive from 'components/DisplayLive'
+import { Position } from 'components/tooltip'
+import DisplayLive from 'components/displayLive'
 
 const messages = {
   min: 'MIN',

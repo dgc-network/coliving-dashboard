@@ -1,4 +1,4 @@
-import { ColivingClient } from '../ColivingClient'
+import { ColivingClient } from '../colivingClient'
 
 import BN from 'bn.js'
 
@@ -16,7 +16,7 @@ import {
   GovernanceProposalEvent,
   GovernanceVoteEvent,
   GovernanceVoteUpdateEvent
-} from 'models/TimelineEvents'
+} from 'models/timelineEvents'
 import { RawProposal, RawVoteEvent } from './types'
 
 // NOTE: Temporary fix- Set the start query block so that the getPastEvent does not error

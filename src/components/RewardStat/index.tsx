@@ -1,1 +1,1 @@
-export { default } from './RewardStat'
+export { default } from './rewardStat'

@@ -4,7 +4,7 @@ import { ThunkAction } from 'redux-thunk'
 import { Action } from 'redux'
 
 import { Status, Vote } from 'types'
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 import { fetchVotes } from 'store/cache/votes/hooks'
 import { fetchProposal } from 'store/cache/proposals/hooks'

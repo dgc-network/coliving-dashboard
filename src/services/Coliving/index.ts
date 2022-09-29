@@ -1,1 +1,1 @@
-export { default } from './ColivingClient'
+export { default } from './colivingClient'

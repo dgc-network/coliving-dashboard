@@ -1,4 +1,4 @@
-import { ColivingClient } from '../ColivingClient'
+import { ColivingClient } from '../colivingClient'
 
 import {
   ServiceType,
@@ -33,7 +33,7 @@ import {
   ServiceProviderDeregisteredEvent,
   ServiceProviderIncreaseStakeEvent,
   ServiceProviderRegisteredEvent
-} from '../../../models/TimelineEvents'
+} from '../../../models/timelineEvents'
 
 export default class ServiceProviderClient {
   aud: ColivingClient

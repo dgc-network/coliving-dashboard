@@ -1,5 +1,5 @@
 import BN from 'bn.js'
-import { ColivingClient } from '../ColivingClient'
+import { ColivingClient } from '../colivingClient'
 
 import { Address, BlockNumber } from 'types'
 

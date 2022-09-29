@@ -1,9 +1,9 @@
 import React from 'react'
 import clsx from 'clsx'
 
-import Paper from 'components/Paper'
-import Button from 'components/Button'
-import ModifyServiceModal from 'components/ModifyServiceModal'
+import Paper from 'components/paper'
+import Button from 'components/button'
+import ModifyServiceModal from 'components/modifyServiceModal'
 import { ButtonType, IconPencil } from '@coliving/stems'
 import { ServiceType, Address } from 'types'
 import { useModalControls } from 'utils/hooks'

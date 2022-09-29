@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Stat from 'components/Stat'
+import Stat from 'components/stat'
 import { useTrailingApiCalls } from 'store/cache/analytics/hooks'
 import { Bucket, MetricError } from 'store/cache/analytics/slice'
 import { formatNumber } from 'utils/format'

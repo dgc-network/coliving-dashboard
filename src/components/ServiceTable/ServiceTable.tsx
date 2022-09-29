@@ -3,8 +3,8 @@ import clsx from 'clsx'
 import ReactCountryFlag from 'react-country-flag'
 import { NodeService, ContentNode, DiscoveryNode } from 'types'
 import styles from './ServiceTable.module.css'
-import Table from 'components/Table'
-import Error from 'components/Error'
+import Table from 'components/table'
+import Error from 'components/error'
 
 type ServiceRow = {
   endpoint: string

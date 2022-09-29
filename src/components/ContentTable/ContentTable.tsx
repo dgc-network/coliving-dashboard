@@ -4,7 +4,7 @@ import { usePushRoute } from 'utils/effects'
 import { ContentNode, Address, Status } from 'types'
 import { SERVICES_CONTENT, contentNodePage } from 'utils/routes'
 
-import ServiceTable from 'components/ServiceTable'
+import ServiceTable from 'components/serviceTable'
 import { useContentNodes } from 'store/cache/contentNode/hooks'
 
 const messages = {

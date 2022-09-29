@@ -8,4 +8,4 @@ export {
   ToOperator,
   StandaloneBox,
   Box
-} from './ConfirmTransactionModal'
+} from './confirmTransactionModal'

@@ -1,1 +1,1 @@
-export { default } from './TopOperatorsTable'
+export { default } from './topOperatorsTable'

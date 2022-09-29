@@ -1,1 +1,1 @@
-export { default } from './ValueSlider'
+export { default } from './valueSlider'

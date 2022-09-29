@@ -1,1 +1,1 @@
-export { default } from './TopGenresChart'
+export { default } from './topGenresChart'

@@ -1,1 +1,1 @@
-export { default } from './VerticalBarChart'
+export { default } from './verticalBarChart'

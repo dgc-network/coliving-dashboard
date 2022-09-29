@@ -7,13 +7,13 @@ import clsx from 'clsx'
 import { AppState } from 'store/types'
 
 import styles from './Timeline.module.css'
-import Paper from 'components/Paper'
-import TimelineEvent from './TimelineEvent'
+import Paper from 'components/paper'
+import TimelineEvent from './timelineEvent'
 import { TimelineType, useTimeline } from 'store/cache/timeline/hooks'
 import { Address } from 'types'
-import Loading from 'components/Loading'
+import Loading from 'components/loading'
 import { useModalControls } from 'utils/hooks'
-import TimelineModal from './TimelineModal'
+import TimelineModal from './timelineModal'
 
 const messages = {
   title: 'Timeline',

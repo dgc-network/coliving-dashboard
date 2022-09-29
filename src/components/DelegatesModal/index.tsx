@@ -1,1 +1,1 @@
-export { default } from './DelegatesModal'
+export { default } from './delegatesModal'

@@ -1,1 +1,1 @@
-export { default } from './RadarChart'
+export { default } from './radarChart'

@@ -1,1 +1,1 @@
-export { default } from './MinimumDelegationAmountModal'
+export { default } from './minimumDelegationAmountModal'

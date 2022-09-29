@@ -3,7 +3,7 @@ import styles from './ProposalStatusChip.module.css'
 import clsx from 'clsx'
 import { Outcome } from 'types'
 import { IconCheck, IconRemove } from '@coliving/stems'
-import Loading from 'components/Loading'
+import Loading from 'components/loading'
 
 const messages = {
   [Outcome.Rejected]: 'Rejected',

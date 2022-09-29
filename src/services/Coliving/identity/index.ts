@@ -1,4 +1,4 @@
-import { ColivingClient } from '../ColivingClient'
+import { ColivingClient } from '../colivingClient'
 
 import BN from 'bn.js'
 import { Address } from 'types'

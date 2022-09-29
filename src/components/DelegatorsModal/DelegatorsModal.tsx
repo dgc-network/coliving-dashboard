@@ -8,18 +8,18 @@ import { ReactComponent as TrashIcon } from 'assets/img/iconTrash.svg'
 
 import styles from './DelegatorsModal.module.css'
 import { Address, Delegate, Status } from 'types'
-import ModalTable from 'components/ModalTable'
+import ModalTable from 'components/modalTable'
 import { useAccount } from 'store/account/hooks'
 import { useRemoveDelegator } from 'store/actions/removeDelegator'
 import ConfirmTransactionModal, {
   StandaloneBox
-} from 'components/ConfirmTransactionModal'
+} from 'components/confirmTransactionModal'
 import { useUndelegateStake } from 'store/actions/undelegateStake'
 import { accountPage } from 'utils/routes'
 import { usePushRoute } from 'utils/effects'
-import DisplayLive from 'components/DisplayLive'
-import UserImage from 'components/UserImage'
-import UserName from 'components/UserName'
+import DisplayLive from 'components/displayLive'
+import UserImage from 'components/userImage'
+import UserName from 'components/userName'
 
 const messages = {
   title: 'Delegators',

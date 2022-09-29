@@ -1,4 +1,4 @@
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { useSelector, useDispatch } from 'react-redux'
 import { ThunkAction } from 'redux-thunk'
 import { Action } from 'redux'

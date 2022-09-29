@@ -1,1 +1,1 @@
-export { default } from './DelegatorsTable'
+export { default } from './delegatorsTable'

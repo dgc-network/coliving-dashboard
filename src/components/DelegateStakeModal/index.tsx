@@ -1,1 +1,1 @@
-export { default } from './DelegateStakeModal'
+export { default } from './delegateStakeModal'

@@ -1,1 +1,1 @@
-export { default } from './NodeOverview'
+export { default } from './nodeOverview'

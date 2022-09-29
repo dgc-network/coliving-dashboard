@@ -1,1 +1,1 @@
-export { default } from './ModalTable'
+export { default } from './modalTable'

@@ -1,1 +1,1 @@
-export { default } from './LiveRewardsModal'
+export { default } from './liveRewardsModal'

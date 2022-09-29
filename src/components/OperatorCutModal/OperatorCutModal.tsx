@@ -2,14 +2,14 @@ import React, { useState, useCallback, useEffect } from 'react'
 import { ButtonType } from '@coliving/stems'
 
 import { useUpdateOperatorCut } from 'store/actions/updateOperatorCut'
-import Modal from 'components/Modal'
-import Button from 'components/Button'
-import TextField from 'components/TextField'
+import Modal from 'components/modal'
+import Button from 'components/button'
+import TextField from 'components/textField'
 import styles from './OperatorCutModal.module.css'
 import { Status } from 'types'
 import ConfirmTransactionModal, {
   StandaloneBox
-} from 'components/ConfirmTransactionModal'
+} from 'components/confirmTransactionModal'
 import { useModalControls } from 'utils/hooks'
 
 const messages = {

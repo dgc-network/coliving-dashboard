@@ -1,1 +1,1 @@
-export { default } from './UniqueUsersStat'
+export { default } from './uniqueUsersStat'

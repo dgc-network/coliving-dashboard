@@ -1,8 +1,8 @@
 import React from 'react'
 
 import styles from './ContentNodes.module.css'
-import Page from 'components/Page'
-import ContentTable from 'components/ContentTable'
+import Page from 'components/page'
+import ContentTable from 'components/contentTable'
 import { SERVICES_TITLE, SERVICES } from 'utils/routes'
 
 const messages = {

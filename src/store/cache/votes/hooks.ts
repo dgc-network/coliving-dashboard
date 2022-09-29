@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { ThunkAction } from 'redux-thunk'
 import { Action } from 'redux'
 
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 import { useEffect } from 'react'
 import { setVotes, setUserVote } from './slice'

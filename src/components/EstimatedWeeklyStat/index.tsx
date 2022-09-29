@@ -1,1 +1,1 @@
-export { default } from './EstimatedWeeklyStat'
+export { default } from './estimatedWeeklyStat'

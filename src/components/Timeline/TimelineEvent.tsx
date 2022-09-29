@@ -4,13 +4,13 @@ import clsx from 'clsx'
 
 import { getUser } from 'store/cache/user/hooks'
 import { useProposal } from 'store/cache/proposals/hooks'
-import Proposal from 'components/Proposal'
+import Proposal from 'components/proposal'
 import { useBlock } from 'store/cache/protocol/hooks'
 import { getDate, formatShortWallet } from 'utils/format'
 import { usePushRoute } from 'utils/effects'
 import { accountPage } from 'utils/routes'
 import { TICKER } from 'utils/consts'
-import Tooltip, { Position } from 'components/Tooltip'
+import Tooltip, { Position } from 'components/tooltip'
 import { Address } from 'types'
 
 import desktopStyles from './TimelineEvent.module.css'
@@ -29,8 +29,8 @@ import {
   ServiceProviderIncreaseStakeEvent,
   ServiceProviderRegisteredEvent,
   TimelineEvent as TimelineEventType
-} from 'models/TimelineEvents'
-import DisplayLive from 'components/DisplayLive'
+} from 'models/timelineEvents'
+import DisplayLive from 'components/displayLive'
 const styles = createStyles({ desktopStyles, mobileStyles })
 
 const DisplayUser = ({ wallet }: { wallet: Address }) => {

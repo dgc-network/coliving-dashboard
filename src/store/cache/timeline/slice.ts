@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { TimelineEvent } from 'models/TimelineEvents'
+import { TimelineEvent } from 'models/timelineEvents'
 import { Address } from 'types'
 
 export type State = {

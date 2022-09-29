@@ -1,4 +1,4 @@
-import BarChart from 'components/BarChart'
+import BarChart from 'components/barChart'
 import React, { useCallback, useState } from 'react'
 import { useTopApps } from 'store/cache/analytics/hooks'
 import { Bucket, MetricError } from 'store/cache/analytics/slice'

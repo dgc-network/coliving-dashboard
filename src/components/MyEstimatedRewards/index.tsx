@@ -1,1 +1,1 @@
-export { default } from './MyEstimatedRewards'
+export { default } from './myEstimatedRewards'

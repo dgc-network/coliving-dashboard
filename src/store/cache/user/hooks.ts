@@ -14,7 +14,7 @@ import {
   Delegate,
   ServiceProvider
 } from 'types'
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 import { setLoading, setUsers, setUserProfile } from './slice'
 import { useEffect } from 'react'
@@ -27,13 +27,13 @@ import {
   fetchContentNodes
 } from '../contentNode/hooks'
 import { useAccountUser } from 'store/account/hooks'
-import { GetPendingDecreaseStakeRequestResponse } from 'services/Coliving/service-provider/types'
+import { GetPendingDecreaseStakeRequestResponse } from 'services/coliving/service-provider/types'
 import getActiveStake, { getTotalActiveDelegatedStake } from 'utils/activeStake'
 import {
   useUser as useGraphUser,
   useUsers as useGraphUsers
 } from './graph/hooks'
-import { getUserProfile } from 'services/SelfId'
+import { getUserProfile } from 'services/selfId'
 
 type UseUsersProp = {
   sortBy?: SortUser

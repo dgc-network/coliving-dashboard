@@ -2,18 +2,18 @@ import React from 'react'
 import clsx from 'clsx'
 
 import styles from './Delegate.module.css'
-import Paper from 'components/Paper'
+import Paper from 'components/paper'
 import BN from 'bn.js'
-import Tooltip, { Position } from 'components/Tooltip'
+import Tooltip, { Position } from 'components/tooltip'
 import { TICKER } from 'utils/consts'
-import Button, { ButtonType } from 'components/Button'
+import Button, { ButtonType } from 'components/button'
 import { IconArrowWhite } from '@coliving/stems'
 import { useModalControls } from 'utils/hooks'
-import UpdateDelegationModal from 'components/UpdateDelegationModal'
+import UpdateDelegationModal from 'components/updateDelegationModal'
 import { Address, Status } from 'types'
 import { useHasPendingDecreaseDelegationTx } from 'store/account/hooks'
 import { usePendingClaim } from 'store/cache/claims/hooks'
-import DisplayLive from 'components/DisplayLive'
+import DisplayLive from 'components/displayLive'
 
 const messages = {
   title: 'Manage Delegation',

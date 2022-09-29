@@ -1,1 +1,1 @@
-export { default } from './ApiCallsStat'
+export { default } from './apiCallsStat'

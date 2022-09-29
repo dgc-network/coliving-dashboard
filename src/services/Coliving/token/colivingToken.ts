@@ -1,4 +1,4 @@
-import { ColivingClient } from '../ColivingClient'
+import { ColivingClient } from '../colivingClient'
 
 import { Address, BigNumber } from 'types'
 

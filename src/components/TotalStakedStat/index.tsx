@@ -1,1 +1,1 @@
-export { default } from './TotalStakedStat'
+export { default } from './totalStakedStat'

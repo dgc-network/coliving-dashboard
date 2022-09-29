@@ -1,1 +1,1 @@
-export { default } from './NewProposalModal'
+export { default } from './newProposalModal'

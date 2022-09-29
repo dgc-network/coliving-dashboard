@@ -1,1 +1,1 @@
-export { default } from './ProposalStatusChip'
+export { default } from './proposalStatusChip'

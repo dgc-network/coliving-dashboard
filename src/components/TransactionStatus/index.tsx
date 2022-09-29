@@ -1,1 +1,1 @@
-export { default } from './TransactionStatus'
+export { default } from './transactionStatus'

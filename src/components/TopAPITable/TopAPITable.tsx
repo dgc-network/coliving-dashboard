@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import styles from './TopAPITable.module.css'
-import Table from 'components/Table'
+import Table from 'components/table'
 import { formatNumberCommas } from 'utils/format'
 import { IconCrown } from '@coliving/stems'
 import { useTopApps } from 'store/cache/analytics/hooks'

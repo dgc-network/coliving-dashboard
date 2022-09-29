@@ -1,1 +1,1 @@
-export { default } from './TotalStakedChart'
+export { default } from './totalStakedChart'

@@ -1,1 +1,1 @@
-export { default } from './TopContentLists'
+export { default } from './topContentLists'

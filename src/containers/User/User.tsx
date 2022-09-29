@@ -4,17 +4,17 @@ import { RouteComponentProps } from 'react-router'
 import { matchPath } from 'react-router-dom'
 import { Utils } from '@coliving/sdk'
 
-import Page from 'components/Page'
-import Delegate from 'components/Delegate'
-import Timeline from 'components/Timeline'
-import StakingStat from 'components/StakingStat'
-import UserStakedStat from 'components/UserStakedStat'
-import DiscoveryTable from 'components/DiscoveryTable'
-import ContentTable from 'components/ContentTable'
-import DelegatorsTable from 'components/DelegatorsTable'
-import DelegatesTable from 'components/DelegatesTable'
-import UserInfo from 'components/UserInfo'
-import ManageService from 'components/ManageService'
+import Page from 'components/page'
+import Delegate from 'components/delegate'
+import Timeline from 'components/timeline'
+import StakingStat from 'components/stakingStat'
+import UserStakedStat from 'components/userStakedStat'
+import DiscoveryTable from 'components/discoveryTable'
+import ContentTable from 'components/contentTable'
+import DelegatorsTable from 'components/delegatorsTable'
+import DelegatesTable from 'components/delegatesTable'
+import UserInfo from 'components/userInfo'
+import ManageService from 'components/manageService'
 
 import {
   useUser,
@@ -37,7 +37,7 @@ import desktopStyles from './User.module.css'
 import mobileStyles from './UserMobile.module.css'
 import { createStyles } from 'utils/mobile'
 import getActiveStake from 'utils/activeStake'
-import DelegationStatsChip from 'components/DelegationStatsChip/DelegationStatsChip'
+import DelegationStatsChip from 'components/delegationStatsChip/delegationStatsChip'
 
 const styles = createStyles({ desktopStyles, mobileStyles })
 

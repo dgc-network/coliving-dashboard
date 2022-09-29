@@ -1,1 +1,1 @@
-export { default } from './ServiceTable'
+export { default } from './serviceTable'

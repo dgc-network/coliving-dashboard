@@ -3,7 +3,7 @@ import { ThunkAction } from 'redux-thunk'
 import { Action } from 'redux'
 
 import { Address, Status } from 'types'
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 import { useEffect } from 'react'
 

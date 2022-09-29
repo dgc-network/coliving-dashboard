@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import clsx from 'clsx'
 
-import AppBar from 'components/AppBar'
-import Nav from 'components/Nav'
+import AppBar from 'components/appBar'
+import Nav from 'components/nav'
 import { useInit } from 'store/cache/protocol/hooks'
 import { useIsMobile } from 'utils/hooks'
 import { IconKebabHorizontal } from '@coliving/stems'
@@ -10,7 +10,7 @@ import { IconKebabHorizontal } from '@coliving/stems'
 import desktopStyles from './Header.module.css'
 import mobileStyles from './HeaderMobile.module.css'
 import { createStyles } from 'utils/mobile'
-import MobileNav from 'components/MobileNav'
+import MobileNav from 'components/mobileNav'
 import useRerouteLegacy from 'hooks/useRerouteLegacy'
 
 const styles = createStyles({ desktopStyles, mobileStyles })

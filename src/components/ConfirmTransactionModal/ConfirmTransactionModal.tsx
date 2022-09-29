@@ -3,15 +3,15 @@ import clsx from 'clsx'
 import SimpleBar from 'simplebar-react'
 import BN from 'bn.js'
 
-import ColivingClient from 'services/Coliving'
+import ColivingClient from 'services/coliving'
 import { IconArrow, ButtonType } from '@coliving/stems'
-import Modal from 'components/Modal'
-import Button from 'components/Button'
+import Modal from 'components/modal'
+import Button from 'components/button'
 import styles from './ConfirmTransactionModal.module.css'
 import { BigNumber, ServiceType, Address, Status } from 'types'
-import Loading from 'components/Loading'
+import Loading from 'components/loading'
 import { TICKER } from 'utils/consts'
-import UserImage from 'components/UserImage'
+import UserImage from 'components/userImage'
 
 const messages = {
   title: 'Confirm Transaction',

@@ -4,7 +4,7 @@ import { ThunkAction } from 'redux-thunk'
 import { Action } from 'redux'
 
 import { Status, ServiceType, BigNumber, Address } from 'types'
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 import { getAccountWallet } from 'store/account/hooks'
 import { fetchUser } from 'store/cache/user/hooks'

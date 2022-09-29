@@ -1,6 +1,6 @@
 import BN from 'bn.js'
 import { User, ServiceType, Operator, ServiceProvider } from 'types'
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { FullUser } from './types'
 
 export const formatUser = async (

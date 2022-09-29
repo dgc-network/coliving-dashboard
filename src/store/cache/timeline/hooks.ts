@@ -2,14 +2,14 @@ import { useSelector, useDispatch } from 'react-redux'
 import { ThunkAction } from 'redux-thunk'
 import { Action } from 'redux'
 
-import Coliving from 'services/Coliving'
+import Coliving from 'services/coliving'
 import { AppState } from 'store/types'
 import { useEffect } from 'react'
 import { setTimeline } from './slice'
 import { Address } from 'types'
 import { useDispatchBasedOnBlockNumber } from '../protocol/hooks'
 import { useUsers } from 'store/cache/user/hooks'
-import { TimelineEvent } from 'models/TimelineEvents'
+import { TimelineEvent } from 'models/timelineEvents'
 
 const getFirstEvent = (...events: TimelineEvent[]) => {
   let min = Number.MAX_SAFE_INTEGER

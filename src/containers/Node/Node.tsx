@@ -1,13 +1,13 @@
 import React from 'react'
 import { RouteComponentProps } from 'react-router'
 import { matchPath } from 'react-router-dom'
-import NodeOverview from 'components/NodeOverview'
+import NodeOverview from 'components/nodeOverview'
 import { useDiscoveryNode } from 'store/cache/discoveryNode/hooks'
 import { useContentNode } from 'store/cache/contentNode/hooks'
 import { useAccount } from 'store/account/hooks'
 
 import styles from './Node.module.css'
-import Page from 'components/Page'
+import Page from 'components/page'
 import { Status, Address, ServiceType } from 'types'
 import { usePushRoute } from 'utils/effects'
 import {

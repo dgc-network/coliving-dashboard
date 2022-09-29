@@ -1,4 +1,4 @@
-import { ColivingClient } from './ColivingClient'
+import { ColivingClient } from './colivingClient'
 
 import { ServiceType, Version, BigNumber } from 'types'
 

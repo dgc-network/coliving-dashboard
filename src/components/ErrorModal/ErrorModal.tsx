@@ -2,8 +2,8 @@ import React, { useState, useCallback } from 'react'
 import SimpleBar from 'simplebar-react'
 import { ButtonType } from '@coliving/stems'
 
-import Modal from 'components/Modal'
-import Button from 'components/Button'
+import Modal from 'components/modal'
+import Button from 'components/button'
 import styles from './ErrorModal.module.css'
 
 const messages = {

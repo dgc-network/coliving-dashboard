@@ -3,7 +3,7 @@ import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
 import { Utils } from '@coliving/sdk'
 import { Address, BigNumber } from 'types'
-import ColivingClient from 'services/Coliving'
+import ColivingClient from 'services/coliving'
 import { TICKER } from './consts'
 import BN from 'bn.js'
 

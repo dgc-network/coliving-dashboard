@@ -1,1 +1,1 @@
-export { default } from './ContentNodes'
+export { default } from './contentNodes'

@@ -1,14 +1,14 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import Modal from 'components/Modal'
-import Button, { ButtonType } from 'components/Button'
-import TextField from 'components/TextField'
+import Modal from 'components/modal'
+import Button, { ButtonType } from 'components/button'
+import TextField from 'components/textField'
 import styles from './ModifyServiceModal.module.css'
 import { ServiceType, Status, Address } from 'types'
 import { useModifyService } from 'store/actions/modifyService'
 import ConfirmTransactionModal, {
   StandaloneBox
-} from 'components/ConfirmTransactionModal'
-import DeregisterServiceModal from 'components/DeregisterServiceModal'
+} from 'components/confirmTransactionModal'
+import DeregisterServiceModal from 'components/deregisterServiceModal'
 import { useModalControls } from 'utils/hooks'
 
 const messages = {
